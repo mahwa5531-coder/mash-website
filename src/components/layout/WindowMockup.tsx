@@ -89,7 +89,7 @@ export function WindowMockup({
         <img
           src={assetPath(src)}
           alt={alt}
-          loading={priority ? "eager" : "lazy"}
+          loading="eager"
           decoding="async"
           className="h-full w-full object-cover object-top select-none transition-transform duration-700 group-hover:scale-[1.004]"
         />
