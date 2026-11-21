@@ -58,9 +58,6 @@ export function Navbar() {
             <Button size="sm" variant="default" className="gap-2 font-medium shadow-xs text-xs h-9 px-4 bg-slate-900 hover:bg-slate-800">
               <Download className="h-3.5 w-3.5" />
               <span>Download</span>
-              <span className="text-slate-400 font-mono text-[10px]">
-                {SITE_CONFIG.installer.sizeDisplay}
-              </span>
             </Button>
           </Link>
 
@@ -96,7 +93,7 @@ export function Navbar() {
               className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-slate-900 text-white font-medium text-xs shadow-sm"
             >
               <Download className="h-3.5 w-3.5" />
-              <span>Download for Windows ({SITE_CONFIG.installer.sizeDisplay})</span>
+              <span>Download for Windows</span>
             </Link>
           </div>
         </div>

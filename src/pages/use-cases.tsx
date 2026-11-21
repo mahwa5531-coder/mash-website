@@ -229,13 +229,13 @@ export default function UseCasesPage() {
               Bring automated audit intelligence to your spreadsheets.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mb-6 leading-relaxed font-sans">
-              Download Mash for Windows. Free forever for individuals, with full 100% on-device data confidentiality.
+              Install the desktop AI workbench on Windows with 100% on-device client confidentiality.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={SITE_CONFIG.installer.downloadPath} download>
                 <Button size="lg" className="gap-2 text-xs font-semibold h-12 px-6 bg-slate-900 hover:bg-slate-800 text-white shadow-sm">
                   <Download className="h-4 w-4" />
-                  <span>Download for Windows ({SITE_CONFIG.installer.sizeDisplay})</span>
+                  <span>Download for Windows</span>
                 </Button>
               </a>
               <Link href="/pricing">

@@ -20,9 +20,6 @@ export function Footer() {
             <p className="text-xs text-slate-500 leading-relaxed max-w-xs">
               The desktop AI workbench for spreadsheets, financial data reconciliation, and statutory audits.
             </p>
-            <p className="text-[11px] text-slate-400 font-mono">
-              Windows x64 · Version {SITE_CONFIG.version}
-            </p>
           </div>
 
           {/* Col 2: Navigation */}
@@ -76,12 +73,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-slate-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div>
-            &copy; {new Date().getFullYear()} Mash Workbench. All rights reserved.
+            &copy; {new Date().getFullYear()} Mash. All rights reserved.
           </div>
-          <div className="flex items-center gap-4">
-            <span>Windows 10 / 11 64-bit</span>
-            <span>·</span>
-            <span>Local Machine Storage</span>
+          <div>
+            <span>100% On-Device Confidentiality</span>
           </div>
         </div>
       </div>

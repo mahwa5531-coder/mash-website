@@ -6,7 +6,6 @@ import {
   Download, 
   Sparkles, 
   ArrowRight, 
-  ShieldCheck, 
   HelpCircle, 
   Minus 
 } from "lucide-react";
@@ -21,48 +20,59 @@ export default function PricingPage() {
     {
       category: "Audit Workspace & Interface",
       items: [
-        { name: "Windows 10 / 11 64-bit Desktop Application", starter: true, pro: true },
-        { name: "Side-by-Side Dual-Pane Audit Canvas (880px)", starter: true, pro: true },
-        { name: "Single-Pane Executive Review Mode", starter: true, pro: true },
-        { name: "Built-in Financial Intelligence (Zero API setup)", starter: true, pro: true },
-        { name: "100% On-Device Client Data Confidentiality", starter: true, pro: true },
+        { name: "Windows 10 / 11 64-bit Desktop Application", free: true, pro: true },
+        { name: "Side-by-Side Dual-Pane Audit Canvas", free: true, pro: true },
+        { name: "Single-Pane Executive Review Mode", free: true, pro: true },
+        { name: "Built-in Financial Intelligence (Zero API setup)", free: true, pro: true },
+        { name: "100% On-Device Client Data Confidentiality", free: true, pro: true },
       ],
     },
     {
       category: "Transaction Testing & Reconciliation",
       items: [
-        { name: "Open & Audit .xlsx, .csv, and .tsv Ledgers", starter: true, pro: true },
-        { name: "Multi-Tab Workbook Reconciliation", starter: true, pro: true },
-        { name: "Automated Debit / Credit Balancing & Variance Flagging", starter: true, pro: true },
-        { name: "100% Transaction Anomaly & Duplicate Detection", starter: "Standard", pro: "Full Anomaly Suite" },
-        { name: "Multi-Sheet Batch Reconciliation (Bank vs Books)", starter: false, pro: true },
+        { name: "Open & Audit .xlsx, .csv, and .tsv Ledgers", free: true, pro: true },
+        { name: "Multi-Tab Workbook Reconciliation", free: true, pro: true },
+        { name: "Automated Debit / Credit Balancing & Variance Flagging", free: true, pro: true },
+        { name: "Full-Scope Anomaly & Duplicate Detection", free: "Standard", pro: "Full Anomaly Suite" },
+        { name: "Multi-Sheet Batch Reconciliation (Bank vs Books)", free: false, pro: true },
       ],
     },
     {
       category: "Statutory Schedules & Workpapers",
       items: [
-        { name: "Standard Account Variance Prompts", starter: true, pro: true },
-        { name: "Statutory Tax & VAT/GST Mismatch Detection", starter: "Basic", pro: "Full Statutory Schedules" },
-        { name: "General Ledger Line-by-Line Voucher Flagging", starter: true, pro: true },
-        { name: "Export Working Papers with Formula Integrity", starter: true, pro: true },
-        { name: "Custom Audit Rules & Materiality Thresholds", starter: false, pro: true },
+        { name: "General Ledger Line-by-Line Voucher Flagging", free: true, pro: true },
+        { name: "Statutory Tax & VAT/GST Mismatch Detection", free: "Basic", pro: "Full Statutory Schedules" },
+        { name: "Benford's Law Digital Analysis", free: false, pro: true },
+        { name: "Export Working Papers with Formula Integrity", free: true, pro: true },
+        { name: "Custom Audit Rules & Materiality Thresholds", free: false, pro: true },
       ],
     },
     {
-      category: "Client Privacy & Firm Licensing",
+      category: "Commercial Practice & Support",
       items: [
-        { name: "Engagement License", starter: "Individual / Sole Practice", pro: "Full Commercial Firm License" },
-        { name: "Automatic Security & Core Application Updates", starter: true, pro: true },
-        { name: "Support Channel", starter: "Standard Support", pro: "Priority Firm Onboarding & Support" },
+        { name: "Engagement License", free: "Individual / Non-Commercial", pro: "Commercial Firm License" },
+        { name: "Financial Reasoning Model Access", free: "Standard", pro: "Priority Frontier Models" },
+        { name: "Support Channel", free: "Standard Support", pro: "Priority Firm Support" },
+        { name: "Pricing (All Taxes Included)", free: "₹0 Forever", pro: "₹1,999 / mo (incl. taxes)" },
       ],
     },
   ];
 
   const faqs = [
     {
+      question: "What is included in the ₹1,999 Pro plan?",
+      answer:
+        "The Pro plan is ₹1,999 per month, inclusive of all taxes. It provides a full commercial practice license for fee-earning client engagements, priority access to frontier financial reasoning models, multi-sheet cross-workbook batch reconciliation, full statutory tax schedules, and priority firm support.",
+    },
+    {
+      question: "Are there any credit limits, token caps, or usage meters?",
+      answer:
+        "No. Mash does not charge per-token, per-credit, or per-prompt fees. You never need to purchase credit packs or monitor token allowances. Workbooks and audit queries execute smoothly as part of your plan.",
+    },
+    {
       question: "Do I need to configure API keys or connect third-party AI models?",
       answer:
-        "No. Mash includes built-in financial and audit intelligence ready out of the box. You do not need to generate API keys, configure cloud endpoints, or manage complex tokens. Just launch the app and start auditing.",
+        "No. Mash includes built-in financial and audit intelligence ready out of the box. Zero API configuration, zero BYOK, and no cloud accounts required. Just launch the app and start auditing.",
     },
     {
       question: "Is client financial data protected under professional confidentiality standards?",
@@ -79,11 +89,6 @@ export default function PricingPage() {
       answer:
         "No. Mash features a native built-in spreadsheet viewer that opens, navigates, and recalculates multi-tab .xlsx and .csv workbooks directly without requiring Microsoft Office or Excel licenses.",
     },
-    {
-      question: "How does the commercial license work for audit partnerships?",
-      answer:
-        "The Pro plan grants a full commercial firm license, permitting CPAs, Chartered Accountants, and consulting practices to use Mash across all fee-earning statutory audit and tax advisory engagements.",
-    },
   ];
 
   return (
@@ -92,11 +97,11 @@ export default function PricingPage() {
         <title>Pricing &amp; Plans — {SITE_CONFIG.name} for CAs, CPAs &amp; Auditors</title>
         <meta
           name="description"
-          content="Simple, transparent pricing for Mash. Starter plan is free forever for individual accountants. Pro plan for practicing audit firms and CPAs."
+          content="Simple, transparent pricing for Mash. Free plan for individual practitioners. Pro plan at ₹1,999/month (incl. taxes) for practicing CA firms and CPAs."
         />
         <link rel="canonical" href="https://mash.ai/pricing/" />
-        <meta property="og:title" content="Mash Pricing — Free Starter vs Pro Commercial for Audit Firms" />
-        <meta property="og:description" content="Simple, transparent pricing for Mash. Full Windows desktop app is free forever." />
+        <meta property="og:title" content="Mash Pricing — Free vs Pro Commercial License for Audit Firms" />
+        <meta property="og:description" content="Simple, transparent pricing for Mash. Free plan and Pro at ₹1,999/month inclusive of taxes." />
         <meta property="og:url" content="https://mash.ai/pricing/" />
       </Head>
 
@@ -112,7 +117,7 @@ export default function PricingPage() {
               Built for accounting practices.
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
-              Start auditing ledgers for free with the full Windows desktop application, or upgrade to Pro for commercial firm licensing and multi-sheet batch reconciliation.
+              Choose the plan that fits your practice. All core audit capabilities are available on Windows with 100% on-device client confidentiality.
             </p>
 
             {/* Billing Switcher */}
@@ -147,22 +152,21 @@ export default function PricingPage() {
 
           {/* 2-Card Side-by-Side Pricing Matrix */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-20">
-            
-            {/* Plan 1: Starter (Free) */}
+            {/* Plan 1: Free */}
             <div className="rounded-2xl border border-slate-200/90 bg-white p-8 shadow-xs flex flex-col justify-between hover:shadow-md transition-shadow">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-bold text-slate-900 font-sans">Starter</h2>
+                  <h2 className="text-xl font-bold text-slate-900 font-sans">Free</h2>
                   <span className="text-xs font-mono font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
                     Free Forever
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6 font-sans">
-                  Essential AI audit workbench for individual practitioners, sole proprietors, and finance analysts.
+                  Essential AI audit workbench for individual accountants, finance students, and sole practitioners.
                 </p>
 
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-sans">$0</span>
+                  <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-sans">₹0</span>
                   <span className="text-xs text-slate-500 font-medium">/ forever</span>
                 </div>
 
@@ -173,7 +177,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Unlimited local spreadsheet auditing (.xlsx, .csv)</span>
+                    <span>Unlimited local spreadsheet &amp; ledger auditing (.xlsx, .csv)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -181,7 +185,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Built-in audit intelligence (Zero API setup required)</span>
+                    <span>Built-in financial intelligence (Zero API setup required)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -198,7 +202,7 @@ export default function PricingPage() {
                 <a href={SITE_CONFIG.installer.downloadPath} download className="block">
                   <Button variant="secondary" className="w-full gap-2 text-xs font-semibold h-12 border-slate-200 hover:bg-slate-100">
                     <Download className="h-4 w-4" />
-                    <span>Download Free for Windows (.exe)</span>
+                    <span>Download Free for Windows</span>
                   </Button>
                 </a>
                 <span className="block text-center text-[10px] text-slate-400 mt-2 font-mono">
@@ -228,23 +232,30 @@ export default function PricingPage() {
                   For CPAs, Chartered Accountants, and audit partnerships handling client engagements and statutory reviews.
                 </p>
 
-                <div className="flex items-baseline gap-1 mb-6">
+                <div className="flex items-baseline gap-1.5 mb-1">
                   <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-sans">
-                    {billingPeriod === "monthly" ? "$20" : "$16"}
+                    {billingPeriod === "monthly" ? "₹1,999" : "₹1,599"}
                   </span>
                   <span className="text-xs text-slate-500 font-medium">
-                    {billingPeriod === "monthly" ? "/ user / month" : "/ user / month (billed annually)"}
+                    {billingPeriod === "monthly" ? "/ month" : "/ month (billed annually)"}
                   </span>
+                </div>
+                <div className="text-[11px] font-medium text-emerald-700 mb-6">
+                  Inclusive of all taxes
                 </div>
 
                 <div className="space-y-3.5 pt-6 border-t border-slate-100 text-xs text-slate-700 font-sans">
                   <div className="flex items-start gap-2.5 font-semibold text-slate-900">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Everything in Starter, plus:</span>
+                    <span>Everything in Free, plus:</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                     <span>Full commercial firm license for client audit engagements</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>Priority access to frontier financial reasoning models</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -287,7 +298,7 @@ export default function PricingPage() {
                 Audit Feature Comparison
               </h2>
               <p className="text-xs text-slate-500 mt-1 font-sans">
-                Detailed comparison of capabilities between Starter (Sole Practice) and Pro (Firm Practice).
+                Detailed comparison of capabilities between Free and Pro commercial license.
               </p>
             </div>
 
@@ -296,8 +307,8 @@ export default function PricingPage() {
                 <thead>
                   <tr className="border-b border-slate-200/80 bg-slate-50/70">
                     <th className="py-4 px-6 font-semibold text-slate-900 w-1/2">Audit Capabilities</th>
-                    <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Starter ($0)</th>
-                    <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Pro ($20/mo)</th>
+                    <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Free (₹0)</th>
+                    <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Pro (₹1,999/mo)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -314,14 +325,14 @@ export default function PricingPage() {
                             {item.name}
                           </td>
                           <td className="py-3.5 px-4 text-center">
-                            {typeof item.starter === "boolean" ? (
-                              item.starter ? (
+                            {typeof item.free === "boolean" ? (
+                              item.free ? (
                                 <Check className="h-4 w-4 text-emerald-600 mx-auto" />
                               ) : (
                                 <Minus className="h-4 w-4 text-slate-300 mx-auto" />
                               )
                             ) : (
-                              <span className="text-slate-600 font-mono text-[11px]">{item.starter}</span>
+                              <span className="text-slate-600 font-mono text-[11px]">{item.free}</span>
                             )}
                           </td>
                           <td className="py-3.5 px-4 text-center">
@@ -385,7 +396,7 @@ export default function PricingPage() {
               <a href={SITE_CONFIG.installer.downloadPath} download>
                 <Button size="lg" className="gap-2 text-xs font-semibold h-12 px-6 bg-slate-900 hover:bg-slate-800 text-white shadow-sm">
                   <Download className="h-4 w-4" />
-                  <span>Download Mash for Windows ({SITE_CONFIG.installer.sizeDisplay})</span>
+                  <span>Download Mash for Windows</span>
                 </Button>
               </a>
               <Link href="/use-cases">

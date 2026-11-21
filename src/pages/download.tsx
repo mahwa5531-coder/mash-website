@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { Download, ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
+import { Download, ShieldCheck, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SITE_CONFIG } from "@/content/site-config";
@@ -10,14 +10,14 @@ export default function DownloadPage() {
   return (
     <>
       <Head>
-        <title>Download {SITE_CONFIG.name} — {SITE_CONFIG.version} for Windows</title>
+        <title>Download {SITE_CONFIG.name} for Windows</title>
         <meta
           name="description"
-          content={`Download Mash ${SITE_CONFIG.version} for Windows 10/11 64-bit. Official desktop release.`}
+          content="Download Mash for Windows. Official desktop application for financial ledgers and spreadsheets."
         />
         <link rel="canonical" href="https://mash.ai/download/" />
-        <meta property="og:title" content={`Download Mash ${SITE_CONFIG.version} for Windows`} />
-        <meta property="og:description" content={`Official Windows installer for Mash ${SITE_CONFIG.version}. 100% on-device data confidentiality.`} />
+        <meta property="og:title" content="Download Mash for Windows" />
+        <meta property="og:description" content="Official Windows installer for Mash. 100% on-device data confidentiality." />
         <meta property="og:url" content="https://mash.ai/download/" />
       </Head>
 
@@ -33,21 +33,15 @@ export default function DownloadPage() {
           </div>
 
           {/* Main Download Card */}
-          <Card className="border-slate-200/90 shadow-sm p-8 md:p-10 mb-12 bg-white text-center">
+          <Card className="border-slate-200/90 shadow-sm p-10 md:p-14 mb-12 bg-white text-center">
             <div className="max-w-xl mx-auto space-y-6">
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
-                <CheckCircle2 className="h-3.5 w-3.5" />
-                <span>Official Windows Production Release</span>
-              </div>
+              <h2 className="text-3xl font-bold text-slate-900 font-sans tracking-tight">
+                Mash for Windows
+              </h2>
 
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 font-sans mb-1">
-                  Mash for Windows
-                </h2>
-                <p className="text-xs text-slate-500 font-mono">
-                  {SITE_CONFIG.installer.platform} · Version {SITE_CONFIG.version} · {SITE_CONFIG.installer.sizeDisplay}
-                </p>
-              </div>
+              <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed font-sans">
+                Install the standalone desktop application to audit financial ledgers with 100% on-device confidentiality.
+              </p>
 
               <div className="pt-2">
                 <a href={SITE_CONFIG.installer.downloadPath} download>
@@ -73,7 +67,7 @@ export default function DownloadPage() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 font-sans">Download Installer</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-sans">
-                Get the setup file to your computer.
+                Save the setup executable to your computer.
               </p>
             </div>
 
@@ -83,7 +77,7 @@ export default function DownloadPage() {
               </div>
               <h3 className="text-sm font-semibold text-slate-900 font-sans">Run Setup</h3>
               <p className="text-xs text-slate-500 leading-relaxed font-sans">
-                Open the installer to complete standard Windows setup.
+                Launch the installer to complete setup in seconds.
               </p>
             </div>
 
