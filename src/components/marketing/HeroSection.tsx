@@ -75,12 +75,12 @@ export function HeroSection() {
               </Button>
             </a>
 
-            <a href="#pricing" className="w-full sm:w-auto">
+            <Link href="/pricing" className="w-full sm:w-auto">
               <Button variant="secondary" size="lg" className="w-full sm:w-auto gap-2 text-sm h-12 px-5 font-medium border-slate-200/90 hover:bg-slate-100 transition-all">
-                <span>View Plans & Pricing</span>
+                <span>View Plans &amp; Pricing</span>
                 <ChevronRight className="h-4 w-4 text-slate-400" />
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Trust Metrics & Cryptographic Verification Row */}

@@ -32,24 +32,29 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#features" className="hover:text-slate-900 transition-colors">
+                <Link href="/" className="hover:text-slate-900 transition-colors">
+                  Product Overview
+                </Link>
+              </li>
+              <li>
+                <Link href="/#features" className="hover:text-slate-900 transition-colors">
                   Capabilities
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-slate-900 transition-colors">
-                  How It Works
-                </a>
+                <Link href="/use-cases" className="hover:text-slate-900 transition-colors">
+                  Use Cases
+                </Link>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-slate-900 transition-colors">
+                <Link href="/pricing" className="hover:text-slate-900 transition-colors">
                   Pricing &amp; Plans
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#download" className="hover:text-slate-900 transition-colors">
+                <Link href="/download" className="hover:text-slate-900 transition-colors">
                   Download for Windows
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
