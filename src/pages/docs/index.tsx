@@ -18,6 +18,10 @@ export default function DocsIndex({ currentDoc, allDocs, htmlContent }: DocsInde
       <Head>
         <title>{currentDoc.title} — {SITE_CONFIG.name} Documentation</title>
         <meta name="description" content={currentDoc.description} />
+        <link rel="canonical" href="https://mash.ai/docs/" />
+        <meta property="og:title" content={`${currentDoc.title} — Mash Docs`} />
+        <meta property="og:description" content={currentDoc.description} />
+        <meta property="og:url" content="https://mash.ai/docs/" />
       </Head>
 
       <DocsLayout currentDoc={currentDoc} allDocs={allDocs}>

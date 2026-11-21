@@ -11,13 +11,31 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{SITE_CONFIG.name} — {SITE_CONFIG.tagline}</title>
         <meta name="description" content={SITE_CONFIG.subhead} />
+        <meta name="keywords" content="AI workbench, financial forensic audit, 3D Excel, statutory audit, local LLM agent, Sarvam AI, Windows desktop app, offline AI, ripgrep search" />
+        <meta name="author" content="Mash Engineering Team" />
+        <meta name="theme-color" content="#FCFCFD" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        
+        {/* Favicons & App Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        
+        {/* OpenGraph / Social Sharing */}
+        <meta property="og:site_name" content="Mash" />
         <meta property="og:title" content={`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`} />
         <meta property="og:description" content={SITE_CONFIG.subhead} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
+        <meta property="og:url" content="https://mash.ai/" />
+        <meta property="og:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
+        <meta property="og:image:width" content="1440" />
+        <meta property="og:image:height" content="900" />
+        <meta property="og:image:alt" content="Mash Autonomous AI Workbench Dual-Pane View" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`} />
+        <meta name="twitter:description" content={SITE_CONFIG.subhead} />
+        <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
       </Head>
 
       <div className="flex min-h-screen flex-col bg-[#FCFCFD] text-slate-900 selection:bg-slate-200">

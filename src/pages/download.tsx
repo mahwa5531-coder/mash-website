@@ -23,6 +23,10 @@ export default function DownloadPage() {
           name="description"
           content={`Download Mash ${SITE_CONFIG.version} for Windows 10/11 64-bit. Verified installer (${SITE_CONFIG.installer.sizeDisplay}).`}
         />
+        <link rel="canonical" href="https://mash.ai/download/" />
+        <meta property="og:title" content={`Download Mash ${SITE_CONFIG.version} for Windows`} />
+        <meta property="og:description" content={`Verified Windows installer for Mash ${SITE_CONFIG.version} (${SITE_CONFIG.installer.sizeDisplay}). SHA-256 integrity verified.`} />
+        <meta property="og:url" content="https://mash.ai/download/" />
       </Head>
 
       <main className="py-16 md:py-24">

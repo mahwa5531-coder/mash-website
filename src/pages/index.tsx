@@ -11,6 +11,7 @@ export default function Home() {
     <>
       <Head>
         <title>{SITE_CONFIG.name} — {SITE_CONFIG.tagline}</title>
+        <link rel="canonical" href="https://mash.ai/" />
       </Head>
 
       <main>

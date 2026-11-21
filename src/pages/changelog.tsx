@@ -15,6 +15,9 @@ export default function ChangelogPage() {
           name="description"
           content={`Detailed release history and feature changelog for Mash version ${SITE_CONFIG.version}.`}
         />
+        <link rel="canonical" href="https://mash.ai/changelog/" />
+        <meta property="og:title" content={`Changelog — Mash ${SITE_CONFIG.version} Release History`} />
+        <meta property="og:url" content="https://mash.ai/changelog/" />
       </Head>
 
       <main className="py-16 md:py-24">
