@@ -69,11 +69,8 @@ export function Footer() {
               <span>100% On-Device Confidentiality</span>
             </div>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Your financial ledgers and spreadsheets are never transmitted to external cloud training pools.
+              Your financial ledgers, tax IDs, and spreadsheets never leave your personal computer.
             </p>
-            <div className="font-mono text-[10px] text-slate-400 break-all bg-slate-50 p-2 rounded border border-slate-200/60 mt-2">
-              SHA-256: {SITE_CONFIG.installer.sha256.substring(0, 24)}...
-            </div>
           </div>
         </div>
 

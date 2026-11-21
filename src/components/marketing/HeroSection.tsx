@@ -4,14 +4,7 @@ import {
   Download, 
   ChevronRight, 
   ShieldCheck, 
-  Terminal, 
-  Copy, 
-  Check, 
   Brain, 
-  Sparkles, 
-  FileSpreadsheet,
-  Layers,
-  Search,
   CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,13 +13,6 @@ import { WindowMockup } from "@/components/layout/WindowMockup";
 import { SITE_CONFIG } from "@/content/site-config";
 
 export function HeroSection() {
-  const [copied, setCopied] = React.useState(false);
-
-  const copyHash = () => {
-    navigator.clipboard.writeText(SITE_CONFIG.installer.sha256);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <section className="relative overflow-hidden pt-12 pb-24 md:pt-20 md:pb-36 bg-[#FCFCFD]">
@@ -83,35 +69,16 @@ export function HeroSection() {
             </Link>
           </div>
 
-          {/* Trust Metrics & Cryptographic Verification Row */}
+          {/* Trust Metrics Row */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-500 mb-14">
             <span className="flex items-center gap-1.5 font-medium text-slate-700">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-              Windows 10 / 11 64-bit
+              Windows 10 / 11 (64-bit)
             </span>
             <span className="text-slate-300">·</span>
-            <span className="flex items-center gap-1.5 font-mono text-[11px] text-slate-600 bg-white px-2.5 py-1 rounded-md border border-slate-200/80 shadow-2xs">
-              <span>SHA-256: {SITE_CONFIG.installer.sha256.substring(0, 16)}...</span>
-              <button
-                type="button"
-                onClick={copyHash}
-                title="Copy complete SHA-256 checksum"
-                className="hover:text-slate-900 p-0.5 rounded transition-colors cursor-pointer ml-1"
-              >
-                {copied ? (
-                  <span className="inline-flex items-center gap-1 text-emerald-600 font-sans font-medium text-[10px]">
-                    <Check className="h-3 w-3" /> Copied!
-                  </span>
-                ) : (
-                  <Copy className="h-3 w-3 text-slate-400 hover:text-slate-700" />
-                )}
-              </button>
-            </span>
+            <span className="text-slate-600 font-medium">Free for individual practitioners</span>
             <span className="text-slate-300">·</span>
-            <span className="flex items-center gap-1.5 text-slate-600 font-medium">
-              <Terminal className="h-3.5 w-3.5 text-slate-500" />
-              100% Local Sandbox
-            </span>
+            <span className="text-slate-600 font-medium">100% on-device client confidentiality</span>
           </div>
         </div>
 

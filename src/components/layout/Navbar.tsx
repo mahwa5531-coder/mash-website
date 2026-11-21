@@ -29,12 +29,6 @@ export function Navbar() {
               Mash
             </span>
           </Link>
-
-          {/* Windows Desktop Pill */}
-          <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-slate-200/80 bg-slate-100/70 px-2.5 py-0.5 text-[11px] font-mono font-medium text-slate-700">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            Windows Desktop
-          </span>
         </div>
 
         {/* Center Desktop Navigation */}
