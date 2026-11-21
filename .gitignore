@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build and export
+/.next/
+/out/
+
+# Production binaries > 100MB (host on GitHub Releases instead of git tracking)
+public/releases/*.exe
+public/releases/*.zip
+public/releases/*.dmg
+public/releases/*.AppImage
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log
+
+# Local env files
+.env*.local
+.env
+
+# TypeScript
+*.tsbuildinfo
