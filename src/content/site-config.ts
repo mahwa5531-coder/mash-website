@@ -14,16 +14,17 @@ export interface SiteConfig {
   };
   links: {
     github: string;
-    docs: string;
-    changelog: string;
+    features: string;
+    howItWorks: string;
+    pricing: string;
     download: string;
   };
 }
 
 export const SITE_CONFIG: SiteConfig = {
   name: "Mash",
-  tagline: "The autonomous AI workbench for complex work.",
-  subhead: "Analyze data, inspect spreadsheets, and build software alongside an agent that reads, edits, and executes on your local computer.",
+  tagline: "The desktop AI workbench for spreadsheets & financial data.",
+  subhead: "Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your confidential company data never leaves your computer.",
   version: "0.1.0",
   releaseDate: "November 20, 2026",
   installer: {
@@ -36,8 +37,9 @@ export const SITE_CONFIG: SiteConfig = {
   },
   links: {
     github: "https://github.com/mahwa5531-coder/mash-website",
-    docs: "/docs",
-    changelog: "/changelog",
+    features: "#features",
+    howItWorks: "#how-it-works",
+    pricing: "#pricing",
     download: "/download"
   }
 };

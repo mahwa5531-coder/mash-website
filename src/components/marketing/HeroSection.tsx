@@ -51,24 +51,18 @@ export function HeroSection() {
             </span>
             <span className="font-semibold text-slate-900">Mash {SITE_CONFIG.version} for Windows</span>
             <span className="text-slate-400">·</span>
-            <span>Stable Production Release</span>
-            <Link
-              href="/changelog"
-              className="inline-flex items-center text-slate-400 hover:text-slate-900 transition-colors ml-0.5"
-            >
-              <ChevronRight className="h-3 w-3" />
-            </Link>
+            <span>Desktop Edition</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold tracking-tight text-slate-900 leading-[1.08] mb-6 font-sans">
-            The autonomous AI workbench <br className="hidden sm:inline" />
-            for complex work.
+          <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-bold tracking-tight text-slate-900 leading-[1.08] mb-6 font-sans">
+            The desktop AI workbench for <br className="hidden sm:inline" />
+            spreadsheets & financial data.
           </h1>
 
           {/* Subhead */}
           <p className="max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed mb-8 font-sans">
-            Analyze live data, inspect local spreadsheets, and build software alongside an agent that reads, edits, and executes on your machine.
+            Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your confidential numbers never leave your computer.
           </p>
 
           {/* Action CTAs Stack */}
@@ -81,12 +75,12 @@ export function HeroSection() {
               </Button>
             </a>
 
-            <Link href="/docs" className="w-full sm:w-auto">
+            <a href="#pricing" className="w-full sm:w-auto">
               <Button variant="secondary" size="lg" className="w-full sm:w-auto gap-2 text-sm h-12 px-5 font-medium border-slate-200/90 hover:bg-slate-100 transition-all">
-                <span>Explore Documentation</span>
+                <span>View Plans & Pricing</span>
                 <ChevronRight className="h-4 w-4 text-slate-400" />
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Trust Metrics & Cryptographic Verification Row */}

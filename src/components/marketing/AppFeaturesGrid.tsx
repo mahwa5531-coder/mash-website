@@ -6,9 +6,8 @@ import {
   Brain, 
   ShieldCheck,
   CheckCircle2,
-  ChevronRight
+  Search
 } from "lucide-react";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -24,11 +23,11 @@ export function AppFeaturesGrid() {
             How the workbench actually works.
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed font-sans">
-            Mash brings together autonomous LLM reasoning with a native Windows desktop inspection environment.
+            Mash brings together deep spreadsheet reasoning with a native Windows desktop inspection environment.
           </p>
         </div>
 
-        {/* 5-Card Asymmetrical Bento Matrix (Only Coded App Features) */}
+        {/* 4-Card Asymmetrical Bento Matrix (Business & Finance Focus) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           
           {/* Card 1: Resizable Dual-Pane Workspace (2 Columns Wide) */}
@@ -43,10 +42,10 @@ export function AppFeaturesGrid() {
                 </span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2 font-sans">
-                Dual-Pane Split with Collapsible Sidebar
+                Dual-Pane Split with Collapsible Workspace
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed max-w-xl font-sans">
-                Work in an uncluttered single-pane chat or slide open the resizable 880px right sidebar to inspect spreadsheets, audit logs, and document deliverables alongside the agent.
+                Work in an uncluttered single-pane conversation or slide open the resizable 880px inspection pane to view spreadsheets, audit ledgers, and document deliverables alongside the assistant.
               </p>
             </div>
 
@@ -55,7 +54,7 @@ export function AppFeaturesGrid() {
               <div className="rounded-lg border border-slate-200/90 bg-white p-3 shadow-2xs font-mono text-xs flex items-center justify-between">
                 <div className="flex items-center gap-2 text-slate-700">
                   <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span className="font-semibold text-[11px]">RightSidebar.tsx</span>
+                  <span className="font-semibold text-[11px]">Dual-Pane Split Canvas</span>
                   <span className="text-slate-400 text-[10px]">· Active Width: 880px</span>
                 </div>
                 <span className="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
@@ -65,7 +64,7 @@ export function AppFeaturesGrid() {
             </div>
           </Card>
 
-          {/* Card 2: Transparent Reasoning Drawer (1 Column) */}
+          {/* Card 2: Transparent Verification Trace (1 Column) */}
           <Card className="hover:shadow-md transition-all duration-300 border-slate-200/90 flex flex-col justify-between">
             <div className="p-6">
               <div className="flex items-center gap-2 mb-3">
@@ -73,14 +72,14 @@ export function AppFeaturesGrid() {
                   <Brain className="h-4 w-4" />
                 </div>
                 <span className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wider">
-                  Deduction Trace
+                  Audit Trail
                 </span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2 font-sans">
-                Thinking Token Inspector
+                Step-by-Step Verification
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Inspect every step the agent takes before generating deliverables. Shows exact token count and execution duration.
+                Inspect every reasoning checkpoint before finalizing numbers. Shows exact calculation duration and voucher checks.
               </p>
             </div>
 
@@ -113,7 +112,7 @@ export function AppFeaturesGrid() {
                 Multi-Sheet Excel Viewer
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Full support for multi-tab workbooks (.xlsx), formula evaluations, and spatial 3D bar/pie visual projections.
+                Full support for multi-tab workbooks (.xlsx, .csv), formula evaluations, and interactive 3D bar/pie visual projections.
               </p>
             </div>
 
@@ -132,33 +131,33 @@ export function AppFeaturesGrid() {
             </div>
           </Card>
 
-          {/* Card 4: Streaming Terminal & Real Tools (2 Columns Wide) */}
+          {/* Card 4: Deep Ledger Search & Live Audit Logs (2 Columns Wide) */}
           <Card className="md:col-span-2 overflow-hidden hover:shadow-md transition-all duration-300 border-slate-200/90 flex flex-col justify-between">
             <div className="p-6 pb-4">
               <div className="flex items-center gap-2 mb-3">
                 <div className="p-1.5 rounded-md bg-slate-900 text-white">
-                  <Terminal className="h-4 w-4" />
+                  <Search className="h-4 w-4" />
                 </div>
                 <span className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wider">
-                  Tool Execution
+                  Data Discovery
                 </span>
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2 font-sans">
-                Real Local Shell & Ripgrep Search
+                Deep Ledger Search & Live Audit Logs
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed max-w-xl font-sans">
-                The agent invokes genuine local tools within your workspace directory. Streams real-time terminal output with full stdout and stderr inspection.
+                Instantly searches thousands of rows across local spreadsheets. Displays real-time reconciliation logs and calculation checkpoints directly on your screen.
               </p>
             </div>
 
             <div className="mt-4 border-t border-slate-200/80 bg-slate-900 p-4 text-slate-100 font-mono text-xs">
               <div className="flex items-center justify-between text-slate-400 text-[10px] mb-2 pb-1 border-b border-slate-800">
-                <span>TerminalViewer.tsx</span>
-                <span className="text-emerald-400">● live stream</span>
+                <span>AuditLogStream</span>
+                <span className="text-emerald-400">● live audit stream</span>
               </div>
               <div className="space-y-1 text-[11px]">
-                <div className="text-slate-300">$ search_file_content --query "DISCREPANCY" --path "./ledgers"</div>
-                <div className="text-emerald-400">› 4 matches found in general_ledger_audit.xlsx:line 182</div>
+                <div className="text-slate-300">&gt; search_ledger --query &quot;DISCREPANCY&quot; --path &quot;./ledgers&quot;</div>
+                <div className="text-emerald-400">&rsaquo; 4 matches flagged in general_ledger_audit.xlsx:line 182</div>
               </div>
             </div>
           </Card>
@@ -173,14 +172,14 @@ export function AppFeaturesGrid() {
             </div>
             <div>
               <div className="font-semibold text-slate-900">100% Local Workstation Privacy</div>
-              <div className="text-slate-500 text-[11px]">All spreadsheets, code, and deliverables remain stored on your machine.</div>
+              <div className="text-slate-500 text-[11px]">All spreadsheets, financial data, and reports remain stored exclusively on your local computer.</div>
             </div>
           </div>
 
-          <Link href="/docs/agent-tools-and-safety" className="inline-flex items-center gap-1 font-medium text-slate-700 hover:text-slate-900 text-xs">
-            <span>Read safety docs</span>
-            <ChevronRight className="h-3.5 w-3.5" />
-          </Link>
+          <div className="flex items-center gap-2 font-mono text-[11px] text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60 font-medium">
+            <CheckCircle2 className="h-3.5 w-3.5" />
+            <span>Zero Cloud Training Retention</span>
+          </div>
         </div>
       </div>
     </section>
