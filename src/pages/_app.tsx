@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/content/site-config";
+import { assetPath } from "@/lib/utils";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,8 +17,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Favicons & App Icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="icon" href={assetPath("/favicon.ico")} sizes="any" />
+        <link rel="apple-touch-icon" href={assetPath("/apple-icon.png")} />
         
         {/* OpenGraph / Social Sharing */}
         <meta property="og:site_name" content="Mash" />

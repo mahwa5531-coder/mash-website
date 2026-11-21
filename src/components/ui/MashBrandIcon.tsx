@@ -1,4 +1,5 @@
 import React from "react";
+import { assetPath } from "@/lib/utils";
 
 export interface MashBrandIconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   size?: number | string;
@@ -18,12 +19,13 @@ export function MashBrandIcon({
   const pixelSize = typeof size === "number" ? `${size}px` : size;
   const numSize = typeof size === "number" ? size : parseInt(String(size), 10) || 24;
   
-  const defaultSrc = numSize <= 16 ? "/brand-logo-16.png" : numSize <= 24 ? "/brand-logo-24.png" : numSize <= 32 ? "/brand-logo-32.png" : "/brand-logo.png";
+  const rawSrc = numSize <= 16 ? "/brand-logo-16.png" : numSize <= 24 ? "/brand-logo-24.png" : numSize <= 32 ? "/brand-logo-32.png" : "/brand-logo.png";
+  const defaultSrc = assetPath(rawSrc);
   const srcSet = numSize <= 20
-    ? "/brand-logo-16.png 1x, /brand-logo-32.png 2x, /brand-logo-48.png 3x"
+    ? `${assetPath("/brand-logo-16.png")} 1x, ${assetPath("/brand-logo-32.png")} 2x, ${assetPath("/brand-logo-48.png")} 3x`
     : numSize <= 32
-    ? "/brand-logo-32.png 1x, /brand-logo-64.png 2x"
-    : "/brand-logo-64.png 1x, /brand-logo-128.png 2x, /brand-logo.png 3x";
+    ? `${assetPath("/brand-logo-32.png")} 1x, ${assetPath("/brand-logo-64.png")} 2x`
+    : `${assetPath("/brand-logo-64.png")} 1x, ${assetPath("/brand-logo-128.png")} 2x, ${assetPath("/brand-logo.png")} 3x`;
 
   return (
     <img

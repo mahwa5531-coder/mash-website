@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Table, ShieldCheck, FileSpreadsheet, Sparkles, Terminal } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn, assetPath } from "@/lib/utils";
 
 interface WindowMockupProps {
   title?: string;
@@ -87,7 +87,7 @@ export function WindowMockup({
       <div className="relative aspect-[16/10] w-full bg-slate-100 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={assetPath(src)}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
