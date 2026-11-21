@@ -25,11 +25,16 @@ For complex financial workflows, open the right-hand inspection sidebar:
 - **Right Column:** An 880px-wide spreadsheet canvas with formula support, sheet tabs, and 3D spatial projections.
 - **Bi-directional Sync:** As the agent writes calculations or audits rows, the spreadsheet viewer updates in real time.
 
+## Workspace Controls & Navigation
+
+- **Toggling the Inspection Pane:** Click the layout toggle icon in the top navigation bar or click any deliverable badge (such as `.xlsx` or terminal logs) within a message turn to open the right sidebar.
+- **Resizing the Pane:** Drag the border handle between the chat canvas and the inspection pane to adjust the width (default: 880px).
+
 ## Keyboard Shortcuts
 
 | Shortcut | Action |
 | :--- | :--- |
-| `Ctrl + Enter` | Submit prompt to agent |
-| `Ctrl + B` | Toggle right-hand spreadsheet pane |
-| `Ctrl + Shift + F` | Search workspace files |
-| `Esc` | Close active modal or sheet maximizer |
+| `Enter` | Submit prompt to agent |
+| `Shift + Enter` | Insert newline in composer |
+| `Ctrl + ;` | Open workspace / project selector |
+| `Esc` | Close active modal or lightbox preview |

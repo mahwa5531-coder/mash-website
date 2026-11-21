@@ -11,7 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{SITE_CONFIG.name} — {SITE_CONFIG.tagline}</title>
         <meta name="description" content={SITE_CONFIG.subhead} />
-        <meta name="keywords" content="AI workbench, financial forensic audit, 3D Excel, statutory audit, local LLM agent, Sarvam AI, Windows desktop app, offline AI, ripgrep search" />
         <meta name="author" content="Mash Engineering Team" />
         <meta name="theme-color" content="#FCFCFD" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
