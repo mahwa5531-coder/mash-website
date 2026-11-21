@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
+import { MashBrandIcon } from "@/components/ui/MashBrandIcon";
 import { SITE_CONFIG } from "@/content/site-config";
 
 export function Footer() {
@@ -9,9 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-slate-900 text-white font-mono font-bold text-xs">
-                M
-              </span>
+              <MashBrandIcon size={22} />
               <span className="font-semibold text-slate-900 tracking-tight text-sm">
                 Mash
               </span>

@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { MashBrandIcon } from "@/components/ui/MashBrandIcon";
 import { SITE_CONFIG } from "@/content/site-config";
 import { cn } from "@/lib/utils";
 
@@ -41,13 +42,7 @@ export function Navbar() {
         {/* Brand Monogram & Wordmark */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative flex h-7 w-7 items-center justify-center rounded-lg bg-slate-900 text-white shadow-xs group-hover:bg-slate-800 transition-all">
-              {/* Custom SVG Geometric Monogram */}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 19V5L12 12L20 5V19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="18" r="2" fill="#059669" />
-              </svg>
-            </div>
+            <MashBrandIcon size={26} className="transition-transform group-hover:scale-105" />
             <span className="font-bold text-slate-900 tracking-tight text-base font-sans">
               Mash
             </span>
