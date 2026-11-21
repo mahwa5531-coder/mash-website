@@ -2,7 +2,7 @@ import * as React from "react";
 import Head from "next/head";
 import { HeroSection } from "@/components/marketing/HeroSection";
 import { FeatureTabs } from "@/components/marketing/FeatureTabs";
-import { ValueProps } from "@/components/marketing/ValueProps";
+import { AppFeaturesGrid } from "@/components/marketing/AppFeaturesGrid";
 import { DownloadCard } from "@/components/marketing/DownloadCard";
 import { SITE_CONFIG } from "@/content/site-config";
 
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeatureTabs />
-        <ValueProps />
+        <AppFeaturesGrid />
         <DownloadCard />
       </main>
     </>
