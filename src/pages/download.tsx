@@ -36,7 +36,7 @@ export default function DownloadPage() {
               Download Mash for Windows
             </h1>
             <p className="text-base text-slate-600 leading-relaxed">
-              Standalone desktop application with full local tool support, 3D spreadsheet engine, and verified cryptographic integrity.
+              Standalone desktop application with built-in financial audit intelligence, multi-tab Excel support, and verified cryptographic integrity.
             </p>
           </div>
 

@@ -125,7 +125,7 @@ export function HeroSection() {
               <div className="truncate">
                 <span className="text-slate-400 font-mono mr-1.5 font-medium">User:</span>
                 <span className="text-slate-800 font-medium truncate">
-                  "Audit financial ledgers for FY24-25, flag VAT discrepancies, and project the 3D sheet"
+                  "Audit financial ledgers for FY24-25, flag VAT discrepancies, and highlight variance rows"
                 </span>
               </div>
             </div>
@@ -150,7 +150,7 @@ export function HeroSection() {
             activeFile="Audit_Deliverables / mash_full_feature_audit.xlsx"
             badge="Live Model Execution"
             src="/screenshots/mash_real_llm_hero_dual_pane_top_light.png"
-            alt="Mash Dual-Pane Workbench showing agent chat generating statutory audit table and 3D Excel sheet"
+            alt="Mash Dual-Pane Workbench showing agent chat generating statutory audit table and live Excel sheet"
             priority={true}
           />
         </div>

@@ -5,11 +5,12 @@ import {
   Brain, 
   MessageSquare, 
   CheckCircle2, 
-  BarChart3, 
   Search, 
   ShieldCheck,
   FileSpreadsheet,
-  ArrowRight
+  FileCheck2,
+  FileSearch,
+  Scale
 } from "lucide-react";
 import { WindowMockup } from "@/components/layout/WindowMockup";
 import { Badge } from "@/components/ui/badge";
@@ -26,133 +27,133 @@ interface ZigZagItem {
   alt: string;
   activeFile: string;
   windowBadge: string;
-  reverseLayout: boolean; // if true, text on left, image on right. if false, image on left, text on right.
+  reverseLayout: boolean;
 }
 
 const ZIGZAG_ITEMS: ZigZagItem[] = [
   {
     id: "dual-pane",
-    badge: "WORKSPACE ARCHITECTURE",
+    badge: "AUDIT WORKBENCH",
     badgeColor: "bg-blue-50 text-blue-700 border-blue-200/60",
-    title: "Dual-Pane Split: Conversation and Spreadsheets Side-by-Side.",
-    subtitle: "Stop toggling between 10 different windows.",
+    title: "Dual-Pane Split: AI Audit Partner Beside Your Live Workbooks.",
+    subtitle: "Review flagged voucher lines and audit findings without leaving your sheet.",
     description:
-      "Mash docks an interactive AI conversational assistant directly beside an 880px-wide spreadsheet canvas. As the assistant audits ledgers, calculates variances, or detects discrepancies, the spreadsheet updates in real time on your screen.",
+      "Mash docks an autonomous audit assistant directly beside your active Excel spreadsheet. Prompt the assistant to verify journal vouchers, calculate quarterly variance percentages, or investigate suspicious accounts while watching your workbook update live on your screen.",
     proofPoints: [
       {
         icon: <Layers className="h-4 w-4 text-blue-600" />,
-        label: "880px Resizable Split View",
-        detail: "Spreadsheets sit side-by-side with chat without horizontal compression or awkward scrolling.",
+        label: "Side-by-Side Audit Canvas",
+        detail: "Keep general ledgers open alongside the assistant without juggling multiple Excel windows.",
       },
       {
         icon: <CheckCircle2 className="h-4 w-4 text-emerald-600" />,
-        label: "Live Bi-Directional Sync",
-        detail: "Modifying values or formulas in the chat instantly updates cell rows in the active workbook.",
+        label: "Instant Cell-Level Verification",
+        detail: "Flagged ledger discrepancies and accounting adjustments update directly in the active sheet.",
       },
       {
-        icon: <ShieldCheck className="h-4 w-4 text-slate-800" />,
-        label: "Zero Context Switching",
-        detail: "Ask questions, review voucher lines, and inspect calculations in one unified workspace.",
+        icon: <Search className="h-4 w-4 text-slate-800" />,
+        label: "Eliminate Manual VLOOKUPs",
+        detail: "Cross-reference account codes, tax rates, and voucher dates automatically across multi-tab files.",
       },
     ],
     screenshot: "/screenshots/mash_real_llm_hero_dual_pane_top_light.png",
-    alt: "Mash dual-pane split workspace showing chat on left and Excel workbook with 3D chart on right",
+    alt: "Mash dual-pane split workspace showing chat on left and Excel workbook with reconciliation table on right",
     activeFile: "Audit_Deliverables / mash_full_feature_audit.xlsx",
-    windowBadge: "Live Dual-Pane Execution",
-    reverseLayout: false, // Image Left, Text Right
+    windowBadge: "Live Audit Execution",
+    reverseLayout: false,
   },
   {
-    id: "spreadsheet-engine",
-    badge: "SPREADSHEET ENGINE",
+    id: "full-scope-audit",
+    badge: "STATUTORY RECONCILIATION",
     badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200/60",
-    title: "Multi-Sheet Excel Viewer with 3D Spatial Visual Projections.",
-    subtitle: "Built from the ground up for high-volume financial workbooks.",
+    title: "Full-Scope Transaction Auditing: Moving Beyond Risky Sampling.",
+    subtitle: "Scan 100% of journal vouchers across multi-tab workbooks in seconds.",
     description:
-      "Seamlessly open complex multi-tab workbooks (.xlsx, .csv). Switch between Executive Dashboards, Monthly Trends, and General Ledger listings with full formula evaluation, zoom controls, and interactive 3D spatial charts.",
+      "Manual 5% sampling leaves material errors and fraud risks undetected. Mash scans every single voucher line across multiple ledger tabs, performing automated debit/credit balancing, bank feed matching, and Benford's Law anomaly checks in seconds.",
     proofPoints: [
       {
-        icon: <Table className="h-4 w-4 text-emerald-600" />,
-        label: "Multi-Sheet Tab Navigation",
-        detail: "Effortlessly toggle between summary dashboards, trend analyses, and voucher listings.",
+        icon: <Scale className="h-4 w-4 text-emerald-600" />,
+        label: "100% Ledger Coverage",
+        detail: "Audit every transaction voucher rather than taking statistical sample guesses.",
       },
       {
-        icon: <BarChart3 className="h-4 w-4 text-amber-600" />,
-        label: "3D Orbital Chart Depth",
-        detail: "Visualize quarterly variance magnitudes in interactive 3D space with orbital rotation.",
+        icon: <Table className="h-4 w-4 text-blue-600" />,
+        label: "Multi-Tab Workpaper Sync",
+        detail: "Reconcile trial balances, revenue schedules, and ledger voucher listings simultaneously.",
       },
       {
-        icon: <FileSpreadsheet className="h-4 w-4 text-blue-600" />,
-        label: "Built-in Calculation Engine",
-        detail: "Real-time formula bar supporting SUM, AVERAGE, and custom accounting variance models.",
+        icon: <CheckCircle2 className="h-4 w-4 text-amber-600" />,
+        label: "Automated Anomaly Detection",
+        detail: "Instantly flags duplicate invoice numbers, threshold breaches, and uncredited deposits.",
       },
     ],
     screenshot: "/screenshots/excel_pw_light_maximized_sheet1.png",
-    alt: "Maximized light mode Excel workbook showing executive dashboard and 3D bar chart",
+    alt: "Maximized light mode Excel workbook showing statutory audit summary and ledger reconciliation",
     activeFile: "Workbooks / Executive_Dashboard_FY25.xlsx",
-    windowBadge: "Maximized Spreadsheet View",
-    reverseLayout: true, // Text Left, Image Right
+    windowBadge: "Statutory Reconciliation View",
+    reverseLayout: true,
   },
   {
     id: "audit-trace",
-    badge: "AUDIT TRANSPARENCY",
+    badge: "WORKPAPER TRANSPARENCY",
     badgeColor: "bg-amber-50 text-[#C8522C] border-amber-200/60",
-    title: "Step-by-Step Verification: Full Audit Trail Transparency.",
-    subtitle: "Trust in numbers requires an auditable deduction trail.",
+    title: "Step-by-Step Audit Trail: Documented Proof for Review Partners.",
+    subtitle: "Every calculation is backed by an auditable deduction trail.",
     description:
-      "Inspect the exact calculation checkpoints and reasoning trail behind every answer. Mash shows how numbers were cross-referenced, which voucher rows were scanned, and what formulas were applied before deliverables are generated.",
+      "Black-box AI is unacceptable in statutory audits. Mash details every voucher checked, every formula verified, and every intermediate ledger step. Review partners can inspect the exact reasoning trail before signing off on working papers.",
     proofPoints: [
       {
         icon: <Brain className="h-4 w-4 text-[#C8522C]" />,
-        label: "Transparent Thought Traces",
-        detail: "Click the reasoning disclosure to review intermediate verification steps and token duration.",
+        label: "Verifiable Deduction Trail",
+        detail: "Complete transparency into how variances were computed and which voucher rows were tested.",
       },
       {
-        icon: <Search className="h-4 w-4 text-blue-600" />,
-        label: "Instant Voucher Search",
-        detail: "Scans thousands of ledger rows across local spreadsheets in milliseconds to flag discrepancies.",
-      },
-      {
-        icon: <CheckCircle2 className="h-4 w-4 text-emerald-600" />,
+        icon: <FileSearch className="h-4 w-4 text-blue-600" />,
         label: "Zero Silent Overwrites",
-        detail: "Every suggested correction requires explicit user approval before updating files.",
+        detail: "Suggested journal adjustments and ledger corrections require explicit auditor confirmation.",
+      },
+      {
+        icon: <ShieldCheck className="h-4 w-4 text-emerald-600" />,
+        label: "Compliance Review Ready",
+        detail: "Audit trails are formatted for external peer reviews, tax inspections, and permanent workpapers.",
       },
     ],
     screenshot: "/screenshots/mash_single_pane_chat_thought_expanded_light.png",
-    alt: "Agent chat showing expanded thought steps and audit verification badges",
+    alt: "Agent chat showing expanded thought steps and audit verification checkpoints",
     activeFile: "Audit_Reports / reconciliation_trace.log",
-    windowBadge: "Verification Trace",
-    reverseLayout: false, // Image Left, Text Right
+    windowBadge: "Audit Trail Trace",
+    reverseLayout: false,
   },
   {
     id: "focused-chat",
-    badge: "DISTRACTION-FREE MODE",
+    badge: "CLIENT DELIVERABLES",
     badgeColor: "bg-purple-50 text-purple-700 border-purple-200/60",
-    title: "Focused Single-Pane Chat with Clickable Deliverables.",
-    subtitle: "Collapse the canvas when you need pure conversational focus.",
+    title: "Instant Audit Schedules & Verified Client Deliverables.",
+    subtitle: "Generate working papers with live formulas intact.",
     description:
-      "When reviewing executive summaries or discussing high-level accounting strategies, collapse the right sidebar with one click. Generated audit tables, discrepancy summaries, and verified .xlsx workbooks appear as clean, actionable cards.",
+      "Collapse the spreadsheet pane when discussing strategic accounting opinions or drafting audit memorandums. When finished, export final audit schedules as native .xlsx workbooks with working formulas intact for clients or review committees.",
     proofPoints: [
       {
-        icon: <MessageSquare className="h-4 w-4 text-purple-600" />,
-        label: "100% Focused Viewport",
-        detail: "Maximized reading width for long-form statutory audit reports and financial summaries.",
+        icon: <FileSpreadsheet className="h-4 w-4 text-purple-600" />,
+        label: "Working Formula Integrity",
+        detail: "Exported workbooks retain real Excel formulas (=SUM, =AVERAGE) rather than static values.",
       },
       {
-        icon: <FileSpreadsheet className="h-4 w-4 text-emerald-600" />,
-        label: "One-Click Deliverable Cards",
-        detail: "Generated Excel workbooks and reports appear as clickable download badges.",
+        icon: <FileCheck2 className="h-4 w-4 text-emerald-600" />,
+        label: "Executive Audit Memos",
+        detail: "Clean markdown tables and findings ready for inclusion in board packs and audit reports.",
       },
       {
         icon: <ShieldCheck className="h-4 w-4 text-slate-800" />,
-        label: "100% On-Device Privacy",
-        detail: "All spreadsheets, code, and chat transcripts remain strictly on your local PC.",
+        label: "100% On-Device Client Privacy",
+        detail: "Client financial statements, tax IDs, and bank transactions never leave your local PC.",
       },
     ],
     screenshot: "/screenshots/mash_single_pane_chat_light.png",
     alt: "Single-pane focused chat view with statutory audit deliverable card",
     activeFile: "Agent_Session / financial_statutory_audit.md",
-    windowBadge: "Single-Pane Focus",
-    reverseLayout: true, // Text Left, Image Right
+    windowBadge: "Executive Deliverables",
+    reverseLayout: true,
   },
 ];
 
@@ -163,13 +164,13 @@ export function ZigZagFeatures() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
           <Badge variant="secondary" className="mb-3 text-[11px] font-mono uppercase tracking-wider">
-            PRODUCT CAPABILITIES
+            AUDIT CAPABILITIES
           </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4 font-sans">
-            Engineered for high-stakes spreadsheet work.
+            Engineered for practicing CAs, CPAs, and auditors.
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
-            Explore the real software interfaces designed to audit financial ledgers, inspect complex Excel workbooks, and automate reconciliation.
+            Explore the real software interfaces designed to audit general ledgers, reconcile statutory tax returns, and automate workpaper verification.
           </p>
         </div>
 
@@ -182,7 +183,7 @@ export function ZigZagFeatures() {
                 item.reverseLayout ? "lg:flex-row-reverse" : ""
               }`}
             >
-              {/* Visual Column (7 Cols on Desktop) */}
+              {/* Visual Column */}
               <div className="w-full lg:w-7/12">
                 <div className="relative group transition-transform duration-300 hover:scale-[1.01]">
                   <WindowMockup
@@ -195,7 +196,7 @@ export function ZigZagFeatures() {
                 </div>
               </div>
 
-              {/* Text Description Column (5 Cols on Desktop) */}
+              {/* Text Description Column */}
               <div className="w-full lg:w-5/12 space-y-5">
                 <div>
                   <span

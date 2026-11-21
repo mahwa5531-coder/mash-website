@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import { SITE_CONFIG } from "@/content/site-config";
 
 export default function PricingPage() {
@@ -20,83 +19,83 @@ export default function PricingPage() {
 
   const comparisonFeatures = [
     {
-      category: "Desktop Application & Core",
+      category: "Audit Workspace & Interface",
       items: [
-        { name: "Windows 10 / 11 64-bit Desktop App", starter: true, pro: true },
-        { name: "Dual-Pane Split Workspace (880px)", starter: true, pro: true },
-        { name: "Single-Pane Distraction-Free Mode", starter: true, pro: true },
-        { name: "100% On-Device Local File Privacy", starter: true, pro: true },
-        { name: "Bring Your Own Model / Local Endpoint", starter: true, pro: true },
+        { name: "Windows 10 / 11 64-bit Desktop Application", starter: true, pro: true },
+        { name: "Side-by-Side Dual-Pane Audit Canvas (880px)", starter: true, pro: true },
+        { name: "Single-Pane Executive Review Mode", starter: true, pro: true },
+        { name: "Built-in Financial Intelligence (Zero API setup)", starter: true, pro: true },
+        { name: "100% On-Device Client Data Confidentiality", starter: true, pro: true },
       ],
     },
     {
-      category: "Spreadsheet & Calculation Engine",
+      category: "Transaction Testing & Reconciliation",
       items: [
-        { name: "Open & View .xlsx, .csv, .tsv Files", starter: true, pro: true },
-        { name: "Multi-Sheet Tab Navigation", starter: true, pro: true },
-        { name: "Live Formula Calculation Bar", starter: true, pro: true },
-        { name: "Interactive 3D Spatial Vector Charts", starter: "Standard", pro: "Advanced Orbital" },
-        { name: "Multi-Sheet Cross-Workbook Batch Audits", starter: false, pro: true },
+        { name: "Open & Audit .xlsx, .csv, and .tsv Ledgers", starter: true, pro: true },
+        { name: "Multi-Tab Workbook Reconciliation", starter: true, pro: true },
+        { name: "Automated Debit / Credit Balancing & Variance Flagging", starter: true, pro: true },
+        { name: "100% Transaction Anomaly & Duplicate Detection", starter: "Standard", pro: "Full Anomaly Suite" },
+        { name: "Multi-Sheet Batch Reconciliation (Bank vs Books)", starter: false, pro: true },
       ],
     },
     {
-      category: "Forensic Auditing & Templates",
+      category: "Statutory Schedules & Workpapers",
       items: [
         { name: "Standard Account Variance Prompts", starter: true, pro: true },
-        { name: "Automated Tax / VAT Mismatch Detection", starter: "Basic", pro: "Full Statutory" },
-        { name: "General Ledger Line-by-Line Flagging", starter: true, pro: true },
-        { name: "Advanced Forensic & Reconciliation Templates", starter: false, pro: true },
-        { name: "Custom Audit Rules & Validation Schemas", starter: false, pro: true },
+        { name: "Statutory Tax & VAT/GST Mismatch Detection", starter: "Basic", pro: "Full Statutory Schedules" },
+        { name: "General Ledger Line-by-Line Voucher Flagging", starter: true, pro: true },
+        { name: "Export Working Papers with Formula Integrity", starter: true, pro: true },
+        { name: "Custom Audit Rules & Materiality Thresholds", starter: false, pro: true },
       ],
     },
     {
-      category: "Licensing & Support",
+      category: "Client Privacy & Firm Licensing",
       items: [
-        { name: "Usage License", starter: "Personal / Non-commercial", pro: "Full Commercial License" },
-        { name: "Automatic Binary Updates", starter: true, pro: true },
-        { name: "Support Channel", starter: "Community Support", pro: "Priority Support & Onboarding" },
+        { name: "Engagement License", starter: "Individual / Sole Practice", pro: "Full Commercial Firm License" },
+        { name: "Automatic Security & Core Application Updates", starter: true, pro: true },
+        { name: "Support Channel", starter: "Standard Support", pro: "Priority Firm Onboarding & Support" },
       ],
     },
   ];
 
   const faqs = [
     {
-      question: "Do I need Microsoft Excel installed on my PC?",
+      question: "Do I need to configure API keys or connect third-party AI models?",
       answer:
-        "No. Mash features a built-in virtualized spreadsheet engine that natively renders, navigates, and calculates .xlsx and .csv workbooks without requiring Microsoft Office or Excel licenses.",
+        "No. Mash includes built-in financial and audit intelligence ready out of the box. You do not need to generate API keys, configure cloud endpoints, or manage complex tokens. Just launch the app and start auditing.",
     },
     {
-      question: "Where is my confidential financial data stored?",
+      question: "Is client financial data protected under professional confidentiality standards?",
       answer:
-        "100% on your local computer. Your spreadsheet cells, company vouchers, client ledgers, and prompt transcripts never leave your machine. Mash adheres to a strict zero-retention, local-first privacy policy.",
+        "Yes, 100%. All ledger scanning, formula calculations, and audit voucher checks execute strictly on your local Windows PC. Your client spreadsheets, company bank transactions, and permanent working papers never touch external cloud training pools.",
     },
     {
-      question: "Can I use Mash completely offline?",
+      question: "Can Mash be used for official statutory audits and peer reviews?",
       answer:
-        "Yes. When connected to local air-gapped endpoints (such as Ollama or local Llama on your workstation), Mash runs entirely offline with zero outbound internet traffic.",
+        "Yes. Mash generates documented step-by-step audit trails and working papers with live calculation formulas intact (=SUM, =AVERAGE, variance models), making workpapers fully verifiable for audit review partners and regulatory authorities.",
     },
     {
-      question: "How does the commercial license work for accounting firms?",
+      question: "Do I need Microsoft Excel installed on my machine?",
       answer:
-        "The Pro plan includes a commercial organization license permitting CPAs, advisory firms, and enterprise finance teams to use Mash across all commercial client engagements.",
+        "No. Mash features a native built-in spreadsheet viewer that opens, navigates, and recalculates multi-tab .xlsx and .csv workbooks directly without requiring Microsoft Office or Excel licenses.",
     },
     {
-      question: "Can I try Pro features before committing?",
+      question: "How does the commercial license work for audit partnerships?",
       answer:
-        "Yes. All Pro licenses include a 14-day risk-free trial. You can also download and use the Starter plan completely free forever with no credit card required.",
+        "The Pro plan grants a full commercial firm license, permitting CPAs, Chartered Accountants, and consulting practices to use Mash across all fee-earning statutory audit and tax advisory engagements.",
     },
   ];
 
   return (
     <>
       <Head>
-        <title>Pricing &amp; Plans — {SITE_CONFIG.name}</title>
+        <title>Pricing &amp; Plans — {SITE_CONFIG.name} for CAs, CPAs &amp; Auditors</title>
         <meta
           name="description"
-          content="Simple, transparent pricing for Mash. Starter plan is free forever on Windows. Pro plan for commercial accounting firms and finance teams."
+          content="Simple, transparent pricing for Mash. Starter plan is free forever for individual accountants. Pro plan for practicing audit firms and CPAs."
         />
         <link rel="canonical" href="https://mash.ai/pricing/" />
-        <meta property="og:title" content="Mash Pricing — Free Starter vs Pro Commercial" />
+        <meta property="og:title" content="Mash Pricing — Free Starter vs Pro Commercial for Audit Firms" />
         <meta property="og:description" content="Simple, transparent pricing for Mash. Full Windows desktop app is free forever." />
         <meta property="og:url" content="https://mash.ai/pricing/" />
       </Head>
@@ -106,14 +105,14 @@ export default function PricingPage() {
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-14">
             <Badge variant="secondary" className="mb-3 text-[11px] font-mono uppercase tracking-wider">
-              PLANS &amp; PRICING
+              PRACTICE LICENSING
             </Badge>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 font-sans">
               Simple, transparent pricing. <br className="hidden sm:inline" />
-              Zero hidden fees.
+              Built for accounting practices.
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
-              Start auditing spreadsheets for free with the full Windows desktop application, or upgrade to Pro for commercial licensing and advanced forensic models.
+              Start auditing ledgers for free with the full Windows desktop application, or upgrade to Pro for commercial firm licensing and multi-sheet batch reconciliation.
             </p>
 
             {/* Billing Switcher */}
@@ -159,7 +158,7 @@ export default function PricingPage() {
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6 font-sans">
-                  Essential AI workbench for individual accountants, freelance analysts, and students.
+                  Essential AI audit workbench for individual practitioners, sole proprietors, and finance analysts.
                 </p>
 
                 <div className="flex items-baseline gap-1 mb-6">
@@ -174,23 +173,23 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Unlimited local spreadsheet viewing (.xlsx, .csv)</span>
+                    <span>Unlimited local spreadsheet auditing (.xlsx, .csv)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Side-by-side dual-pane workspace (880px)</span>
+                    <span>Side-by-side dual-pane audit canvas</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Bring your own model or local API key</span>
+                    <span>Built-in audit intelligence (Zero API setup required)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Standard variance and audit prompts</span>
+                    <span>Automated debit/credit balancing &amp; variance detection</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="font-semibold text-slate-900">100% on-device privacy guarantee</span>
+                    <span className="font-semibold text-slate-900">100% on-device client confidentiality guarantee</span>
                   </div>
                 </div>
               </div>
@@ -208,13 +207,13 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Plan 2: Pro (Business) */}
+            {/* Plan 2: Pro (Commercial) */}
             <div className="relative rounded-2xl border-2 border-slate-900 bg-white p-8 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
               {/* Recommended Badge */}
               <div className="absolute -top-3.5 right-6">
                 <span className="inline-flex items-center gap-1 rounded-full bg-slate-900 px-3.5 py-1 text-[10px] font-semibold text-white tracking-wide shadow-md uppercase">
                   <Sparkles className="h-3 w-3 text-amber-400" />
-                  Recommended for Teams
+                  Recommended for Audit Firms
                 </span>
               </div>
 
@@ -222,11 +221,11 @@ export default function PricingPage() {
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-bold text-slate-900 font-sans">Pro</h2>
                   <span className="text-xs font-mono font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
-                    Commercial License
+                    Commercial Practice License
                   </span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6 font-sans">
-                  For CPAs, audit firms, and finance teams needing advanced forensic capabilities and priority support.
+                  For CPAs, Chartered Accountants, and audit partnerships handling client engagements and statutory reviews.
                 </p>
 
                 <div className="flex items-baseline gap-1 mb-6">
@@ -245,23 +244,23 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Advanced statutory forensic &amp; reconciliation templates</span>
+                    <span>Full commercial firm license for client audit engagements</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Multi-sheet cross-workbook batch audits</span>
+                    <span>Multi-sheet cross-workbook batch reconciliation (Bank vs Books)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Interactive 3D vector spatial chart depth</span>
+                    <span>Automated statutory tax &amp; VAT/GST audit return schedules</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Commercial organizational usage license</span>
+                    <span>100% transaction coverage &amp; Benford&apos;s Law anomaly scanning</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Priority customer &amp; onboarding support</span>
+                    <span>Priority firm onboarding &amp; dedicated audit support</span>
                   </div>
                 </div>
               </div>
@@ -285,18 +284,18 @@ export default function PricingPage() {
           <div className="mb-24">
             <div className="text-center mb-10">
               <h2 className="text-2xl font-bold tracking-tight text-slate-900 font-sans">
-                Detailed Feature Comparison
+                Audit Feature Comparison
               </h2>
-              <p className="text-xs text-slate-500 mt-1">
-                Everything you need to know about the Starter vs. Pro plan capabilities.
+              <p className="text-xs text-slate-500 mt-1 font-sans">
+                Detailed comparison of capabilities between Starter (Sole Practice) and Pro (Firm Practice).
               </p>
             </div>
 
             <div className="rounded-2xl border border-slate-200/90 bg-white overflow-hidden shadow-xs">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full text-left text-xs border-collapse font-sans">
                 <thead>
                   <tr className="border-b border-slate-200/80 bg-slate-50/70">
-                    <th className="py-4 px-6 font-semibold text-slate-900 w-1/2">Features</th>
+                    <th className="py-4 px-6 font-semibold text-slate-900 w-1/2">Audit Capabilities</th>
                     <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Starter ($0)</th>
                     <th className="py-4 px-4 font-semibold text-slate-900 text-center w-1/4">Pro ($20/mo)</th>
                   </tr>
@@ -352,7 +351,7 @@ export default function PricingPage() {
                 Frequently Asked Questions
               </h2>
               <p className="text-xs text-slate-500 mt-1 font-sans">
-                Clear answers regarding data safety, licensing, and offline usage.
+                Clear answers regarding client confidentiality, statutory schedules, and practice licensing.
               </p>
             </div>
 
@@ -377,10 +376,10 @@ export default function PricingPage() {
           {/* Bottom Call to Action Card */}
           <div className="rounded-2xl border border-slate-200/90 bg-white p-8 md:p-12 shadow-md text-center max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold text-slate-900 mb-3 font-sans">
-              Start auditing spreadsheets on your local PC today.
+              Start auditing client spreadsheets on your Windows PC today.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mb-6 leading-relaxed font-sans">
-              Download the official Windows installer. 100% on-device data confidentiality guaranteed.
+              Download the official Windows installer. 100% on-device client data confidentiality guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={SITE_CONFIG.installer.downloadPath} download>
@@ -391,7 +390,7 @@ export default function PricingPage() {
               </a>
               <Link href="/use-cases">
                 <Button variant="secondary" size="lg" className="gap-2 text-xs font-medium h-12 px-5 border-slate-200 hover:bg-slate-100">
-                  <span>Explore Use Cases</span>
+                  <span>Explore Practice Use Cases</span>
                   <ArrowRight className="h-4 w-4 text-slate-400" />
                 </Button>
               </Link>

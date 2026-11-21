@@ -47,21 +47,21 @@ export default function UseCasesPage() {
       badge: "CORPORATE FP&A",
       badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200/60",
       title: "Budget Variance & Financial Forecasting",
-      subtitle: "Multi-quarter trend analytics with spatial 3D visualization.",
+      subtitle: "Consolidate quarterly actuals against budget with automated variance flags.",
       problem:
         "Stitching together quarterly department budgets and comparing actuals against forecasts requires complex spreadsheet macros that break easily and obscure underlying variance drivers.",
       solution:
-        "Mash evaluates multi-tab Excel workbooks, dynamically recalculates SUM and AVERAGE formulas, and extrudes monthly trend variances into interactive 3D spatial bar charts.",
+        "Mash evaluates multi-tab Excel workbooks, dynamically recalculates SUM and AVERAGE formulas across cost centers, and highlights cost overruns and ledger variances with cell-level precision.",
       screenshot: "/screenshots/excel_pw_light_maximized_sheet1.png",
-      alt: "Maximized Excel sheet with 3D bar chart",
+      alt: "Maximized Excel sheet showing quarterly variance and monthly trend tabs",
       activeFile: "Workbooks / Executive_Dashboard_FY25.xlsx",
       metrics: [
-        "Interactive 3D spatial chart depth",
+        "Automated variance & overrun tagging (>5%)",
         "Multi-tab Executive vs Trend navigation",
         "Live recalculation on formula updates",
       ],
       promptExample:
-        '"Compare Q1-Q3 actual expenditures against FY25 department budgets, highlight variances exceeding 5%, and project the monthly trend sheet."',
+        '"Compare Q1-Q3 actual expenditures against FY25 department budgets, highlight variances exceeding 5%, and generate a consolidated quarterly summary sheet."',
     },
     {
       id: "tax-reconciliation",
