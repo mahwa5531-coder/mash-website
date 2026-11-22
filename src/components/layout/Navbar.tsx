@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Download, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MashBrandIcon } from "@/components/ui/MashBrandIcon";
+import { BrandLockup } from "@/components/ui/BrandLockup";
 import { SITE_CONFIG } from "@/content/site-config";
 import { cn } from "@/lib/utils";
 
@@ -21,14 +21,9 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/70 bg-[#FCFCFD]/90 backdrop-blur-xl transition-all">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        {/* Brand Monogram & Wordmark */}
+        {/* Unified Brand Lockup */}
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <MashBrandIcon size={26} className="transition-transform group-hover:scale-105" />
-            <span className="font-bold text-slate-900 tracking-tight text-base font-sans">
-              Mash
-            </span>
-          </Link>
+          <BrandLockup size="default" />
         </div>
 
         {/* Center Desktop Navigation */}

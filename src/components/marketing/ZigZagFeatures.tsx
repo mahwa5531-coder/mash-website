@@ -199,11 +199,12 @@ export function ZigZagFeatures() {
               {/* Text Description Column */}
               <div className="w-full lg:w-5/12 space-y-5">
                 <div>
-                  <span
-                    className={`inline-block text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border mb-3 ${item.badgeColor}`}
+                  <Badge
+                    variant="secondary"
+                    className="mb-3 text-[11px] font-mono uppercase tracking-wider font-semibold"
                   >
                     {item.badge}
-                  </span>
+                  </Badge>
                   <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 leading-snug font-sans">
                     {item.title}
                   </h3>

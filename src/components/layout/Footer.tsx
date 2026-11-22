@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { MashBrandIcon } from "@/components/ui/MashBrandIcon";
+import { BrandLockup } from "@/components/ui/BrandLockup";
 import { SITE_CONFIG } from "@/content/site-config";
 import { ShieldCheck } from "lucide-react";
 
@@ -11,12 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Col 1: Brand */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <MashBrandIcon size={22} />
-              <span className="font-semibold text-slate-900 tracking-tight text-sm">
-                Mash
-              </span>
-            </div>
+            <BrandLockup size="sm" />
             <p className="text-xs text-slate-500 leading-relaxed max-w-xs">
               The desktop AI workbench for spreadsheets, financial data reconciliation, and statutory audits.
             </p>

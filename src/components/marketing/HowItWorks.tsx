@@ -1,18 +1,19 @@
 import * as React from "react";
-import { FileSpreadsheet, MessageSquare, CheckCircle2, ArrowRight } from "lucide-react";
+import { FileSpreadsheet, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export function HowItWorks() {
   const steps = [
     {
       number: "01",
-      icon: <FileSpreadsheet className="h-5 w-5 text-emerald-600" />,
+      icon: <FileSpreadsheet className="h-5 w-5 text-slate-800" />,
       title: "Open Any Workbook",
       description:
         "Select your .xlsx or .csv spreadsheets directly from your local computer. Supports complex multi-tab audit ledgers with zero file conversions or cloud uploads.",
     },
     {
       number: "02",
-      icon: <MessageSquare className="h-5 w-5 text-blue-600" />,
+      icon: <MessageSquare className="h-5 w-5 text-slate-800" />,
       title: "Ask in Plain English",
       description:
         "Prompt the assistant to check tax calculations, detect ledger variances, reconcile accounts, or cross-reference quarterly expenses in seconds.",
@@ -30,10 +31,10 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-20 border-t border-slate-200/80 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-[11px] font-mono font-semibold text-slate-500 uppercase tracking-wider bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200/60">
+          <Badge variant="secondary" className="mb-3 text-[11px] font-mono uppercase tracking-wider font-semibold">
             SIMPLE WORKFLOW
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mt-3 mb-3 font-sans">
+          </Badge>
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mt-2 mb-3 font-sans">
             How Mash works in three simple steps.
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed font-sans">

@@ -40,7 +40,7 @@ export default function UseCasesPage() {
         "Zero data transmission to cloud pools",
       ],
       promptExample:
-        '"Audit the FY26 statutory vouchers in the workspace, verify zero material variance against bank feeds, and plot the mash_full_feature_audit.xlsx sheet."',
+        '"Audit the FY26 statutory vouchers in the workspace, verify zero material variance against bank feeds, and reconcile ledger accounts into mash_full_feature_audit.xlsx."',
     },
     {
       id: "fpa-variance",
@@ -146,11 +146,12 @@ export default function UseCasesPage() {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
                   <div>
-                    <span
-                      className={`inline-block text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full border mb-2 ${cs.badgeColor}`}
+                    <Badge
+                      variant="secondary"
+                      className="mb-2 text-[11px] font-mono uppercase tracking-wider font-semibold"
                     >
                       {cs.badge}
-                    </span>
+                    </Badge>
                     <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans">
                       {cs.title}
                     </h2>
