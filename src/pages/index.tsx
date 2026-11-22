@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{SITE_CONFIG.name} — {SITE_CONFIG.tagline}</title>
+        <title>{`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`}</title>
         <meta
           name="description"
           content={SITE_CONFIG.subhead}

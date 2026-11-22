@@ -10,7 +10,7 @@ export default function DownloadPage() {
   return (
     <>
       <Head>
-        <title>Download {SITE_CONFIG.name} for Windows</title>
+        <title>{`Download ${SITE_CONFIG.name} for Windows`}</title>
         <meta
           name="description"
           content="Download Mash for Windows. Official desktop application for financial ledgers and spreadsheets."

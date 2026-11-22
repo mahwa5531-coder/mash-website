@@ -18,7 +18,6 @@ import { Badge } from "@/components/ui/badge";
 interface ZigZagItem {
   id: string;
   badge: string;
-  badgeColor: string;
   title: string;
   subtitle: string;
   description: string;
@@ -34,7 +33,6 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
   {
     id: "dual-pane",
     badge: "AUDIT WORKBENCH",
-    badgeColor: "bg-blue-50 text-blue-700 border-blue-200/60",
     title: "Dual-Pane Split: AI Audit Partner Beside Your Live Workbooks.",
     subtitle: "Review flagged voucher lines and audit findings without leaving your sheet.",
     description:
@@ -65,7 +63,6 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
   {
     id: "full-scope-audit",
     badge: "STATUTORY RECONCILIATION",
-    badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200/60",
     title: "Full-Scope Transaction Auditing: Moving Beyond Risky Sampling.",
     subtitle: "Scan 100% of journal vouchers across multi-tab workbooks in seconds.",
     description:
@@ -96,7 +93,6 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
   {
     id: "audit-trace",
     badge: "WORKPAPER TRANSPARENCY",
-    badgeColor: "bg-amber-50 text-[#C8522C] border-amber-200/60",
     title: "Step-by-Step Audit Trail: Documented Proof for Review Partners.",
     subtitle: "Every calculation is backed by an auditable deduction trail.",
     description:
@@ -127,7 +123,6 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
   {
     id: "focused-chat",
     badge: "CLIENT DELIVERABLES",
-    badgeColor: "bg-purple-50 text-purple-700 border-purple-200/60",
     title: "Instant Audit Schedules & Verified Client Deliverables.",
     subtitle: "Generate working papers with live formulas intact.",
     description:

@@ -24,7 +24,6 @@ export default function UseCasesPage() {
     {
       id: "statutory-audit",
       badge: "AUDIT & ASSURANCE",
-      badgeColor: "bg-blue-50 text-blue-700 border-blue-200/60",
       title: "Statutory & Forensic Financial Auditing",
       subtitle: "Reconcile thousands of journal vouchers in minutes instead of days.",
       problem:
@@ -45,7 +44,6 @@ export default function UseCasesPage() {
     {
       id: "fpa-variance",
       badge: "CORPORATE FP&A",
-      badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200/60",
       title: "Budget Variance & Financial Forecasting",
       subtitle: "Consolidate quarterly actuals against budget with automated variance flags.",
       problem:
@@ -66,7 +64,6 @@ export default function UseCasesPage() {
     {
       id: "tax-reconciliation",
       badge: "TAX & COMPLIANCE",
-      badgeColor: "bg-amber-50 text-[#C8522C] border-amber-200/60",
       title: "Vendor Invoice & Tax Reconciliation",
       subtitle: "Cross-reference accounts payable against bank records securely.",
       problem:
@@ -87,7 +84,6 @@ export default function UseCasesPage() {
     {
       id: "executive-reporting",
       badge: "EXECUTIVE REPORTING",
-      badgeColor: "bg-purple-50 text-purple-700 border-purple-200/60",
       title: "Executive Data Discovery & Board Deliverables",
       subtitle: "Ask questions in plain English; receive verified board-ready summaries.",
       problem:
