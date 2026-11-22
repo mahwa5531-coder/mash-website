@@ -1,13 +1,56 @@
 import * as React from "react";
 import Link from "next/link";
-import { Download, ChevronRight, ShieldCheck } from "lucide-react";
+import { Download, ChevronRight, ShieldCheck, CheckCircle2, FileSpreadsheet, Layers, Brain, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WindowMockup } from "@/components/layout/WindowMockup";
 import { SITE_CONFIG } from "@/content/site-config";
 
 export function HeroSection() {
+  const [activeTab, setActiveTab] = React.useState(0);
+
+  const heroModes = [
+    {
+      id: "statutory",
+      label: "Statutory Audit",
+      icon: <Layers className="h-3.5 w-3.5" />,
+      file: "Audit_Deliverables / mash_full_feature_audit.xlsx",
+      src: "/screenshots/mash_real_llm_hero_dual_pane_top_light.png",
+      alt: "Mash Dual-Pane Split: AI Chat beside Excel sheet verifying statutory audit table",
+      tag: "264 Control Tests Passed · ₹0.00 Material Variance",
+    },
+    {
+      id: "reconciliation",
+      label: "Ledger Reconciliation",
+      icon: <FileSpreadsheet className="h-3.5 w-3.5" />,
+      file: "Workbooks / Executive_Dashboard_FY25.xlsx",
+      src: "/screenshots/excel_pw_light_maximized_sheet1.png",
+      alt: "Maximized Excel workbook showing trial balance and quarterly variance reconciliation",
+      tag: "Live Excel Recalculation · Working Formulas Intact",
+    },
+    {
+      id: "trace",
+      label: "Auditable Deduction Trail",
+      icon: <Brain className="h-3.5 w-3.5" />,
+      file: "Audit_Reports / reconciliation_trace.log",
+      src: "/screenshots/mash_single_pane_chat_thought_expanded_light.png",
+      alt: "Expanded thought steps showing verifiable calculation checkpoints and deduction trail",
+      tag: "Zero Silent Overwrites · Partner Sign-off Ready",
+    },
+    {
+      id: "deliverable",
+      label: "Verified Workpaper",
+      icon: <FileCheck className="h-3.5 w-3.5" />,
+      file: "Audit_Deliverables / statutory_audit_fy26.xlsx",
+      src: "/screenshots/mash_single_pane_chat_light.png",
+      alt: "Focused chat view with direct download deliverable card for verified Excel workpaper",
+      tag: "Native .xlsx Export · 100% On-Device Security",
+    },
+  ];
+
+  const currentMode = heroModes[activeTab];
+
   return (
-    <section className="relative overflow-hidden pt-24 pb-24 md:pt-32 md:pb-36 bg-[#FCFCFD]">
+    <section className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28 bg-[#FCFCFD]">
       {/* Background Engineering Dotted Grid Mask (Subtle, Crisp, Clean) */}
       <div 
         className="pointer-events-none absolute inset-0 z-0 opacity-40"
@@ -50,7 +93,7 @@ export function HeroSection() {
           </div>
 
           {/* Trust Metrics Row */}
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-500 mb-14">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-500 mb-10">
             <span className="flex items-center gap-1.5 font-medium text-slate-700">
               <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
               Windows 10 / 11 (64-bit)
@@ -60,11 +103,40 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Hero Visual Mockup: Clean App Screenshot */}
-        <div className="relative">
+        {/* Interactive Mode Selector Tabs */}
+        <div className="mb-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-2 sm:px-4 sm:py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 w-full sm:w-auto">
+            {heroModes.map((mode, idx) => {
+              const isSelected = activeTab === idx;
+              return (
+                <button
+                  key={mode.id}
+                  type="button"
+                  onClick={() => setActiveTab(idx)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all duration-150 flex items-center gap-1.5 cursor-pointer select-none ${
+                    isSelected
+                      ? "bg-slate-900 text-white shadow-xs font-semibold"
+                      : "text-slate-600 hover:text-slate-950 hover:bg-slate-100/70"
+                  }`}
+                >
+                  {mode.icon}
+                  <span>{mode.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="flex items-center gap-2 text-[11px] font-mono text-slate-500 shrink-0">
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="text-slate-700 font-medium">{currentMode.tag}</span>
+          </div>
+        </div>
+
+        {/* Hero Visual Mockup: Clean App Screenshot with smooth transition */}
+        <div className="relative group transition-transform duration-300">
           <WindowMockup
-            src="/screenshots/mash_real_llm_hero_dual_pane_top_light.png"
-            alt="Mash Dual-Pane Workbench showing agent chat generating statutory audit table and live Excel sheet"
+            src={currentMode.src}
+            alt={currentMode.alt}
             priority={true}
           />
         </div>

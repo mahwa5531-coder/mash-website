@@ -10,16 +10,28 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState<string>("product");
   const router = useRouter();
 
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 15);
+      if (router.pathname === "/") {
+        const featuresEl = document.getElementById("features");
+        if (featuresEl) {
+          const rect = featuresEl.getBoundingClientRect();
+          if (rect.top <= 300) {
+            setActiveSection("capabilities");
+          } else {
+            setActiveSection("product");
+          }
+        }
+      }
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [router.pathname]);
 
   const navLinks = [
     { label: "Product", href: "/" },
@@ -58,7 +70,14 @@ export function Navbar() {
         {/* Center: Desktop Navigation Pills (Always visible on tablet, laptop, desktop >= sm: 640px) */}
         <nav className="hidden sm:flex items-center gap-1 text-xs font-medium text-slate-600">
           {navLinks.map((link) => {
-            const isActive = router.pathname === link.href;
+            const isActive =
+              router.pathname === "/"
+                ? link.href === "/#features"
+                  ? activeSection === "capabilities"
+                  : link.href === "/"
+                  ? activeSection === "product"
+                  : false
+                : router.pathname === link.href;
             return (
               <Link
                 key={link.href}

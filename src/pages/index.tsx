@@ -1,6 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 import { HeroSection } from "@/components/marketing/HeroSection";
+import { InteractiveAuditSandbox } from "@/components/marketing/InteractiveAuditSandbox";
 import { HowItWorks } from "@/components/marketing/HowItWorks";
 import { ZigZagFeatures } from "@/components/marketing/ZigZagFeatures";
 import { DownloadCard } from "@/components/marketing/DownloadCard";
@@ -23,6 +24,7 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        <InteractiveAuditSandbox />
         <HowItWorks />
         <ZigZagFeatures />
         <div id="download">
