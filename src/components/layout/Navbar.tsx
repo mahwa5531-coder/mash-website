@@ -9,7 +9,17 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
   const router = useRouter();
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Product", href: "/" },
@@ -19,14 +29,22 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/70 bg-[#FCFCFD]/90 backdrop-blur-xl transition-all">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
-        {/* Unified Brand Lockup */}
-        <div className="flex items-center gap-3">
-          <BrandLockup size="default" />
+    <header className="fixed top-3 sm:top-4 inset-x-0 z-50 flex flex-col items-center px-4 sm:px-6 pointer-events-none">
+      {/* Floating Island Capsule */}
+      <div
+        className={cn(
+          "w-full max-w-4xl h-13 sm:h-14 rounded-full border px-4 sm:px-5 flex items-center justify-between pointer-events-auto transition-all duration-300",
+          isScrolled
+            ? "border-slate-200/90 bg-white/85 backdrop-blur-md shadow-[0_4px_20px_rgba(15,23,42,0.08),0_1px_3px_rgba(15,23,42,0.04)]"
+            : "border-slate-200/70 bg-white/75 backdrop-blur-md shadow-[0_2px_12px_rgba(15,23,42,0.04)]"
+        )}
+      >
+        {/* Left: Brand Lockup */}
+        <div className="flex items-center">
+          <BrandLockup size="sm" />
         </div>
 
-        {/* Center Desktop Navigation */}
+        {/* Center: Desktop Navigation Pills */}
         <nav className="hidden md:flex items-center gap-1 text-xs font-medium text-slate-600">
           {navLinks.map((link) => {
             const isActive = router.pathname === link.href;
@@ -35,10 +53,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-3 py-1.5 rounded-md transition-colors",
+                  "px-3.5 py-1.5 rounded-full transition-all duration-150 font-sans",
                   isActive
-                    ? "text-slate-900 font-semibold bg-slate-100/80"
-                    : "hover:text-slate-900 hover:bg-slate-100/60"
+                    ? "text-slate-950 font-semibold bg-slate-100/90 shadow-2xs"
+                    : "hover:text-slate-950 hover:bg-slate-100/60"
                 )}
               >
                 {link.label}
@@ -48,9 +66,13 @@ export function Navbar() {
         </nav>
 
         {/* Right Action: Download CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <Link href="/download" className="hidden sm:inline-block">
-            <Button size="sm" variant="default" className="gap-2 font-medium shadow-xs text-xs h-9 px-4 bg-slate-900 hover:bg-slate-800">
+            <Button
+              size="sm"
+              variant="default"
+              className="h-8 rounded-full px-4 text-xs font-medium gap-1.5 shadow-xs"
+            >
               <Download className="h-3.5 w-3.5" />
               <span>Download</span>
             </Button>
@@ -60,7 +82,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-1.5 rounded-md text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+            className="md:hidden p-1.5 rounded-full text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors"
             aria-label="Toggle navigation"
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -68,15 +90,15 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Floating Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200/80 bg-white px-4 py-4 space-y-3 animate-in slide-in-from-top-2">
+        <div className="md:hidden w-full max-w-sm mt-2 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-xl p-4 shadow-xl space-y-2 pointer-events-auto animate-in fade-in zoom-in-95 duration-200">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50"
+              className="block px-3.5 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-950 transition-colors"
             >
               {link.label}
             </Link>
@@ -85,7 +107,7 @@ export function Navbar() {
             <Link
               href="/download"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-slate-900 text-white font-medium text-xs shadow-sm"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-900 text-white font-medium text-xs shadow-sm hover:bg-slate-800 transition-colors"
             >
               <Download className="h-3.5 w-3.5" />
               <span>Download for Windows</span>

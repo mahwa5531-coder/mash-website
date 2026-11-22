@@ -21,7 +21,7 @@ export default function DownloadPage() {
         <meta property="og:url" content="https://mash.ai/download/" />
       </Head>
 
-      <main className="py-16 md:py-24 bg-[#FCFCFD]">
+      <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FCFCFD]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4 font-sans">

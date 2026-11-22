@@ -121,7 +121,7 @@ export default function UseCasesPage() {
         <meta property="og:url" content="https://mash.ai/use-cases/" />
       </Head>
 
-      <main className="py-16 md:py-24 bg-[#FCFCFD]">
+      <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FCFCFD]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-20">
@@ -190,8 +190,8 @@ export default function UseCasesPage() {
                     {/* Example Prompt Box */}
                     <div className="rounded-xl border border-slate-200/80 bg-slate-50 p-4 space-y-2">
                       <div className="flex items-center gap-2 text-[11px] font-mono text-slate-500 font-semibold">
-                        <span className="h-2 w-2 rounded-full bg-blue-500" />
-                        <span>Example Business Prompt</span>
+                        <span className="h-2 w-2 rounded-full bg-slate-700" />
+                        <span>Example Audit Prompt</span>
                       </div>
                       <p className="text-xs font-mono text-slate-800 leading-relaxed select-all">
                         {cs.promptExample}

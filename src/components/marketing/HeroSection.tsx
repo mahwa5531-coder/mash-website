@@ -7,7 +7,7 @@ import { SITE_CONFIG } from "@/content/site-config";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-36 bg-[#FCFCFD]">
+    <section className="relative overflow-hidden pt-24 pb-24 md:pt-32 md:pb-36 bg-[#FCFCFD]">
       {/* Background Engineering Dotted Grid Mask (Subtle, Crisp, Clean) */}
       <div 
         className="pointer-events-none absolute inset-0 z-0 opacity-40"

@@ -41,7 +41,7 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
       "Mash docks an autonomous audit assistant directly beside your active Excel spreadsheet. Prompt the assistant to verify journal vouchers, calculate quarterly variance percentages, or investigate suspicious accounts while watching your workbook update live on your screen.",
     proofPoints: [
       {
-        icon: <Layers className="h-4 w-4 text-blue-600" />,
+        icon: <Layers className="h-4 w-4 text-slate-800" />,
         label: "Side-by-Side Audit Canvas",
         detail: "Keep general ledgers open alongside the assistant without juggling multiple Excel windows.",
       },
@@ -72,17 +72,17 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
       "Manual 5% sampling leaves material errors and fraud risks undetected. Mash scans every single voucher line across multiple ledger tabs, performing automated debit/credit balancing, bank feed matching, and Benford's Law anomaly checks in seconds.",
     proofPoints: [
       {
-        icon: <Scale className="h-4 w-4 text-emerald-600" />,
+        icon: <Scale className="h-4 w-4 text-slate-800" />,
         label: "100% Ledger Coverage",
         detail: "Audit every transaction voucher rather than taking statistical sample guesses.",
       },
       {
-        icon: <Table className="h-4 w-4 text-blue-600" />,
+        icon: <Table className="h-4 w-4 text-slate-800" />,
         label: "Multi-Tab Workpaper Sync",
         detail: "Reconcile trial balances, revenue schedules, and ledger voucher listings simultaneously.",
       },
       {
-        icon: <CheckCircle2 className="h-4 w-4 text-amber-600" />,
+        icon: <CheckCircle2 className="h-4 w-4 text-emerald-600" />,
         label: "Automated Anomaly Detection",
         detail: "Instantly flags duplicate invoice numbers, threshold breaches, and uncredited deposits.",
       },
@@ -103,12 +103,12 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
       "Black-box AI is unacceptable in statutory audits. Mash details every voucher checked, every formula verified, and every intermediate ledger step. Review partners can inspect the exact reasoning trail before signing off on working papers.",
     proofPoints: [
       {
-        icon: <Brain className="h-4 w-4 text-[#C8522C]" />,
+        icon: <Brain className="h-4 w-4 text-slate-800" />,
         label: "Verifiable Deduction Trail",
         detail: "Complete transparency into how variances were computed and which voucher rows were tested.",
       },
       {
-        icon: <FileSearch className="h-4 w-4 text-blue-600" />,
+        icon: <FileSearch className="h-4 w-4 text-slate-800" />,
         label: "Zero Silent Overwrites",
         detail: "Suggested journal adjustments and ledger corrections require explicit auditor confirmation.",
       },
@@ -134,7 +134,7 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
       "Collapse the spreadsheet pane when discussing strategic accounting opinions or drafting audit memorandums. When finished, export final audit schedules as native .xlsx workbooks with working formulas intact for clients or review committees.",
     proofPoints: [
       {
-        icon: <FileSpreadsheet className="h-4 w-4 text-purple-600" />,
+        icon: <FileSpreadsheet className="h-4 w-4 text-slate-800" />,
         label: "Working Formula Integrity",
         detail: "Exported workbooks retain real Excel formulas (=SUM, =AVERAGE) rather than static values.",
       },
@@ -144,7 +144,7 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
         detail: "Clean markdown tables and findings ready for inclusion in board packs and audit reports.",
       },
       {
-        icon: <ShieldCheck className="h-4 w-4 text-slate-800" />,
+        icon: <ShieldCheck className="h-4 w-4 text-emerald-600" />,
         label: "100% On-Device Client Privacy",
         detail: "Client financial statements, tax IDs, and bank transactions never leave your local PC.",
       },
