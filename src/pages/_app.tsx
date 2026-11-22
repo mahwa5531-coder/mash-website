@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{SITE_CONFIG.name} — {SITE_CONFIG.tagline}</title>
+        <title>{`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`}</title>
         <meta name="description" content={SITE_CONFIG.subhead} />
         <meta name="author" content="Mash Engineering Team" />
         <meta name="theme-color" content="#FCFCFD" />

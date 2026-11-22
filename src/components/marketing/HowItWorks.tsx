@@ -64,10 +64,6 @@ export function HowItWorks() {
                   {step.description}
                 </p>
               </div>
-
-              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-[11px] font-medium text-slate-400">
-                <span>Step {idx + 1} of 3</span>
-              </div>
             </div>
           ))}
         </div>

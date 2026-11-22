@@ -29,16 +29,27 @@ export function Navbar() {
   ];
 
   return (
-    <header className="fixed top-3 sm:top-4 inset-x-0 z-50 flex flex-col items-center px-4 sm:px-6 pointer-events-none">
-      {/* Floating Island Capsule */}
+    <>
+      {/* Top Scroll Dissolve Curtain: Seals the ceiling gap above the island pill and smoothly feathers out */}
       <div
         className={cn(
-          "w-full max-w-3xl sm:max-w-[820px] h-13 sm:h-14 rounded-full border px-4 sm:px-5 flex items-center justify-between pointer-events-auto transition-all duration-300",
+          "fixed top-0 inset-x-0 h-20 sm:h-24 pointer-events-none z-40 transition-opacity duration-200",
           isScrolled
-            ? "border-slate-200/90 bg-white/90 backdrop-blur-md shadow-[0_4px_20px_rgba(15,23,42,0.08),0_1px_3px_rgba(15,23,42,0.04)]"
-            : "border-slate-200/70 bg-white/80 backdrop-blur-md shadow-[0_2px_12px_rgba(15,23,42,0.04)]"
+            ? "opacity-100 bg-gradient-to-b from-[#FCFCFD] from-60% via-[#FCFCFD]/80 via-80% to-transparent"
+            : "opacity-0"
         )}
-      >
+      />
+
+      <header className="fixed top-3 sm:top-4 inset-x-0 z-50 flex flex-col items-center px-4 sm:px-6 pointer-events-none">
+        {/* Floating Island Capsule */}
+        <div
+          className={cn(
+            "w-full max-w-3xl sm:max-w-[820px] h-13 sm:h-14 rounded-full border px-4 sm:px-5 flex items-center justify-between pointer-events-auto transition-all duration-300",
+            isScrolled
+              ? "border-slate-200/90 bg-white shadow-[0_4px_24px_rgba(15,23,42,0.08),0_1px_3px_rgba(15,23,42,0.04)]"
+              : "border-slate-200/70 bg-white/95 backdrop-blur-md shadow-[0_2px_12px_rgba(15,23,42,0.04)]"
+          )}
+        >
         {/* Left: Brand Lockup */}
         <div className="flex items-center">
           <BrandLockup size="sm" />
@@ -116,5 +127,6 @@ export function Navbar() {
         </div>
       )}
     </header>
+    </>
   );
 }
