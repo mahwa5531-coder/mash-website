@@ -190,13 +190,10 @@ export default function PricingPage() {
                 <Link href="/checkout" className="w-full">
                   <Button className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md">
                     <Zap className="h-4 w-4 text-amber-400" />
-                    <span>Upgrade to Pro — ₹1,999/mo</span>
+                    <span>Upgrade to Pro</span>
                     <ArrowRight className="h-4 w-4 text-slate-400" />
                   </Button>
                 </Link>
-                <span className="text-center text-[10px] text-slate-500 font-sans">
-                  Instant Razorpay checkout · Official payment receipt
-                </span>
               </CardFooter>
             </Card>
           </div>

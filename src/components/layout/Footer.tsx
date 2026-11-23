@@ -74,7 +74,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Mash. All rights reserved.
           </div>
           <div>
-            <span>Republic of India</span>
+            <span>India</span>
           </div>
         </div>
       </div>

@@ -71,7 +71,7 @@ In no event shall Mash or its directors be liable for indirect, consequential, o
     {
       id: "governing-law",
       title: "8. Governing Law & Dispute Resolution",
-      content: `These Terms are governed by and construed in accordance with the laws of the Republic of India. The parties agree to attempt informal conciliation for at least thirty (30) days before initiating formal proceedings. Any unresolved dispute shall be subject to the exclusive jurisdiction of the competent civil courts in India at our operating headquarters.`,
+      content: `These Terms are governed by and construed in accordance with the laws of India. The parties agree to attempt informal conciliation for at least thirty (30) days before initiating formal proceedings. Any unresolved dispute shall be subject to the exclusive jurisdiction of the competent civil courts in India at our operating headquarters.`,
     },
   ];
 
@@ -107,7 +107,7 @@ In no event shall Mash or its directors be liable for indirect, consequential, o
                 Terms of Use
               </h1>
               <p className="text-xs text-slate-500 font-mono">
-                Effective Date: {lastUpdated} · Republic of India
+                Effective Date: {lastUpdated} · India
               </p>
             </div>
           </div>
