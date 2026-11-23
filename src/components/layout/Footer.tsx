@@ -1,51 +1,80 @@
 import * as React from "react";
 import Link from "next/link";
 import { BrandLockup } from "@/components/ui/BrandLockup";
-import { SITE_CONFIG } from "@/content/site-config";
-import { ShieldCheck } from "lucide-react";
 
 export function Footer() {
-  const navLinks = [
-    { label: "Product", href: "/" },
+  const platformLinks = [
+    { label: "Product Overview", href: "/" },
     { label: "Capabilities", href: "/#features" },
     { label: "Use Cases", href: "/use-cases" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Download", href: "/download" },
+    { label: "Pricing & Plans", href: "/pricing" },
+    { label: "Download for Windows", href: "/download" },
+  ];
+
+  const policyLinks = [
+    { label: "Terms of Use", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Other Policies", href: "/policies" },
   ];
 
   return (
-    <footer className="border-t border-slate-200/80 bg-white py-10 text-xs text-slate-500">
+    <footer className="border-t border-slate-200/80 bg-white py-12 text-xs text-slate-500 font-sans">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Main Row: Brand Lockup + Authoritative One-Liner on Left, Clean Nav Links on Right */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-slate-100">
-          <div className="space-y-2 max-w-md">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-100">
+          {/* Column 1: Brand & Executive One-Liner */}
+          <div className="space-y-3 md:col-span-2 max-w-sm">
             <BrandLockup size="sm" />
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-xs text-slate-500 leading-relaxed">
               Autonomous financial verification and spreadsheet auditing on local Windows hardware.
             </p>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-medium text-slate-600">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="hover:text-slate-950 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Column 2: Platform Links */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold text-slate-400 tracking-tight">
+              Platform
+            </h4>
+            <ul className="space-y-2.5">
+              {platformLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-xs font-medium text-slate-900 hover:text-slate-600 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Terms & Policies (OpenAI Pattern) */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold text-slate-400 tracking-tight">
+              Terms &amp; Policies
+            </h4>
+            <ul className="space-y-2.5">
+              {policyLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-xs font-medium text-slate-900 hover:text-slate-600 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Bottom Sub-bar: Copyright on Left, Verified Security & Platform on Right */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400 font-sans">
+        {/* Bottom Sub-bar: Copyright Only, Clean and Simple */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
           <div>
             &copy; {new Date().getFullYear()} Mash. All rights reserved.
           </div>
-          <div className="flex items-center gap-1.5 text-slate-600 font-medium">
-            <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-            <span>100% On-Device Confidentiality · Windows 10 / 11 (64-bit)</span>
+          <div>
+            <span>Republic of India</span>
           </div>
         </div>
       </div>
