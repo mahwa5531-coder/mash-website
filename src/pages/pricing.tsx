@@ -288,13 +288,13 @@ export default function PricingPage() {
               </div>
 
               <CardFooter className="p-0 mt-8 pt-6 border-t border-slate-100 flex flex-col gap-2">
-                <a href={SITE_CONFIG.installer.downloadPath} download className="w-full">
+                <Link href="/checkout" className="w-full">
                   <Button className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md">
                     <Zap className="h-4 w-4 text-amber-400" />
                     <span>Get 30-Day Pro Pass (₹1,999)</span>
                     <ArrowRight className="h-4 w-4 text-slate-400" />
                   </Button>
-                </a>
+                </Link>
                 <span className="text-center text-[10px] text-slate-500 font-sans">
                   One-time Razorpay checkout · No recurring debit · Instant payment receipt
                 </span>
