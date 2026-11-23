@@ -12,7 +12,7 @@ export default function PoliciesOverviewPage() {
       title: "Terms of Use",
       href: "/terms",
       badge: "Commercial License",
-      description: "Governs software licensing, autonomous local tool execution, 30-day non-recurring passes, and statutory auditor responsibility under ICAI standards.",
+      description: "Governs software licensing, autonomous local tool execution, Pro monthly subscriptions, and statutory auditor responsibility under ICAI standards.",
       icon: <FileText className="h-5 w-5 text-slate-800" />,
       updated: "November 23, 2026",
     },

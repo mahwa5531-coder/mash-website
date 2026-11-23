@@ -19,7 +19,7 @@ export default function CheckoutSuccessPage() {
         <title>{`Payment Successful · ${SITE_CONFIG.name}`}</title>
         <meta
           name="description"
-          content="Your Mash 30-Day Pro Practice Pass is confirmed. Launch Mash on Windows or download the installer."
+          content="Your Mash Pro subscription is confirmed. Launch Mash on Windows or download the installer."
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -41,7 +41,7 @@ export default function CheckoutSuccessPage() {
 
             {/* Description */}
             <p className="text-sm text-slate-600 font-sans leading-relaxed mb-6">
-              Your 30-Day Pro Pass is now active. A confirmation receipt has been sent to{" "}
+              Your Mash Pro subscription is now active. A confirmation receipt has been sent to{" "}
               <span className="font-medium text-slate-900">{userEmail}</span>.
             </p>
 
@@ -49,7 +49,7 @@ export default function CheckoutSuccessPage() {
             <div className="bg-slate-50/80 rounded-xl border border-slate-200/60 p-4 mb-6 text-left space-y-2 text-xs font-sans">
               <div className="flex justify-between items-center text-slate-600">
                 <span>Plan</span>
-                <span className="font-semibold text-slate-900">30-Day Pro Practice Pass</span>
+                <span className="font-semibold text-slate-900">Mash Pro</span>
               </div>
               <div className="flex justify-between items-center text-slate-600">
                 <span>Amount Paid</span>
@@ -57,7 +57,7 @@ export default function CheckoutSuccessPage() {
               </div>
               <div className="flex justify-between items-center text-slate-600">
                 <span>Billing</span>
-                <span className="text-slate-700">One-time (Non-recurring)</span>
+                <span className="text-slate-700">Monthly Subscription</span>
               </div>
             </div>
 

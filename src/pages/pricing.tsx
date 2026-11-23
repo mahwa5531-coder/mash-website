@@ -22,11 +22,11 @@ export default function PricingPage() {
         <title>{`Pricing & Plans — ${SITE_CONFIG.name} for CAs, CPAs & Auditors`}</title>
         <meta
           name="description"
-          content="Simple, transparent pricing for Mash. Free plan for individual practitioners. Pro plan at ₹1,999 flat fee for practicing CA firms and CPAs."
+          content="Simple, transparent pricing for Mash. Free plan for individual practitioners. Pro plan at ₹1,999/month for practicing CA firms and CPAs."
         />
         <link rel="canonical" href="https://mash.ai/pricing/" />
         <meta property="og:title" content="Mash Pricing — Free vs Pro Commercial License for Audit Firms" />
-        <meta property="og:description" content="Simple, transparent pricing for Mash. Free plan and Pro at ₹1,999 one-time flat fee." />
+        <meta property="og:description" content="Simple, transparent pricing for Mash. Free plan and Pro at ₹1,999/month flat fee." />
         <meta property="og:url" content="https://mash.ai/pricing/" />
       </Head>
 
@@ -143,14 +143,14 @@ export default function PricingPage() {
                       ₹1,999
                     </span>
                     <span className="text-xs text-slate-500 font-medium">
-                      / 30-day practice pass
+                      / month
                     </span>
                   </div>
                   <div className="text-[11px] font-semibold text-emerald-700 mt-1">
-                    Flat fee · No hidden taxes or extra charges
+                    Flat software license fee · Zero hidden charges
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5 font-medium">
-                    One-time payment · Zero auto-renewal · Renew whenever needed
+                    Billed monthly · Renew whenever needed
                   </div>
                 </div>
 
@@ -190,12 +190,12 @@ export default function PricingPage() {
                 <Link href="/checkout" className="w-full">
                   <Button className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md">
                     <Zap className="h-4 w-4 text-amber-400" />
-                    <span>Get 30-Day Pro Pass (₹1,999)</span>
+                    <span>Upgrade to Pro — ₹1,999/mo</span>
                     <ArrowRight className="h-4 w-4 text-slate-400" />
                   </Button>
                 </Link>
                 <span className="text-center text-[10px] text-slate-500 font-sans">
-                  One-time Razorpay checkout · No recurring debit · Instant payment receipt
+                  Instant Razorpay checkout · Official payment receipt
                 </span>
               </CardFooter>
             </Card>

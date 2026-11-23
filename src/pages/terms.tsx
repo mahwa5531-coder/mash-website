@@ -44,12 +44,12 @@ Under the Chartered Accountants Act, 1949, the Companies Act, 2013, and Standard
     },
     {
       id: "paid-accounts",
-      title: "5. Paid Accounts & 30-Day Pro Practice Pass",
-      content: `(a) Plan Structure: Mash offers a Free tier for everyday reconciliation and standard workloads, and a Pro Practice Pass (₹1,999 for 30 calendar days) for commercial firm audit engagements requiring high-volume priority frontier reasoning.
+      title: "5. Paid Accounts & Pro Subscription",
+      content: `(a) Plan Structure: Mash offers a Free tier for everyday reconciliation and standard workloads, and a Pro Plan (₹1,999/month) for commercial firm audit engagements requiring high-volume priority frontier reasoning.
 
-(b) Non-Recurring Flat Fee: Pro passes are purchased on a one-time basis. Mash does NOT enroll you in automated recurring debits, silent auto-renewals, or stored payment mandates. Payments are securely processed in INR via Razorpay as a flat software license fee (exempt from mandatory GST registration under Section 22 of the CGST Act, 2017). Users receive an instant commercial payment receipt eligible as a business expense deduction under Section 37(1) of the Indian Income Tax Act, 1961.
+(b) Non-Recurring Flat Fee: Pro subscriptions are purchased on a flat-fee monthly basis. Mash does NOT enroll you in automated recurring debits, silent auto-renewals, or stored payment mandates. Payments are securely processed in INR via Razorpay as a flat software license fee (exempt from mandatory GST registration under Section 22 of the CGST Act, 2017). Users receive an instant commercial payment receipt eligible as a business expense deduction under Section 37(1) of the Indian Income Tax Act, 1961.
 
-(c) Natural Expiration: Upon day 30, your account naturally returns to the Free tier with zero cancellation requirements and no interruption to your local files. You can renew at any time.
+(c) Natural Expiration: Upon the conclusion of your 30-day billing period, your account naturally returns to the Free tier with zero cancellation requirements and no interruption to your local files. You can renew at any time.
 
 (d) Non-Refundable: Because software licenses and inference allocations are provisioned immediately upon transaction confirmation, license fees are non-refundable once activated.`,
     },
