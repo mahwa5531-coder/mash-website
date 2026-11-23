@@ -50,25 +50,8 @@ export default function CheckoutSuccessPage() {
       </Head>
 
       <div className="min-h-screen bg-[#FAF9F6] text-slate-900 font-sans selection:bg-slate-200">
-        {/* Minimal Header */}
-        <header className="border-b border-slate-200/80 bg-white/70 backdrop-blur-md">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <MashBrandIcon size={24} />
-              <span className="font-bold text-base tracking-tight text-slate-900 font-sans">
-                {SITE_CONFIG.name}
-              </span>
-            </Link>
-
-            <span className="text-[11px] font-mono text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 font-semibold flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Payment Verified
-            </span>
-          </div>
-        </header>
-
         {/* Success Container */}
-        <main className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="space-y-8">
             
             {/* Success Headline Card */}
