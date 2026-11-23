@@ -22,7 +22,7 @@ import { SITE_CONFIG } from "@/content/site-config";
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const [selectedMethod, setSelectedMethod] = React.useState<"upi" | "netbanking" | "cards">("upi");
+  const [selectedMethod, setSelectedMethod] = React.useState<"upi" | "cards">("upi");
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [showUpiModal, setShowUpiModal] = React.useState(false);
   const [paymentError, setPaymentError] = React.useState<string | null>(null);
@@ -46,7 +46,7 @@ export default function CheckoutPage() {
         <title>{`Checkout · 30-Day Pro Practice Pass · ${SITE_CONFIG.name}`}</title>
         <meta
           name="description"
-          content="Complete your one-time purchase of the Mash 30-Day Pro Practice Pass for ₹1,999. Zero auto-debit, instant UPI QR & NetBanking via Razorpay."
+          content="Complete your one-time purchase of the Mash 30-Day Pro Practice Pass for ₹1,999. Zero auto-debit, instant UPI QR & Cards via Razorpay."
         />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
@@ -193,16 +193,16 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                {/* Method Tabs */}
+                {/* Method Tabs: UPI & Cards Only */}
                 <div className="mb-6">
                   <label className="text-[11px] font-mono uppercase tracking-wider text-slate-500 block mb-2 font-semibold">
                     SELECT PAYMENT METHOD
                   </label>
-                  <div className="grid grid-cols-3 gap-2.5">
+                  <div className="grid grid-cols-2 gap-3">
                     <button
                       type="button"
                       onClick={() => setSelectedMethod("upi")}
-                      className={`flex flex-col items-center justify-center p-3 rounded-xl border text-xs font-medium transition-all ${
+                      className={`flex flex-col items-center justify-center p-3.5 rounded-xl border text-xs font-medium transition-all ${
                         selectedMethod === "upi"
                           ? "border-slate-900 bg-slate-900 text-white shadow-sm"
                           : "border-slate-200 hover:border-slate-300 bg-white text-slate-700"
@@ -217,24 +217,8 @@ export default function CheckoutPage() {
 
                     <button
                       type="button"
-                      onClick={() => setSelectedMethod("netbanking")}
-                      className={`flex flex-col items-center justify-center p-3 rounded-xl border text-xs font-medium transition-all ${
-                        selectedMethod === "netbanking"
-                          ? "border-slate-900 bg-slate-900 text-white shadow-sm"
-                          : "border-slate-200 hover:border-slate-300 bg-white text-slate-700"
-                      }`}
-                    >
-                      <Building2 className="h-5 w-5 mb-1" />
-                      <span className="font-semibold">NetBanking</span>
-                      <span className={`text-[9px] ${selectedMethod === "netbanking" ? "text-slate-300" : "text-slate-400"}`}>
-                        50+ Indian Banks
-                      </span>
-                    </button>
-
-                    <button
-                      type="button"
                       onClick={() => setSelectedMethod("cards")}
-                      className={`flex flex-col items-center justify-center p-3 rounded-xl border text-xs font-medium transition-all ${
+                      className={`flex flex-col items-center justify-center p-3.5 rounded-xl border text-xs font-medium transition-all ${
                         selectedMethod === "cards"
                           ? "border-slate-900 bg-slate-900 text-white shadow-sm"
                           : "border-slate-200 hover:border-slate-300 bg-white text-slate-700"
@@ -243,7 +227,7 @@ export default function CheckoutPage() {
                       <CreditCard className="h-5 w-5 mb-1" />
                       <span className="font-semibold">Cards</span>
                       <span className={`text-[9px] ${selectedMethod === "cards" ? "text-slate-300" : "text-slate-400"}`}>
-                        Corporate / RuPay
+                        Visa, Mastercard, RuPay
                       </span>
                     </button>
                   </div>
@@ -267,35 +251,18 @@ export default function CheckoutPage() {
                   </div>
                 )}
 
-                {selectedMethod === "netbanking" && (
-                  <div className="rounded-xl border border-slate-200 bg-slate-50/60 p-4 mb-6">
-                    <div className="text-xs font-semibold text-slate-900 mb-2">
-                      Popular Indian Banks Supported:
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-slate-700 font-medium mb-2">
-                      <div className="p-2 bg-white rounded-lg border border-slate-200 text-center">HDFC Bank</div>
-                      <div className="p-2 bg-white rounded-lg border border-slate-200 text-center">ICICI Bank</div>
-                      <div className="p-2 bg-white rounded-lg border border-slate-200 text-center">SBI</div>
-                      <div className="p-2 bg-white rounded-lg border border-slate-200 text-center">Axis Bank</div>
-                    </div>
-                    <p className="text-[10px] text-slate-500 text-center">
-                      +46 other commercial banks available via Razorpay.
-                    </p>
-                  </div>
-                )}
-
                 {selectedMethod === "cards" && (
                   <div className="rounded-xl border border-slate-200 bg-slate-50/60 p-4 mb-6 text-center">
                     <div className="text-xs font-semibold text-slate-900 mb-1">
-                      Domestic RuPay, Visa &amp; Mastercard
+                      Visa, Mastercard &amp; RuPay Cards Supported
                     </div>
-                    <p className="text-[11px] text-slate-500 mb-2">
-                      Corporate practice cards and personal debit/credit cards with instant OTP authentication.
+                    <p className="text-[11px] text-slate-500 mb-2.5">
+                      Corporate practice cards, personal credit &amp; debit cards with instant 3D-Secure OTP verification.
                     </p>
                     <div className="flex justify-center gap-2 text-[10px] font-mono text-slate-600">
-                      <span className="bg-white px-2 py-0.5 rounded border border-slate-200">RuPay</span>
-                      <span className="bg-white px-2 py-0.5 rounded border border-slate-200">Visa</span>
-                      <span className="bg-white px-2 py-0.5 rounded border border-slate-200">Mastercard</span>
+                      <span className="bg-white px-2.5 py-1 rounded border border-slate-200 font-semibold text-slate-800">Visa</span>
+                      <span className="bg-white px-2.5 py-1 rounded border border-slate-200 font-semibold text-slate-800">Mastercard</span>
+                      <span className="bg-white px-2.5 py-1 rounded border border-slate-200 font-semibold text-emerald-700">RuPay</span>
                     </div>
                   </div>
                 )}
@@ -328,13 +295,6 @@ export default function CheckoutPage() {
                   </p>
                 </div>
               </Card>
-
-              {/* Razorpay Trust Indicator */}
-              <div className="flex items-center justify-center gap-2 text-xs text-slate-400 font-mono">
-                <span>Authorized payment processing via</span>
-                <span className="font-semibold text-slate-700">Razorpay</span>
-                <span>(RBI Regulated)</span>
-              </div>
             </div>
 
           </div>
