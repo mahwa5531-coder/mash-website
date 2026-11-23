@@ -11,131 +11,67 @@ export default function TermsPage() {
   const sections = [
     {
       id: "registration-and-access",
-      title: "1. Registration and Access",
-      content: `You must be at least 18 years old and legally competent to enter into these Terms of Use ("Terms"). If you use Mash on behalf of an accounting firm, corporate entity, or partnership, you represent and warrant that you hold full authority to bind that organization to these Terms.
+      title: "1. Account Registration & Authentication",
+      content: `You must be at least 18 years old and legally competent to enter into these Terms of Use ("Terms"). When using Mash on behalf of an accounting firm, partnership, or corporate entity, you represent that you hold full authority to bind that organization.
 
-To access the desktop application and cloud reasoning capabilities, you may be required to register and authenticate via Google OAuth or designated sign-in providers. You agree to maintain the security of your authentication credentials and notify us immediately of any unauthorized access to your account. You may not share your account credentials or license seat outside your authorized organization.`,
-    },
-    {
-      id: "using-our-services",
-      title: "2. Using Our Services",
-      content: `Subject to your continuous compliance with these Terms, Mash grants you a personal, non-exclusive, non-transferable, revocable license to install, execute, and use the Mash desktop software and its associated agent services.
-
-Prohibited Conduct: You agree not to:
-(a) Reverse engineer, decompile, disassemble, or attempt to derive the source code, underlying algorithms, or prompt architectures of Mash, except to the extent permitted by applicable law;
-(b) Probe, scan, or test the vulnerability of our cloud gateway or bypass any security or authentication measures;
-(c) Scrape, harvest, or extract data from our services using automated bots, crawlers, or scripts;
-(d) Resell, sub-license, rent, or lease access to Mash or its API endpoints to third parties without our prior written consent;
-(e) Use the services in any manner that infringes, misappropriates, or violates the intellectual property, privacy, or statutory rights of any person.`,
+Authentication to the Mash desktop software and cloud reasoning gateway is handled exclusively via Google OAuth. You are responsible for safeguarding your credentials and maintaining device security. License seats are provisioned for your authorized professional practice and may not be shared outside your firm.`,
     },
     {
       id: "agent-and-tools",
-      title: "3. Autonomous AI Agent & Local Tool Execution",
-      content: `Mash operates as an autonomous desktop agent. When you prompt the agent to perform auditing, cross-referencing, or reconciliation tasks, the agent executes local computational tools (including Python runtimes, local database queries, and spreadsheet read/write commands) directly on your hardware.
+      title: "2. Autonomous Desktop Agent & Local Execution",
+      content: `Mash operates as an autonomous desktop agent. When you prompt the agent to perform financial reconciliation or audit tasks, it executes local computational tools (such as Python scripts, DuckDB queries, and spreadsheet read/write commands) directly on your device.
 
-By issuing instructions to the agent, you explicitly authorize Mash to:
-(a) Access, inspect, parse, and evaluate local files and workbooks located within workspaces you designate;
-(b) Perform mathematical operations, generate new worksheets, append audit verification tables, and format cells according to your query;
-(c) Transmit minimal ephemeral prompt tokens and extracted cell text snippets to authorized inference gateways solely to generate reasoning steps.
+By prompting the agent, you authorize it to:
+• Parse and evaluate local workbooks and files in designated workspaces;
+• Perform mathematical reconciliations, format cells, and append verification tables;
+• Transmit minimal, ephemeral prompt tokens and cell snippets to inference gateways strictly to compute analytical steps.
 
-Mandatory Backup Warranty: You acknowledge that automated spreadsheet tools modify local files. You represent and warrant that you maintain unedited master backup copies of all financial ledgers, tax returns, and client workbooks prior to initiating agent operations. Mash is not liable for data loss or file corruption arising from user-directed local file mutations.`,
+Master Backup Warranty: Automated tools modify local workbooks. You agree to maintain unedited master backup copies of all financial ledgers, tax filings, and client workbooks prior to initiating agent operations. Mash is not liable for data loss arising from user-directed file mutations.`,
     },
     {
-      id: "content",
-      title: "4. Content (Input and Output)",
-      content: `(a) Your Input: You retain complete ownership and all intellectual property rights in and to the files, spreadsheets, ledger data, and prompt text that you provide to Mash ("Input"). You represent that you possess all necessary rights, licenses, and client consents to submit such Input.
+      id: "content-and-zero-training",
+      title: "3. Client Data Ownership & Zero Model Training",
+      content: `(a) Ownership: You retain 100% ownership and all intellectual property rights in your files, spreadsheets, client records, and prompts ("Input"). Deliverables, verified workpapers, and calculation summaries generated by the software ("Output") belong entirely to you.
 
-(b) Output Ownership: As between you and Mash, and to the fullest extent permitted by applicable law, Mash assigns to you all right, title, and interest in and to the deliverables, reports, verified workpapers, and calculation summaries generated by the software ("Output").
-
-(c) Zero Model Training: Mash contractually covenants that your Input, Output, and financial figures are NEVER used to train, retrain, fine-tune, or calibrate any public or proprietary artificial intelligence or machine learning foundation models.`,
+(b) Zero Training Covenant: Mash contractually warrants that your financial spreadsheets, client numbers, transaction ledgers, and prompt queries are NEVER used to train, fine-tune, or calibrate public or proprietary artificial intelligence foundation models.`,
     },
     {
-      id: "accuracy-and-statutory-duty",
-      title: "5. Accuracy & Professional Auditor Responsibility",
-      content: `Artificial intelligence and computational deduction systems are probabilistic. While Mash is engineered for precision, Output may occasionally contain calculation discrepancies, incomplete control test captures, or logical errors. You must independently inspect and verify all Output before relying on it.
+      id: "statutory-duty",
+      title: "4. Statutory Auditor Duty & CAAT Disclaimer",
+      content: `Mash is a Computer-Assisted Audit Technique (CAAT) and assistive analytical workbench. Mash is NOT a registered Chartered Accountancy firm, licensed statutory auditor, or legal advisor, and does not issue formal audit opinions or assurance.
 
-CRITICAL STATUTORY AUDITOR DISCLAIMER:
-Mash is a Computer-Assisted Audit Technique (CAAT) and assistive software workbench. Mash is NOT a registered Chartered Accountancy firm, statutory audit firm, or licensed legal advisor. Mash does not provide certified audit opinions, formal assurance, or statutory certifications.
-
-Under the Chartered Accountants Act, 1949, the Companies Act, 2013, and applicable Standards on Auditing (including SA 200, SA 230, and SA 500 issued by the ICAI), the practicing Chartered Accountant, CPA, or corporate finance officer retains exclusive, non-delegable personal and statutory responsibility for:
-(i) Formulating professional audit conclusions;
-(ii) Verifying the sufficiency and appropriateness of audit evidence;
-(iii) Signing off on statutory audit reports, tax filings (including Form 3CD/3CA/3CB), and financial disclosures.`,
-    },
-    {
-      id: "acceptable-use",
-      title: "6. Acceptable Use for Financial Audits & Anti-Fraud",
-      content: `You agree to use Mash exclusively for lawful financial management, statutory audit, accounting, and analytical purposes. You strictly warrant that you will NOT use Mash to:
-(a) Generate fictitious invoices, circular trading documentation, or fraudulent books of accounts;
-(b) Disguise unaccounted money or engineer illegal tax evasion structures;
-(c) Fabricate audit working papers designed to mislead regulatory bodies, including the National Financial Reporting Authority (NFRA), the Ministry of Corporate Affairs (MCA), the Income Tax Department, the GST Network (GSTN), or judicial tribunals;
-(d) Process classified defense information, state secrets, or data prohibited under national security statutes.`,
+Under the Chartered Accountants Act, 1949, the Companies Act, 2013, and Standards on Auditing (including SA 200, SA 230, and SA 500 issued by the ICAI), the practicing Chartered Accountant or auditor retains exclusive, personal, and non-delegable statutory responsibility for verifying evidence, forming audit conclusions, and signing statutory audit reports or tax filings (including Form 3CD/3CA/3CB).`,
     },
     {
       id: "paid-accounts",
-      title: "7. Paid Accounts & Practice Licenses",
-      content: `(a) Account Tiers: Mash provides a Free tier and a Pro Commercial Practice License.
-- Free Tier: Intended for personal evaluation, individual accounting, and standard daily workloads.
-- Pro Practice License (₹1,999 / 30-Day Practice Pass): Grants commercial rights to deploy Mash outputs in fee-earning statutory audit engagements and partnership client deliverables with priority frontier reasoning capacity.
+      title: "5. Paid Accounts & 30-Day Pro Practice Pass",
+      content: `(a) Plan Structure: Mash offers a Free tier for everyday reconciliation and standard workloads, and a Pro Practice Pass (₹1,999 for 30 calendar days) for commercial firm audit engagements requiring high-volume priority frontier reasoning.
 
-(b) Non-Recurring Billing & Taxes: Pro Practice Passes are purchased on a one-time, non-recurring basis for a fixed 30-calendar-day validity period. Mash does NOT enroll you in automated recurring debit mandates, silent auto-renewals, or stored payment instruments. All transactions are securely processed in Indian Rupees (INR) via Razorpay as a flat software license fee (exempt from mandatory GST registration under Section 22 threshold of the CGST Act, 2017). Users receive an instant commercial payment receipt eligible for income tax business expense deduction under Section 37 of the Income Tax Act, 1961.
+(b) Non-Recurring Flat Fee: Pro passes are purchased on a one-time basis. Mash does NOT enroll you in automated recurring debits, silent auto-renewals, or stored payment mandates. Payments are securely processed in INR via Razorpay as a flat software license fee (exempt from mandatory GST registration under Section 22 of the CGST Act, 2017). Users receive an instant commercial payment receipt eligible as a business expense deduction under Section 37(1) of the Indian Income Tax Act, 1961.
 
-(c) Expiration & Renewal: Upon the expiration of your 30-day pass, your account automatically returns to the Free tier with zero penalties, zero cancellation steps, and zero interruption to your locally stored spreadsheets. You may purchase a renewal pass at any time directly through the app or website.
+(c) Natural Expiration: Upon day 30, your account naturally returns to the Free tier with zero cancellation requirements and no interruption to your local files. You can renew at any time.
 
-(d) No-Refund Policy: Because software execution, license activation, and computational AI inference tokens are provisioned immediately upon transaction confirmation, license fees are non-refundable once activated, except where explicitly required by applicable consumer protection laws.`,
+(d) Non-Refundable: Because software licenses and inference allocations are provisioned immediately upon transaction confirmation, license fees are non-refundable once activated.`,
     },
     {
-      id: "our-ip-rights",
-      title: "8. Our Intellectual Property Rights",
-      content: `Mash, its application binaries, source code, visual interfaces, documentation, brand logos, Celtic infinity knot mark, and trade secrets are the exclusive intellectual property of Mash and its licensors. Except for the limited licenses expressly granted herein, no other rights, title, or interest are conferred upon you.`,
+      id: "acceptable-use",
+      title: "6. Lawful Audit Practice & Anti-Fraud",
+      content: `You agree to use Mash strictly for lawful accounting, statutory auditing, tax compliance, and financial analysis. You strictly agree not to use Mash to:
+• Fabricate invoices, circular trading entries, or fictitious books of account;
+• Facilitate tax evasion, money laundering, or illegal financial structures;
+• Generate fraudulent audit working papers intended to mislead regulatory authorities (NFRA, MCA, Income Tax Department, GSTN) or courts.`,
     },
     {
-      id: "termination-and-suspension",
-      title: "9. Termination and Suspension",
-      content: `We reserve the right to suspend or terminate your access to our cloud gateway and services immediately upon notice if:
-(a) You materially breach these Terms or our acceptable use policies;
-(b) Your account generates anomalous, abusive, or automated denial-of-service traffic;
-(c) Required by law, judicial decree, or regulatory authority;
-(d) You initiate a fraudulent payment dispute or chargeback.
+      id: "liability",
+      title: "7. Disclaimer of Warranties & Limitation of Liability",
+      content: `Mash is provided on an "as is" and "as available" basis without warranties of any kind. To the maximum extent permitted by Indian law, Mash disclaims all implied warranties, including merchantability and fitness for a particular audit deadline.
 
-Upon termination, your right to use cloud reasoning endpoints ceases immediately. Provisions that by their nature should survive termination (including Content ownership, Disclaimers, Limitation of Liability, and Dispute Resolution) shall survive.`,
+In no event shall Mash or its directors be liable for indirect, consequential, or punitive damages, loss of profits, loss of professional reputation, regulatory penalties, or business interruption. In all circumstances, total aggregate liability shall not exceed the amount actually paid by you to Mash in the twelve (12) months preceding the claim.`,
     },
     {
-      id: "discontinuation-of-services",
-      title: "10. Discontinuation of Services",
-      content: `We may modify, update, or discontinue features of Mash over time. In the event of a permanent discontinuation of our cloud reasoning gateway, we will provide commercially reasonable advance notice. Core local spreadsheet capabilities already installed on your device remain functional independent of cloud gateway operations.`,
-    },
-    {
-      id: "disclaimer-of-warranties",
-      title: "11. Disclaimer of Warranties",
-      content: `THE MASH DESKTOP SOFTWARE, CLOUD GATEWAY, AND ALL ASSOCIATED SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY.
-
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, MASH EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT MASH WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE, OR THAT IT WILL SATISFY STRICT STATUTORY FILING DEADLINES (SUCH AS TAX AUDIT CLOSING DATES) WITHOUT CONTINGENT MANUAL BACKUP PROCEDURES.`,
-    },
-    {
-      id: "limitation-of-liability",
-      title: "12. Limitation of Liability",
-      content: `TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MASH, ITS DIRECTORS, EMPLOYEES, AFFILIATES, OR LICENSORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES WHATSOEVER, INCLUDING LOSS OF PROFITS, LOSS OF CLIENTS, LOSS OF PROFESSIONAL REPUTATION, REGULATORY FINES IMPOSED BY STATUTORY AUTHORITIES, BUSINESS INTERRUPTION, OR LOSS OF FINANCIAL DATA, REGARDLESS OF THE THEORY OF LIABILITY.
-
-IN ALL CIRCUMSTANCES, MASH'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE SERVICES SHALL NOT EXCEED THE TOTAL AMOUNT ACTUALLY PAID BY YOU TO MASH FOR ACCESS TO THE SERVICES IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM (OR ₹23,988, WHICHEVER IS LESS).`,
-    },
-    {
-      id: "dispute-resolution",
-      title: "13. Dispute Resolution, Governing Law & Jurisdiction",
-      content: `(a) Governing Law: These Terms and any dispute arising out of or related to them shall be governed by and construed in accordance with the laws of the Republic of India, without regard to conflict of law principles.
-
-(b) Informal Conciliation: Before initiating formal litigation, you and Mash agree to attempt to resolve any dispute informally by delivering written notice to legal@mash.ai. The parties shall engage in good-faith negotiations for a period of at least thirty (30) calendar days.
-
-(c) Exclusive Jurisdiction: If a dispute cannot be resolved informally within thirty (30) days, the dispute shall be submitted to the exclusive jurisdiction of the competent civil courts located in India at our operating headquarters.`,
-    },
-    {
-      id: "general-terms",
-      title: "14. General Terms",
-      content: `(a) Entire Agreement: These Terms, together with our Privacy Policy, constitute the entire agreement between you and Mash regarding the services and supersede all prior agreements or representations.
-
-(b) Severability: If any provision of these Terms is found to be invalid or unenforceable, that provision will be enforced to the maximum extent permissible, and the remaining provisions will remain in full force and effect.
-
-(c) Updates: We may update these Terms periodically to reflect product changes or legal requirements. We will notify you of material changes by posting the updated Terms on our website and updating the "Last Updated" date. Continued use of Mash after such notice constitutes your acceptance of the updated Terms.`,
+      id: "governing-law",
+      title: "8. Governing Law & Dispute Resolution",
+      content: `These Terms are governed by and construed in accordance with the laws of the Republic of India. The parties agree to attempt informal conciliation for at least thirty (30) days before initiating formal proceedings. Any unresolved dispute shall be subject to the exclusive jurisdiction of the competent civil courts in India at our operating headquarters.`,
     },
   ];
 
@@ -152,22 +88,22 @@ IN ALL CIRCUMSTANCES, MASH'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATIN
       </Head>
 
       <main className="pt-28 pb-20 md:pt-36 md:pb-28 bg-[#FAF9F6]">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           {/* Header */}
-          <div className="mb-12">
+          <div className="mb-10 text-center sm:text-left">
             <Link
-              href="/"
+              href="/policies"
               className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-900 transition-colors mb-6 font-sans font-medium"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
-              <span>Back to Overview</span>
+              <span>Back to Policies</span>
             </Link>
 
             <div className="space-y-3">
               <Badge variant="secondary" className="text-[11px] font-mono uppercase tracking-wider font-semibold">
                 LEGAL AGREEMENT
               </Badge>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 font-sans">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 font-sans">
                 Terms of Use
               </h1>
               <p className="text-xs text-slate-500 font-mono">
@@ -176,32 +112,14 @@ IN ALL CIRCUMSTANCES, MASH'S TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATIN
             </div>
           </div>
 
-          {/* Table of Contents Pill Bar */}
-          <div className="mb-10 rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs">
-            <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3 font-mono">
-              Table of Contents
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600 font-sans">
-              {sections.map((s) => (
-                <a
-                  key={s.id}
-                  href={`#${s.id}`}
-                  className="hover:text-slate-950 transition-colors truncate"
-                >
-                  {s.title}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Legal Sections Card */}
-          <div className="rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-12 shadow-xs space-y-12">
+          {/* Legal Sections */}
+          <div className="rounded-3xl border border-slate-200/90 bg-white p-8 sm:p-10 shadow-xs space-y-10">
             {sections.map((s) => (
-              <section key={s.id} id={s.id} className="scroll-mt-28 space-y-3">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-sans tracking-tight">
+              <section key={s.id} id={s.id} className="scroll-mt-28 space-y-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-sans tracking-tight">
                   {s.title}
                 </h2>
-                <div className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans whitespace-pre-line space-y-2">
+                <div className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans whitespace-pre-line">
                   {s.content}
                 </div>
               </section>
