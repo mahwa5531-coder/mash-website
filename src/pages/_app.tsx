@@ -1,10 +1,18 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/content/site-config";
 import { assetPath } from "@/lib/utils";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -38,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
       </Head>
 
-      <div className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200">
+      <div className={`flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200 ${plusJakartaSans.className} ${plusJakartaSans.variable}`}>
         <Navbar />
         <div className="flex-1">
           <Component {...pageProps} />
