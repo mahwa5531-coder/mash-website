@@ -141,7 +141,7 @@ export default function PricingPage() {
               </div>
               <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/90 shadow-2xs">
                 <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                <span className="font-medium">UPI, NetBanking &amp; GST Invoicing via Razorpay</span>
+                <span className="font-medium">UPI, NetBanking &amp; Instant Receipt via Razorpay</span>
               </div>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function PricingPage() {
                     </span>
                   </div>
                   <div className="text-[11px] font-semibold text-emerald-700 mt-1">
-                    Inclusive of all taxes (18% GST invoice included)
+                    Flat fee · No hidden taxes or extra charges
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5 font-medium">
                     One-time payment · Zero auto-renewal · Renew whenever needed
@@ -296,7 +296,7 @@ export default function PricingPage() {
                   </Button>
                 </a>
                 <span className="text-center text-[10px] text-slate-500 font-sans">
-                  One-time Razorpay checkout · No recurring debit · UPI &amp; GST receipt
+                  One-time Razorpay checkout · No recurring debit · Instant payment receipt
                 </span>
               </CardFooter>
             </Card>

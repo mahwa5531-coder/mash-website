@@ -78,7 +78,7 @@ Under the Chartered Accountants Act, 1949, the Companies Act, 2013, and applicab
 - Free Tier: Intended for personal evaluation, individual accounting, and standard daily workloads.
 - Pro Practice License (₹1,999 / 30-Day Practice Pass): Grants commercial rights to deploy Mash outputs in fee-earning statutory audit engagements and partnership client deliverables with priority frontier reasoning capacity.
 
-(b) Non-Recurring Billing & Taxes: Pro Practice Passes are purchased on a one-time, non-recurring basis for a fixed 30-calendar-day validity period. Mash does NOT enroll you in automated recurring debit mandates, silent auto-renewals, or stored payment instruments. All transactions are securely processed in Indian Rupees (INR) via Razorpay, inclusive of applicable Goods and Services Tax (GST 18%) with an instant B2B tax invoice.
+(b) Non-Recurring Billing & Taxes: Pro Practice Passes are purchased on a one-time, non-recurring basis for a fixed 30-calendar-day validity period. Mash does NOT enroll you in automated recurring debit mandates, silent auto-renewals, or stored payment instruments. All transactions are securely processed in Indian Rupees (INR) via Razorpay as a flat software license fee (exempt from mandatory GST registration under Section 22 threshold of the CGST Act, 2017). Users receive an instant commercial payment receipt eligible for income tax business expense deduction under Section 37 of the Income Tax Act, 1961.
 
 (c) Expiration & Renewal: Upon the expiration of your 30-day pass, your account automatically returns to the Free tier with zero penalties, zero cancellation steps, and zero interruption to your locally stored spreadsheets. You may purchase a renewal pass at any time directly through the app or website.
 

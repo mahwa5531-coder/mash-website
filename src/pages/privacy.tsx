@@ -28,7 +28,7 @@ export default function PrivacyPage() {
     {
       name: "Razorpay Software Pvt. Ltd.",
       location: "Bengaluru, India",
-      role: "RBI-Authorized Payment Aggregator, PCI-DSS Level 1, UPI & GST Invoicing",
+      role: "RBI-Authorized Payment Aggregator, PCI-DSS Level 1, UPI & Digital Invoicing",
       dataResidency: "India (RBI Regulated)",
       training: "Not Applicable (Financial Transactions Only)",
       link: "https://razorpay.com/privacy/",
