@@ -22,9 +22,6 @@ export default function Document() {
   return (
     <Html lang="en" className="scroll-smooth">
       <Head>
-        {/* Razorpay Standard Checkout Official Script */}
-        <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
-        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
