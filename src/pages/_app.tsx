@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>{`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`}</title>
         <meta name="description" content={SITE_CONFIG.subhead} />
         <meta name="author" content="Mash Engineering Team" />
-        <meta name="theme-color" content="#FCFCFD" />
+        <meta name="theme-color" content="#FAF9F6" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Favicons & App Icons */}
@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
       </Head>
 
-      <div className="flex min-h-screen flex-col bg-[#FCFCFD] text-slate-900 selection:bg-slate-200">
+      <div className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200">
         <Navbar />
         <div className="flex-1">
           <Component {...pageProps} />

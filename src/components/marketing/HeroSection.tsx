@@ -50,10 +50,19 @@ export function HeroSection() {
   const currentMode = heroModes[activeTab];
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28 bg-[#FCFCFD]">
+    <section className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28 bg-[#FAF9F6]">
+      {/* Brand Ambient Atmosphere Aura: Echoes the Mash logo's Indigo and Saffron spectrum (Sarvam AI / Indus inspired) */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute inset-x-0 -top-24 sm:-top-32 h-[550px] sm:h-[620px] overflow-hidden -z-10 blur-3xl opacity-35 select-none"
+      >
+        <div className="absolute top-1/6 sm:top-1/4 left-1/2 -translate-x-[75%] w-[480px] sm:w-[560px] h-[340px] rounded-full bg-gradient-to-tr from-[#313C88]/30 via-[#3B49A2]/20 to-transparent" />
+        <div className="absolute top-1/4 sm:top-1/3 left-1/2 -translate-x-[20%] w-[480px] sm:w-[560px] h-[340px] rounded-full bg-gradient-to-tl from-[#F59E0B]/25 via-[#C8522C]/15 to-transparent" />
+      </div>
+
       {/* Background Engineering Dotted Grid Mask (Subtle, Crisp, Clean) */}
       <div 
-        className="pointer-events-none absolute inset-0 z-0 opacity-40"
+        className="pointer-events-none absolute inset-0 z-0 opacity-25"
         style={{
           backgroundImage: "radial-gradient(#94A3B8 1px, transparent 1px)",
           backgroundSize: "28px 28px",

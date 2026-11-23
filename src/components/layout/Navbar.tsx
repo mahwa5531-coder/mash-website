@@ -47,7 +47,7 @@ export function Navbar() {
         className={cn(
           "fixed top-0 inset-x-0 h-20 sm:h-24 pointer-events-none z-40 transition-opacity duration-200",
           isScrolled
-            ? "opacity-100 bg-gradient-to-b from-[#FCFCFD] from-60% via-[#FCFCFD]/80 via-80% to-transparent"
+            ? "opacity-100 bg-gradient-to-b from-[#FAF9F6] from-60% via-[#FAF9F6]/80 via-80% to-transparent"
             : "opacity-0"
         )}
       />

@@ -7,9 +7,9 @@ import { SITE_CONFIG } from "@/content/site-config";
 
 export function DownloadCard() {
   return (
-    <section className="py-20 border-t border-slate-200/80 bg-white">
+    <section className="py-20 border-t border-slate-200/80 bg-[#FAF9F6]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <Card className="border-slate-200/90 shadow-sm p-8 md:p-12 text-center bg-[#FCFCFD]">
+        <Card className="rounded-2xl border-slate-200/90 shadow-sm p-8 md:p-12 text-center bg-white">
           <div className="max-w-xl mx-auto space-y-5">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-sans tracking-tight">
               Start auditing spreadsheets on Windows today.

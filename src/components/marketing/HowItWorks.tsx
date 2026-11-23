@@ -28,7 +28,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 border-t border-slate-200/80 bg-white">
+    <section id="how-it-works" className="py-20 border-t border-slate-200/80 bg-[#FAF9F6]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <Badge variant="secondary" className="mb-3 text-[11px] font-mono uppercase tracking-wider font-semibold">
@@ -46,7 +46,7 @@ export function HowItWorks() {
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative rounded-xl border border-slate-200/90 bg-[#FCFCFD] p-6 shadow-2xs hover:shadow-sm hover:border-slate-300 transition-all flex flex-col justify-between"
+              className="relative rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs hover:shadow-sm hover:border-slate-300 transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

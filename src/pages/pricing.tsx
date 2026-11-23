@@ -116,7 +116,7 @@ export default function PricingPage() {
         <meta property="og:url" content="https://mash.ai/pricing/" />
       </Head>
 
-      <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FCFCFD]">
+      <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FAF9F6]">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-12">
