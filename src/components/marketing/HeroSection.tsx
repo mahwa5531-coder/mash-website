@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { Download, ChevronRight, ShieldCheck, CheckCircle2, FileSpreadsheet, Layers, Brain, FileCheck } from "lucide-react";
+import { Download, ChevronRight, CheckCircle2, FileSpreadsheet, Layers, Brain, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WindowMockup } from "@/components/layout/WindowMockup";
 import { SITE_CONFIG } from "@/content/site-config";
@@ -85,7 +85,7 @@ export function HeroSection() {
           </p>
 
           {/* Action CTAs Stack */}
-          <div className="flex flex-col sm:flex-row items-center gap-3.5 mb-6 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-3.5 mb-10 w-full sm:w-auto">
             <a href={SITE_CONFIG.installer.downloadPath} download className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto gap-2 text-sm shadow-md h-12 px-6 font-semibold bg-slate-900 hover:bg-slate-800 transition-all hover:scale-[1.01]">
                 <Download className="h-4 w-4" />
@@ -99,16 +99,6 @@ export function HeroSection() {
                 <ChevronRight className="h-4 w-4 text-slate-400" />
               </Button>
             </Link>
-          </div>
-
-          {/* Trust Metrics Row */}
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-slate-500 mb-10">
-            <span className="flex items-center gap-1.5 font-medium text-slate-700">
-              <ShieldCheck className="h-3.5 w-3.5 text-emerald-600" />
-              Windows 10 / 11 (64-bit)
-            </span>
-            <span className="text-slate-300">·</span>
-            <span className="text-slate-600 font-medium">100% on-device client confidentiality</span>
           </div>
         </div>
 
