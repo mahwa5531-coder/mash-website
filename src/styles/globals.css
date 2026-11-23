@@ -27,6 +27,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Tactile Bond-Paper Micro-Grain Texture: Eliminates CSS gradient banding and provides natural physical parchment feel */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Slow Ambient Aurora Breathing Pulse (16s cycle, pure GPU hardware acceleration) */
+@keyframes ambient-breathe {
+  0%, 100% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 0.32;
+  }
+  50% {
+    transform: scale(1.06) translate3d(12px, -8px, 0);
+    opacity: 0.44;
+  }
+}
+
+.animate-ambient-breathe {
+  animation: ambient-breathe 16s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
 ::selection {
   background-color: #E2E8F0;
   color: #0F172A;

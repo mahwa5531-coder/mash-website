@@ -54,7 +54,7 @@ export function HeroSection() {
       {/* Brand Ambient Atmosphere Aura: Echoes the Mash logo's Indigo and Saffron spectrum (Sarvam AI / Indus inspired) */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute inset-x-0 -top-24 sm:-top-32 h-[550px] sm:h-[620px] overflow-hidden -z-10 blur-3xl opacity-35 select-none"
+        className="pointer-events-none absolute inset-x-0 -top-24 sm:-top-32 h-[550px] sm:h-[620px] overflow-hidden -z-10 blur-3xl opacity-35 select-none animate-ambient-breathe"
       >
         <div className="absolute top-1/6 sm:top-1/4 left-1/2 -translate-x-[75%] w-[480px] sm:w-[560px] h-[340px] rounded-full bg-gradient-to-tr from-[#313C88]/30 via-[#3B49A2]/20 to-transparent" />
         <div className="absolute top-1/4 sm:top-1/3 left-1/2 -translate-x-[20%] w-[480px] sm:w-[560px] h-[340px] rounded-full bg-gradient-to-tl from-[#F59E0B]/25 via-[#C8522C]/15 to-transparent" />

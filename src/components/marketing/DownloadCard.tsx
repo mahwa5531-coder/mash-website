@@ -7,8 +7,16 @@ import { SITE_CONFIG } from "@/content/site-config";
 
 export function DownloadCard() {
   return (
-    <section className="py-20 border-t border-slate-200/80 bg-[#FAF9F6]">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+    <section className="relative overflow-hidden py-20 border-t border-slate-200/80 bg-[#FAF9F6]">
+      {/* Subtle Bottom Ambient Anchor Glow */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 h-[360px] overflow-hidden -z-0 blur-3xl opacity-25 select-none"
+      >
+        <div className="mx-auto w-[540px] h-[260px] rounded-full bg-gradient-to-r from-[#313C88]/20 via-[#F59E0B]/20 to-[#C8522C]/20" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6">
         <Card className="rounded-2xl border-slate-200/90 shadow-sm p-8 md:p-12 text-center bg-white">
           <div className="max-w-xl mx-auto space-y-5">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-sans tracking-tight">
