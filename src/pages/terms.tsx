@@ -74,13 +74,15 @@ Under the Chartered Accountants Act, 1949, the Companies Act, 2013, and applicab
     {
       id: "paid-accounts",
       title: "7. Paid Accounts & Practice Licenses",
-      content: `(a) Subscription Tiers: Mash offers a Free evaluation tier and a Pro Commercial Practice License.
+      content: `(a) Account Tiers: Mash provides a Free tier and a Pro Commercial Practice License.
 - Free Tier: Intended for personal evaluation, individual accounting, and standard daily workloads.
-- Pro Practice License (₹1,999 / month or ₹19,190 / year): Grants commercial rights to deploy Mash outputs in fee-earning statutory audit engagements and partnership client deliverables with frontier reasoning capacity.
+- Pro Practice License (₹1,999 / 30-Day Practice Pass): Grants commercial rights to deploy Mash outputs in fee-earning statutory audit engagements and partnership client deliverables with priority frontier reasoning capacity.
 
-(b) Billing and Taxes: Subscriptions are billed on a recurring monthly or annual basis on the calendar day corresponding to the commencement of your paid subscription. All quoted subscription fees are inclusive of applicable Goods and Services Tax (GST) and statutory levies.
+(b) Non-Recurring Billing & Taxes: Pro Practice Passes are purchased on a one-time, non-recurring basis for a fixed 30-calendar-day validity period. Mash does NOT enroll you in automated recurring debit mandates, silent auto-renewals, or stored payment instruments. All transactions are securely processed in Indian Rupees (INR) via Razorpay, inclusive of applicable Goods and Services Tax (GST 18%) with an instant B2B tax invoice.
 
-(c) Cancellation & No-Refund Policy: You may cancel your Pro subscription at any time via your account portal. Upon cancellation, your Pro features will remain active until the conclusion of your current paid billing period. Because software download, license activation, and computational inference tokens are delivered immediately upon purchase, subscription fees are strictly non-refundable once billed, except where mandated by applicable consumer protection laws.`,
+(c) Expiration & Renewal: Upon the expiration of your 30-day pass, your account automatically returns to the Free tier with zero penalties, zero cancellation steps, and zero interruption to your locally stored spreadsheets. You may purchase a renewal pass at any time directly through the app or website.
+
+(d) No-Refund Policy: Because software execution, license activation, and computational AI inference tokens are provisioned immediately upon transaction confirmation, license fees are non-refundable once activated, except where explicitly required by applicable consumer protection laws.`,
     },
     {
       id: "our-ip-rights",

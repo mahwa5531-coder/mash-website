@@ -26,11 +26,11 @@ export default function PrivacyPage() {
       link: "https://www.sarvam.ai/terms-of-service",
     },
     {
-      name: "Stripe / Razorpay Payments",
-      location: "India / Global",
-      role: "PCI-DSS Compliant Subscription Billing & GST Invoicing",
-      dataResidency: "RBI E-Mandate Compliant",
-      training: "Not Applicable",
+      name: "Razorpay Software Pvt. Ltd.",
+      location: "Bengaluru, India",
+      role: "RBI-Authorized Payment Aggregator, PCI-DSS Level 1, UPI & GST Invoicing",
+      dataResidency: "India (RBI Regulated)",
+      training: "Not Applicable (Financial Transactions Only)",
       link: "https://razorpay.com/privacy/",
     },
   ];

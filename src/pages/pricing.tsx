@@ -32,8 +32,6 @@ import {
 import { SITE_CONFIG } from "@/content/site-config";
 
 export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = React.useState<"monthly" | "annual">("monthly");
-
   const comparisonCategories = [
     {
       name: "Practice Workload & Capacity",
@@ -64,7 +62,7 @@ export default function PricingPage() {
         { feature: "Client Data Confidentiality", free: "100% On-Device (Zero Cloud)", pro: "100% On-Device (Zero Cloud)" },
         { feature: "Built-in Financial Intelligence (Zero API Setup)", free: true, pro: true },
         { feature: "Support Channel", free: "Standard Support", pro: "Priority Dedicated Firm Support" },
-        { feature: "Price (All Taxes Included)", free: "₹0 Forever", pro: "₹1,999 / mo (incl. taxes)" },
+        { feature: "Price (All Taxes Included)", free: "₹0 Forever", pro: "₹1,999 / 30-day pass (incl. taxes)" },
       ],
     },
   ];
@@ -131,24 +129,20 @@ export default function PricingPage() {
               All core spreadsheet auditing tools are included on Windows with 100% local confidentiality. Choose the plan matching your practice workload.
             </p>
 
-            {/* Billing Switcher (shadcn Tabs primitive) */}
-            <div className="mt-8 flex justify-center">
-              <Tabs
-                value={billingPeriod}
-                onValueChange={(val) => setBillingPeriod(val as "monthly" | "annual")}
-              >
-                <TabsList className="bg-slate-100 p-1 rounded-xl border border-slate-200/90 shadow-2xs">
-                  <TabsTrigger value="monthly" className="px-5 py-1.5 text-xs">
-                    Monthly Billing
-                  </TabsTrigger>
-                  <TabsTrigger value="annual" className="px-5 py-1.5 text-xs flex items-center gap-1.5">
-                    <span>Annual Billing</span>
-                    <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                      Save 20%
-                    </span>
-                  </TabsTrigger>
-                </TabsList>
-              </Tabs>
+            {/* Trust and Non-Recurring Clarity Badges */}
+            <div className="mt-8 flex flex-wrap justify-center items-center gap-3 text-xs text-slate-700 font-sans">
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/90 shadow-2xs">
+                <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                <span className="font-medium">30-day non-recurring pass</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/90 shadow-2xs">
+                <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                <span className="font-medium">Zero auto-debit / No recurring mandates</span>
+              </div>
+              <div className="flex items-center gap-1.5 bg-white px-3.5 py-1.5 rounded-full border border-slate-200/90 shadow-2xs">
+                <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                <span className="font-medium">UPI, NetBanking &amp; GST Invoicing via Razorpay</span>
+              </div>
             </div>
           </div>
 
@@ -247,14 +241,17 @@ export default function PricingPage() {
                 <div className="my-6">
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-sans">
-                      {billingPeriod === "monthly" ? "₹1,999" : "₹1,599"}
+                      ₹1,999
                     </span>
                     <span className="text-xs text-slate-500 font-medium">
-                      {billingPeriod === "monthly" ? "/ month" : "/ month (billed annually)"}
+                      / 30-day practice pass
                     </span>
                   </div>
                   <div className="text-[11px] font-semibold text-emerald-700 mt-1">
-                    Inclusive of all taxes
+                    Inclusive of all taxes (18% GST invoice included)
+                  </div>
+                  <div className="text-[11px] text-slate-500 mt-0.5 font-medium">
+                    One-time payment · Zero auto-renewal · Renew whenever needed
                   </div>
                 </div>
 
@@ -294,12 +291,12 @@ export default function PricingPage() {
                 <a href={SITE_CONFIG.installer.downloadPath} download className="w-full">
                   <Button className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md">
                     <Zap className="h-4 w-4 text-amber-400" />
-                    <span>Subscribe to Pro</span>
+                    <span>Get 30-Day Pro Pass (₹1,999)</span>
                     <ArrowRight className="h-4 w-4 text-slate-400" />
                   </Button>
                 </a>
-                <span className="text-center text-[10px] text-slate-400 font-mono">
-                  Instant activation · Cancel anytime
+                <span className="text-center text-[10px] text-slate-500 font-sans">
+                  One-time Razorpay checkout · No recurring debit · UPI &amp; GST receipt
                 </span>
               </CardFooter>
             </Card>
