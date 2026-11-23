@@ -1,18 +1,10 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/content/site-config";
 import { assetPath } from "@/lib/utils";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-sans",
-});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -27,6 +19,11 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Favicons & App Icons */}
         <link rel="icon" href={assetPath("/favicon.ico")} sizes="any" />
         <link rel="apple-touch-icon" href={assetPath("/apple-icon.png")} />
+
+        {/* Plus Jakarta Sans (Native Web Font) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
         
         {/* OpenGraph / Social Sharing */}
         <meta property="og:site_name" content="Mash" />
@@ -46,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
       </Head>
 
-      <div className={`flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200 ${plusJakartaSans.className} ${plusJakartaSans.variable}`}>
+      <div className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200">
         <Navbar />
         <div className="flex-1">
           <Component {...pageProps} />
