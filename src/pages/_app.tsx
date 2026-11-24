@@ -9,7 +9,7 @@ import { assetPath } from "@/lib/utils";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const isMinimalLayout = router.pathname.startsWith("/auth") || router.pathname === "/checkout/success";
+  const isMinimalLayout = router.pathname.startsWith("/auth") || router.pathname === "/checkout/success" || router.pathname === "/404";
 
   return (
     <>

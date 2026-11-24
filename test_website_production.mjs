@@ -7,7 +7,7 @@ async function verifyProductionSite() {
   const baseUrl = `http://localhost:${port}`;
   console.log(`Launching headless browser to test production website on ${baseUrl}...`);
   
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, channel: "chrome" });
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   const page = await context.newPage();
 
@@ -31,7 +31,9 @@ async function verifyProductionSite() {
     { route: "/checkout", expectedTitle: "Checkout" },
     { route: "/terms", expectedTitle: "Terms" },
     { route: "/privacy", expectedTitle: "Privacy" },
-    { route: "/policies", expectedTitle: "Policies" }
+    { route: "/policies", expectedTitle: "Policies" },
+    { route: "/checkout/success", expectedTitle: "Payment" },
+    { route: "/auth/success", expectedTitle: "Authentication" }
   ];
 
   for (const { route, expectedTitle } of routesToTest) {
