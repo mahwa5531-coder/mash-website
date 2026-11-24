@@ -16,7 +16,6 @@ export function HeroSection() {
       file: "Audit_Deliverables / mash_full_feature_audit.xlsx",
       src: "/screenshots/mash_real_llm_hero_dual_pane_top_light.png",
       alt: "Mash Dual-Pane Split: AI Chat beside Excel sheet verifying statutory audit table",
-      tag: "264 Control Tests Passed · ₹0.00 Material Variance",
     },
     {
       id: "reconciliation",
@@ -25,7 +24,6 @@ export function HeroSection() {
       file: "Workbooks / Executive_Dashboard_FY25.xlsx",
       src: "/screenshots/excel_pw_light_maximized_sheet1.png",
       alt: "Maximized Excel workbook showing trial balance and quarterly variance reconciliation",
-      tag: "Live Excel Recalculation · Working Formulas Intact",
     },
     {
       id: "trace",
@@ -34,7 +32,6 @@ export function HeroSection() {
       file: "Audit_Reports / reconciliation_trace.log",
       src: "/screenshots/mash_single_pane_chat_thought_expanded_light.png",
       alt: "Expanded thought steps showing verifiable calculation checkpoints and deduction trail",
-      tag: "Zero Silent Overwrites · Partner Sign-off Ready",
     },
     {
       id: "deliverable",
@@ -43,7 +40,6 @@ export function HeroSection() {
       file: "Audit_Deliverables / statutory_audit_fy26.xlsx",
       src: "/screenshots/mash_single_pane_chat_light.png",
       alt: "Focused chat view with direct download deliverable card for verified Excel workpaper",
-      tag: "Native .xlsx Export · 100% On-Device Security",
     },
   ];
 
@@ -103,8 +99,8 @@ export function HeroSection() {
         </div>
 
         {/* Interactive Mode Selector Tabs */}
-        <div className="mb-4 flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-2 sm:px-4 sm:py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs">
-          <div className="flex flex-wrap items-center justify-center gap-1.5 w-full sm:w-auto">
+        <div className="mb-5 flex items-center justify-center">
+          <div className="inline-flex flex-wrap items-center justify-center gap-1.5 bg-white p-1.5 sm:p-2 rounded-2xl border border-slate-200/90 shadow-2xs">
             {heroModes.map((mode, idx) => {
               const isSelected = activeTab === idx;
               return (
@@ -112,7 +108,7 @@ export function HeroSection() {
                   key={mode.id}
                   type="button"
                   onClick={() => setActiveTab(idx)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all duration-150 flex items-center gap-1.5 cursor-pointer select-none ${
+                  className={`px-3 sm:px-4 py-1.5 rounded-xl text-xs font-medium transition-all duration-150 flex items-center gap-1.5 cursor-pointer select-none ${
                     isSelected
                       ? "bg-slate-900 text-white shadow-xs font-semibold"
                       : "text-slate-600 hover:text-slate-950 hover:bg-slate-100/70"
@@ -123,11 +119,6 @@ export function HeroSection() {
                 </button>
               );
             })}
-          </div>
-
-          <div className="flex items-center gap-2 text-[11px] font-mono text-slate-500 shrink-0">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span className="text-slate-700 font-medium">{currentMode.tag}</span>
           </div>
         </div>
 

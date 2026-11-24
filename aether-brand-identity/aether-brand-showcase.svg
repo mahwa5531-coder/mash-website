@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     viewBox="0 0 1920 1080" width="1920" height="1080"
+     style="background-color: #06080D;">
+  <defs>
+    
+    <!-- Linear Gradients for Optical Depth -->
+    <linearGradient id="grad-cyan-blue" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052FF" />
+      <stop offset="60%" stop-color="#00C8FF" />
+      <stop offset="100%" stop-color="#00F2FE" />
+    </linearGradient>
+
+    <linearGradient id="grad-blue-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="40%" stop-color="#0066FF" />
+      <stop offset="100%" stop-color="#3A0CA3" />
+    </linearGradient>
+
+    <linearGradient id="grad-core-thrust" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#0099FF" />
+      <stop offset="100%" stop-color="#0033CC" />
+    </linearGradient>
+
+    <!-- Subtle Ambient Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="shadow-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="icon-glass" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E131F" />
+      <stop offset="100%" stop-color="#090D15" />
+    </linearGradient>
+  </defs>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 01: ARTBOARD BACKGROUND & HEADER                      -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-01-background" inkscape:label="01 - Background &amp; Canvas">
+    <rect width="1920" height="1080" fill="#06080D" />
+    <!-- Subtle Ambient Radial Glows -->
+    <circle cx="440" cy="460" r="380" fill="#0052FF" opacity="0.12" filter="url(#glow)" />
+    <circle cx="1100" cy="380" r="320" fill="#00C8FF" opacity="0.08" filter="url(#glow)" />
+
+    <!-- Top Navigation / Header -->
+    <g transform="translate(80, 55)">
+      <text x="0" y="24" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="28" font-weight="800" letter-spacing="6px" fill="#FFFFFF">AETHER DYNAMICS</text>
+      <text x="320" y="24" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500" letter-spacing="3px" fill="#00F2FE" opacity="0.8">// VECTOR BRAND SYSTEM &amp; GEOMETRIC SPECIFICATION</text>
+      
+      <!-- Metadata Tag Pills -->
+      <g transform="translate(1320, 5)">
+        <rect x="0" y="0" width="130" height="26" rx="6" fill="#141B2D" stroke="#00F2FE" stroke-opacity="0.3" stroke-width="1" />
+        <text x="14" y="17" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00F2FE">INKSCAPE NATIVE</text>
+
+        <rect x="145" y="0" width="120" height="26" rx="6" fill="#141B2D" stroke="#00F2FE" stroke-opacity="0.3" stroke-width="1" />
+        <text x="160" y="17" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFFFFF">W3C SVG 1.1</text>
+
+        <rect x="280" y="0" width="140" height="26" rx="6" fill="#141B2D" stroke="#00F2FE" stroke-opacity="0.3" stroke-width="1" />
+        <text x="295" y="17" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00F2FE">CMYK COMPLIANT</text>
+      </g>
+
+      <!-- Dividing Accent Rule -->
+      <line x1="0" y1="46" x2="1760" y2="46" stroke="#1A2338" stroke-width="1.5" />
+      <line x1="0" y1="46" x2="280" y2="46" stroke="#00F2FE" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 02: HERO BRANDMARK DISPLAY (LEFT PANEL)              -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-02-hero" inkscape:label="02 - Hero Primary Mark">
+    <!-- Panel Container -->
+    <rect x="80" y="130" width="680" height="890" rx="16" fill="url(#panel-bg)" stroke="#161F33" stroke-width="1.5" />
+    
+    <!-- Hero Mark (Large Scale, ~420px) -->
+    <g transform="translate(170, 190) scale(1.0)">
+      <!-- Soft Back Glow -->
+      <g opacity="0.35" filter="url(#glow)">
+        <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="#00C8FF" />
+        <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="#0052FF" />
+        <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="#00F2FE" />
+      </g>
+      <!-- Crisp Render -->
+      <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="url(#grad-cyan-blue)" />
+      <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="url(#grad-blue-indigo)" />
+      <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="url(#grad-core-thrust)" filter="url(#shadow-soft)" />
+    </g>
+
+    <!-- Wordmark & Tagline -->
+    <g transform="translate(180, 750)">
+      <text x="130" y="0" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="56" font-weight="800" letter-spacing="16px" fill="#FFFFFF">AETHER</text>
+      <text x="130" y="42" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" letter-spacing="12px" fill="#00F2FE">DYNAMICS</text>
+      <text x="130" y="80" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="13" font-weight="400" letter-spacing="3px" fill="#7E8DA6">ATMOSPHERIC &amp; ORBITAL PROPULSION</text>
+    </g>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 03: GEOMETRIC CONSTRUCTION BLUEPRINT (CENTER TOP)     -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-03-blueprint" inkscape:label="03 - Geometric Construction">
+    <rect x="790" y="130" width="580" height="500" rx="16" fill="url(#panel-bg)" stroke="#161F33" stroke-width="1.5" />
+
+    <text x="825" y="172" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" letter-spacing="2px" fill="#FFFFFF">MATHEMATICAL BLUEPRINT</text>
+    <text x="825" y="194" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00F2FE">GOLDEN RATIO CIRCLES &amp; 14px LAMINAR CHANNELS</text>
+
+    <!-- Embedded Construction SVG Viewport -->
+    <g transform="translate(830, 200) scale(0.85)">
+      <!-- Grid Lines -->
+      <g opacity="0.3">
+        <line x1="250" y1="20" x2="250" y2="480" stroke="#00F2FE" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="20" y1="240" x2="480" y2="240" stroke="#00F2FE" stroke-width="1" stroke-dasharray="4,4" />
+        <line x1="250" y1="72" x2="95" y2="375" stroke="#00F2FE" stroke-width="1" />
+        <line x1="250" y1="72" x2="405" y2="375" stroke="#00F2FE" stroke-width="1" />
+        <circle cx="250" cy="240" r="185" fill="none" stroke="#00F2FE" stroke-width="0.8" stroke-dasharray="6,6" />
+        <circle cx="250" cy="240" r="114" fill="none" stroke="#FF0077" stroke-width="0.8" stroke-dasharray="4,4" />
+      </g>
+      <!-- Wireframe Stroke -->
+      <g fill="none" stroke="#00F2FE" stroke-width="2.2">
+        <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" opacity="0.9" />
+        <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" opacity="0.9" />
+        <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" stroke="#FF0077" stroke-width="2.2" opacity="0.95" />
+      </g>
+      <!-- Nodes -->
+      <circle cx="250" cy="72" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="2" />
+      <circle cx="95" cy="375" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="2" />
+      <circle cx="405" cy="375" r="4.5" fill="#FFFFFF" stroke="#00F2FE" stroke-width="2" />
+      <circle cx="250" cy="165" r="4" fill="#FF0077" />
+    </g>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 04: TYPOGRAPHY & SAFE EXCLUSION ZONE (CENTER BOTTOM)  -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-04-typography" inkscape:label="04 - Typography &amp; Clear Space">
+    <rect x="790" y="650" width="580" height="370" rx="16" fill="url(#panel-bg)" stroke="#161F33" stroke-width="1.5" />
+
+    <text x="825" y="692" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" letter-spacing="2px" fill="#FFFFFF">TYPE METRICS &amp; EXCLUSION ZONE</text>
+    <text x="825" y="714" font-family="'JetBrains Mono', monospace" font-size="12" fill="#7E8DA6">SAFE CLEAR SPACE = 1.5X OF CORE DELTA</text>
+
+    <!-- Metric Lines for Typography -->
+    <g transform="translate(825, 750)">
+      <!-- Baseline Guides -->
+      <line x1="0" y1="20" x2="510" y2="20" stroke="#FF0077" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+      <text x="440" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FF0077">CAP HEIGHT</text>
+
+      <line x1="0" y1="75" x2="510" y2="75" stroke="#00F2FE" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+      <text x="450" y="70" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00F2FE">BASELINE</text>
+
+      <text x="15" y="72" font-family="'Space Grotesk', sans-serif" font-size="52" font-weight="800" letter-spacing="12px" fill="#FFFFFF">AETHER</text>
+      <text x="18" y="115" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" letter-spacing="8px" fill="#00F2FE">DYNAMICS</text>
+
+      <!-- Typeface Notes -->
+      <g transform="translate(0, 150)">
+        <text x="0" y="20" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">PRIMARY TYPEFACE:</text>
+        <text x="160" y="20" font-family="'JetBrains Mono', monospace" font-size="13" fill="#00F2FE">Space Grotesk Bold (Tracking +250)</text>
+
+        <text x="0" y="48" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">SECONDARY MONO:</text>
+        <text x="160" y="48" font-family="'JetBrains Mono', monospace" font-size="13" fill="#7E8DA6">JetBrains Mono SemiBold (Tracking +400)</text>
+
+        <text x="0" y="76" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">BODY EDITORIAL:</text>
+        <text x="160" y="76" font-family="'JetBrains Mono', monospace" font-size="13" fill="#7E8DA6">Inter Regular / Medium</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 05: CONTEXT TESTS & RESPONSIVE SCALING (RIGHT TOP)    -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-05-context" inkscape:label="05 - Context &amp; Responsive Scale">
+    <rect x="1390" y="130" width="450" height="500" rx="16" fill="url(#panel-bg)" stroke="#161F33" stroke-width="1.5" />
+
+    <text x="1425" y="172" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" letter-spacing="2px" fill="#FFFFFF">STRESS-TESTING &amp; CONTEXT</text>
+
+    <!-- Test 1: Light Mode Container -->
+    <g transform="translate(1425, 200)">
+      <rect width="180" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+      <text x="12" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#475569">LIGHT MODE PROOF</text>
+      <!-- Small Dark Navy Mark -->
+      <g transform="translate(48, 25) scale(0.20)">
+        <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="#0A1128" />
+        <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="#001F54" />
+        <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="#0066FF" />
+      </g>
+    </g>
+
+    <!-- Test 2: 1-Color Solid Monochrome Test -->
+    <g transform="translate(1625, 200)">
+      <rect width="180" height="110" rx="10" fill="#000000" stroke="#222" stroke-width="1" />
+      <text x="12" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#94A3B8">MONOCHROME 1-COLOR</text>
+      <!-- Pure White Solid Mark -->
+      <g transform="translate(48, 25) scale(0.20)">
+        <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="#FFFFFF" />
+        <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="#FFFFFF" />
+        <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="#FFFFFF" />
+      </g>
+    </g>
+
+    <!-- Test 3: App Icon Preview (Squircle) -->
+    <g transform="translate(1425, 335)">
+      <rect width="180" height="160" rx="10" fill="#090D15" stroke="#161F33" stroke-width="1" />
+      <text x="12" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#7E8DA6">APP ICON SYSTEM</text>
+      
+      <!-- Squircle -->
+      <g transform="translate(45, 38)">
+        <rect width="90" height="90" rx="20" fill="url(#icon-bg)" stroke="url(#icon-border)" stroke-width="1" />
+        <g transform="translate(13, 10) scale(0.13)">
+          <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="url(#grad-cyan-blue)" />
+          <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="url(#grad-blue-indigo)" />
+          <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="url(#grad-core-thrust)" />
+        </g>
+      </g>
+    </g>
+
+    <!-- Test 4: Favicon Scale (32px & 16px) -->
+    <g transform="translate(1625, 335)">
+      <rect width="180" height="160" rx="10" fill="#090D15" stroke="#161F33" stroke-width="1" />
+      <text x="12" y="22" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#7E8DA6">FAVICON SCALABILITY</text>
+
+      <!-- 32px Native Render -->
+      <g transform="translate(30, 60)">
+        <rect width="32" height="32" rx="4" fill="#141B2D" stroke="#00F2FE" stroke-width="0.5" />
+        <g transform="translate(3, 2) scale(0.055)">
+          <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="#00F2FE" />
+          <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="#0066FF" />
+          <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="#00F2FE" />
+        </g>
+        <text x="42" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFFFFF">32×32 px</text>
+      </g>
+
+      <!-- 16px Native Render -->
+      <g transform="translate(30, 110)">
+        <rect width="16" height="16" rx="2" fill="#141B2D" stroke="#00F2FE" stroke-width="0.5" />
+        <g transform="translate(1.5, 1) scale(0.026)">
+          <path d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" fill="#00F2FE" />
+          <path d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" fill="#0066FF" />
+          <path d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" fill="#00F2FE" />
+        </g>
+        <text x="42" y="12" font-family="'JetBrains Mono', monospace" font-size="11" fill="#FFFFFF">16×16 px</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================================================================== -->
+  <!-- INKSCAPE LAYER 06: PRODUCTION COLOR PALETTE (RIGHT BOTTOM)           -->
+  <!-- ==================================================================== -->
+  <g inkscape:groupmode="layer" id="layer-06-colors" inkscape:label="06 - Production Color System">
+    <rect x="1390" y="650" width="450" height="370" rx="16" fill="url(#panel-bg)" stroke="#161F33" stroke-width="1.5" />
+
+    <text x="1425" y="692" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" letter-spacing="2px" fill="#FFFFFF">PRODUCTION COLOR SYSTEM</text>
+
+    <!-- Swatch 1: Hypersonic Cyan -->
+    <g transform="translate(1425, 715)">
+      <rect width="40" height="40" rx="8" fill="#00F2FE" />
+      <text x="52" y="16" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">HYPERSONIC CYAN</text>
+      <text x="52" y="34" font-family="'JetBrains Mono', monospace" font-size="11" fill="#00F2FE">HEX #00F2FE | RGB 0, 242, 254 | PMS 305 C</text>
+    </g>
+
+    <!-- Swatch 2: Orbital Blue -->
+    <g transform="translate(1425, 775)">
+      <rect width="40" height="40" rx="8" fill="#0066FF" />
+      <text x="52" y="16" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">ORBITAL BLUE</text>
+      <text x="52" y="34" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E8DA6">HEX #0066FF | RGB 0, 102, 255 | PMS 2174 C</text>
+    </g>
+
+    <!-- Swatch 3: Deep Stratosphere -->
+    <g transform="translate(1425, 835)">
+      <rect width="40" height="40" rx="8" fill="#0A1128" stroke="#1E293B" stroke-width="1" />
+      <text x="52" y="16" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DEEP STRATOSPHERE</text>
+      <text x="52" y="34" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E8DA6">HEX #0A1128 | RGB 10, 17, 40 | PMS 2768 C</text>
+    </g>
+
+    <!-- Swatch 4: Pure Stellar White -->
+    <g transform="translate(1425, 895)">
+      <rect width="40" height="40" rx="8" fill="#FFFFFF" />
+      <text x="52" y="16" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">STELLAR WHITE</text>
+      <text x="52" y="34" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E8DA6">HEX #FFFFFF | RGB 255, 255, 255 | CMYK 0, 0, 0, 0</text>
+    </g>
+
+    <text x="1425" y="980" font-family="'JetBrains Mono', monospace" font-size="10" fill="#00F2FE" opacity="0.6">READY FOR DIGITAL DISPLAY (sRGB) &amp; OFFSET PRINT (CMYK / PMS)</text>
+  </g>
+</svg>

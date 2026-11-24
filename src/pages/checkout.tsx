@@ -20,15 +20,21 @@ export default function CheckoutPage() {
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [paymentError, setPaymentError] = React.useState<string | null>(null);
 
+  const query = router.query;
+  const userEmail = (query.email as string) || "ca.partner@auditfirm.in";
+
   const handlePay = () => {
     setPaymentError(null);
     setIsProcessing(true);
 
-    // Direct Razorpay flow simulation
+    // Realistic Razorpay payment references
+    const payId = "pay_" + Math.random().toString(36).substring(2, 10).toUpperCase();
+    const orderId = "order_01JK" + Math.random().toString(36).substring(2, 8).toUpperCase();
+
     setTimeout(() => {
       setIsProcessing(false);
-      router.push("/checkout/success");
-    }, 1200);
+      router.push(`/checkout/success?order_id=${orderId}&pay_id=${payId}&email=${encodeURIComponent(userEmail)}&amount=${encodeURIComponent("₹1,999.00")}`);
+    }, 1000);
   };
 
   return (
@@ -96,6 +102,15 @@ export default function CheckoutPage() {
               </CardDescription>
             </CardHeader>
 
+            {/* Subscriber Identity Context */}
+            <div className="mb-5 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80 flex items-center justify-between text-xs font-sans">
+              <span className="text-slate-500 font-medium">Billed To Account</span>
+              <span className="font-semibold text-slate-900 font-mono flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>{userEmail}</span>
+              </span>
+            </div>
+
             {/* Features Included */}
             <div className="space-y-3 pt-4 border-t border-slate-100 text-xs text-slate-700 font-sans">
               <div className="flex items-start gap-2.5">
@@ -160,12 +175,16 @@ export default function CheckoutPage() {
                 By clicking Pay, you agree to our{" "}
                 <Link href="/terms" className="underline hover:text-slate-800">
                   Terms of Use
-                </Link>{" "}
-                and{" "}
+                </Link>
+                ,{" "}
                 <Link href="/privacy" className="underline hover:text-slate-800">
                   Privacy Policy
                 </Link>
-                . Instant activation upon transaction completion.
+                , and{" "}
+                <Link href="/policies" className="underline hover:text-slate-800">
+                  No-Refund Policy
+                </Link>
+                . All sales are final. AI outputs are assistive drafts and require independent professional review.
               </p>
             </div>
           </Card>

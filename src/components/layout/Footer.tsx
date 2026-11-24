@@ -14,7 +14,7 @@ export function Footer() {
   const policyLinks = [
     { label: "Terms of Use", href: "/terms" },
     { label: "Privacy Policy", href: "/privacy" },
-    { label: "Other Policies", href: "/policies" },
+    { label: "Cancellation & Refund", href: "/policies" },
   ];
 
   return (

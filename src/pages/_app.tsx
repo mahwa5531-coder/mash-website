@@ -1,12 +1,16 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/content/site-config";
 import { assetPath } from "@/lib/utils";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const isMinimalLayout = router.pathname.startsWith("/auth") || router.pathname === "/checkout/success";
+
   return (
     <>
       <Head>
@@ -17,8 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         {/* Favicons & App Icons */}
+        <link rel="icon" type="image/svg+xml" href={assetPath("/brand-logo.svg")} />
+        <link rel="icon" type="image/png" sizes="32x32" href={assetPath("/brand-logo-32.png")} />
+        <link rel="icon" type="image/png" sizes="16x16" href={assetPath("/brand-logo-16.png")} />
         <link rel="icon" href={assetPath("/favicon.ico")} sizes="any" />
-        <link rel="apple-touch-icon" href={assetPath("/apple-icon.png")} />
+        <link rel="apple-touch-icon" href={assetPath("/brand-logo.png")} />
 
         {/* Plus Jakarta Sans (Native Web Font) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,13 +50,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
       </Head>
 
-      <div className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200">
-        <Navbar />
-        <div className="flex-1">
-          <Component {...pageProps} />
+      {isMinimalLayout ? (
+        <Component {...pageProps} />
+      ) : (
+        <div className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 selection:bg-slate-200">
+          <Navbar />
+          <div className="flex-1">
+            <Component {...pageProps} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      )}
     </>
   );
 }

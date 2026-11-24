@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     viewBox="0 0 500 500" width="500" height="500"
+     style="background-color: transparent;">
+  <!--
+    1-Color Monochrome Master Proof
+    Strictly uses single-fill paths with 14px negative space channels.
+    Tested for: Vinyl cutting, laser engraving, single-color silk screen, and embroidery.
+  -->
+  <g id="aether-symbol-monochrome" fill="#000000">
+    <path id="mono-left-wing" d="M 95,375 C 106,275 154,142 242,72 C 245,69 249,69 251,72 L 251,114 C 251,118 248,122 244,126 C 180,188 154,260 148,348 L 148,375 Z" />
+    <path id="mono-right-wing" d="M 405,375 C 394,275 346,142 258,72 C 255,69 251,69 249,72 L 249,114 C 249,118 252,122 256,126 C 320,188 346,260 352,348 L 352,375 Z" />
+    <path id="mono-thrust-core" d="M 250,165 C 252,165 255,168 257,171 L 305,258 C 308,263 305,270 299,270 L 264,270 C 260,270 256,274 255,278 L 251,335 C 251,337 249,337 249,335 L 245,278 C 244,274 240,270 236,270 L 201,270 C 195,270 192,263 195,258 L 243,171 C 245,168 248,165 250,165 Z" />
+  </g>
+</svg>

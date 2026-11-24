@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoAuditz // Standalone Typographic Styling Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #07090E; color: #E2E8F0; font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px; min-height: 100vh; transition: all 0.3s ease; }
+    
+    .theme-light { background: #F8FAFC; color: #0F172A; }
+    .theme-light .card { background: #FFFFFF; border-color: #E2E8F0; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .theme-light .card-tag { color: #0052FF; }
+    .theme-light .style-desc { color: #64748B; }
+    .theme-light .badge-verdict { background: #EEF2FF; color: #0052FF; border-color: #C7D2FE; }
+    .theme-light .meta-box { background: #F1F5F9; border-color: #CBD5E1; color: #475569; }
+
+    header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; border-bottom: 1px solid #1E293B; padding-bottom: 24px; }
+    .theme-light header { border-color: #E2E8F0; }
+    
+    h1 { font-size: 26px; font-weight: 800; letter-spacing: 2px; }
+    .subtitle { color: #00F2FE; font-family: 'JetBrains Mono', monospace; font-size: 13px; margin-top: 6px; }
+    .theme-light .subtitle { color: #0052FF; }
+
+    .controls { display: flex; gap: 12px; }
+    .theme-btn { padding: 10px 20px; border-radius: 8px; border: 1px solid #334155; background: #1E293B; color: #FFFFFF; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .theme-btn:hover { border-color: #00F2FE; }
+    .theme-light .theme-btn { background: #FFFFFF; color: #0F172A; border-color: #CBD5E1; }
+
+    .grid { display: flex; flex-direction: column; gap: 24px; max-width: 1200px; margin: 0 auto; }
+    
+    .card { background: #0E131F; border: 1px solid #1E293B; border-radius: 16px; padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; transition: all 0.3s; }
+    .card:hover { border-color: #00F2FE; transform: translateY(-2px); }
+    .card.highlight { border-color: #00F2FE; box-shadow: 0 0 30px rgba(0, 242, 254, 0.12); }
+
+    .card-left { display: flex; flex-direction: column; gap: 12px; }
+    .card-tag { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; color: #00F2FE; letter-spacing: 1.5px; }
+    
+    .card-title { font-size: 20px; font-weight: 700; }
+    .style-desc { font-size: 13px; color: #94A3B8; line-height: 1.6; }
+    
+    .badge-verdict { align-self: flex-start; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; background: rgba(0, 242, 254, 0.12); color: #00F2FE; border: 1px solid rgba(0, 242, 254, 0.3); letter-spacing: 0.5px; }
+
+    .card-right { background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 140px; }
+    .theme-light .card-right { background: #F8FAFC; border-color: #E2E8F0; }
+
+    /* The Typography Styles */
+    /* Style 1: Modern Lowercase with illuminated dot */
+    .style-1-text { font-family: 'Space Grotesk', sans-serif; font-size: 54px; letter-spacing: -0.02em; display: inline-flex; align-items: baseline; }
+    .style-1-co { font-weight: 400; color: #DE7F44; }
+    .style-1-dot { display: inline-block; width: 8px; height: 8px; background: #00F2FE; border-radius: 50%; margin: 0 8px 12px 8px; box-shadow: 0 0 12px #00F2FE; }
+    .style-1-auditz { font-weight: 800; color: #FFFFFF; }
+    .theme-light .style-1-auditz { color: #0F172A; }
+    .theme-light .style-1-co { color: #C25E2E; }
+    .theme-light .style-1-dot { background: #0052FF; box-shadow: 0 0 10px #0052FF; }
+
+    /* Style 2: Dual-Tone Tech Caps */
+    .style-2-text { font-family: 'Space Grotesk', sans-serif; font-size: 46px; display: inline-flex; align-items: baseline; gap: 4px; }
+    .style-2-co { font-weight: 300; font-size: 40px; color: #00F2FE; }
+    .style-2-auditz { font-weight: 800; letter-spacing: 4px; color: #FFFFFF; }
+    .theme-light .style-2-co { color: #0052FF; }
+    .theme-light .style-2-auditz { color: #0F172A; }
+
+    /* Style 3: Enterprise Gold Standard (CoAudit) */
+    .style-3-text { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 50px; font-weight: 800; letter-spacing: -0.03em; color: #FFFFFF; }
+    .style-3-audit { color: #00F2FE; }
+    .theme-light .style-3-text { color: #0F172A; }
+    .theme-light .style-3-audit { color: #0052FF; }
+
+    /* Style 4: Cybersecurity Terminal Slash */
+    .style-4-text { font-family: 'JetBrains Mono', monospace; font-size: 44px; font-weight: 700; letter-spacing: 2px; color: #FFFFFF; display: inline-flex; align-items: center; }
+    .style-4-slash { color: #00F2FE; margin: 0 6px; font-weight: 300; }
+    .theme-light .style-4-text { color: #0F172A; }
+    .theme-light .style-4-slash { color: #0052FF; }
+
+    /* Style 5: Monolith TitleCase */
+    .style-5-text { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; letter-spacing: -0.01em; color: #FFFFFF; }
+    .theme-light .style-5-text { color: #0F172A; }
+
+    .subhead-tagline { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 4px; color: #64748B; margin-top: 10px; }
+    .theme-light .subhead-tagline { color: #94A3B8; }
+
+    .meta-box { margin-top: 14px; font-size: 12px; color: #7E8DA6; line-height: 1.5; padding: 10px 14px; border-radius: 8px; background: #141B2D; border: 1px solid #1E293B; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>CO·AUDITZ // STANDALONE NAME STYLING SHOWCASE</h1>
+      <div class="subtitle">DEEP TYPOGRAPHIC RESEARCH • 5 ELITE STYLING DIRECTIONS • TEST IN DARK &amp; LIGHT MODE</div>
+    </div>
+    <div class="controls">
+      <button class="theme-btn" onclick="toggleTheme()">Toggle Dark / Light Mode</button>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- OPTION 1 -->
+    <div class="card highlight">
+      <div class="card-left">
+        <div class="card-tag">OPTION 01 // MODERN DEVELOPER AESTHETIC</div>
+        <div class="badge-verdict">⭐ #1 BEST LOOKING FOR MODERN AI SAAS</div>
+        <div class="card-title">co · auditz</div>
+        <div class="style-desc">
+          Inspired by <strong>Linear, Stripe, Supabase, and Figma</strong>. Lowercase conveys effortless speed and intelligence. The illuminated cyan dot physically balances the trailing "z", eliminating the slang perception.
+        </div>
+        <div class="meta-box">
+          <strong>Font:</strong> Space Grotesk (Weight 400 + 800)<br>
+          <strong>Coloring:</strong> Copper (#DE7F44) + Cyan Dot (#00F2FE) + Pure White<br>
+          <strong>Best For:</strong> AI Co-pilot positioning, modern developers, tech-forward CFOs.
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="style-1-text">
+          <span class="style-1-co">co</span>
+          <span class="style-1-dot"></span>
+          <span class="style-1-auditz">auditz</span>
+        </div>
+        <div class="subhead-tagline">CONTINUOUS COMPLIANCE ENGINE</div>
+      </div>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="card">
+      <div class="card-left">
+        <div class="card-tag">OPTION 02 // DUAL-TONE ENTERPRISE CAPS</div>
+        <div class="badge-verdict">HIGHEST AUTHORITY &amp; CONTRAST</div>
+        <div class="card-title">coAUDITZ</div>
+        <div class="style-desc">
+          Lowercase "co" in thin electric cyan juxtaposed against massive, architectural bold capital letters "AUDITZ". Creates instant semantic clarity between the "co-pilot" and the "statutory audit".
+        </div>
+        <div class="meta-box">
+          <strong>Font:</strong> Space Grotesk (Weight 300 + 800, Wide Tracking +4px)<br>
+          <strong>Coloring:</strong> Hypersonic Cyan (#00F2FE) + Solid White<br>
+          <strong>Best For:</strong> High enterprise credibility, bold navbar visibility.
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="style-2-text">
+          <span class="style-2-co">co</span>
+          <span class="style-2-auditz">AUDITZ</span>
+        </div>
+        <div class="subhead-tagline">AUTONOMOUS AUDIT WORKBENCH</div>
+      </div>
+    </div>
+
+    <!-- OPTION 3 -->
+    <div class="card">
+      <div class="card-left">
+        <div class="card-tag">OPTION 03 // THE BILLION-DOLLAR ENTERPRISE STANDARD</div>
+        <div class="badge-verdict">INSTANT FORTUNE 500 &amp; BIG-4 TRUST</div>
+        <div class="card-title">CoAudit</div>
+        <div class="style-desc">
+          Drops the informal "z" in favor of the pristine, authoritative spelling. Follows the naming conventions of <strong>Datadog, Chainalysis, Palantir, and Workday</strong>. Leaves zero friction with conservative audit committees.
+        </div>
+        <div class="meta-box">
+          <strong>Font:</strong> Plus Jakarta Sans (Weight 800, Tight Tracking -0.03em)<br>
+          <strong>Coloring:</strong> Solid White + Cyan Highlight on "Audit"<br>
+          <strong>Best For:</strong> Selling directly to Enterprise CFOs, Big 4 CPA firms (PwC, EY).
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="style-3-text">
+          Co<span class="style-3-audit">Audit</span>
+        </div>
+        <div class="subhead-tagline">FINANCIAL LEDGER VERIFICATION</div>
+      </div>
+    </div>
+
+    <!-- OPTION 4 -->
+    <div class="card">
+      <div class="card-left">
+        <div class="card-tag">OPTION 04 // CYBERSECURITY &amp; TERMINAL SLASH</div>
+        <div class="badge-verdict">COMMAND-LINE &amp; WEB3 VERIFICATION</div>
+        <div class="card-title">CO / AUDITZ</div>
+        <div class="style-desc">
+          Monospaced technical lettering separated by a dynamic 60-degree slash. Communicates automated code scanning, cryptographic proof, and mathematical immutability.
+        </div>
+        <div class="meta-box">
+          <strong>Font:</strong> JetBrains Mono (Weight 700, All-Caps)<br>
+          <strong>Coloring:</strong> Phosphor Cyan (#00F2FE) + Pure White<br>
+          <strong>Best For:</strong> Smart contract audits, algorithmic validation, CLI tools.
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="style-4-text">
+          CO<span class="style-4-slash">/</span>AUDITZ
+        </div>
+        <div class="subhead-tagline">CRYPTOGRAPHIC LEDGER PROOF</div>
+      </div>
+    </div>
+
+    <!-- OPTION 5 -->
+    <div class="card">
+      <div class="card-left">
+        <div class="card-tag">OPTION 05 // UNIFIED MONOLITH TITLECASE</div>
+        <div class="badge-verdict">TRADITIONAL B2B SAAS FAMILIARITY</div>
+        <div class="card-title">CoAuditz</div>
+        <div class="style-desc">
+          Standard TitleCase without separators. Balanced, compact, and highly legible even at tiny 14px sizes in headers and documentation footers.
+        </div>
+        <div class="meta-box">
+          <strong>Font:</strong> Space Grotesk (Weight 700, Standard Tracking)<br>
+          <strong>Coloring:</strong> Crisp White / Slate-900<br>
+          <strong>Best For:</strong> Clean, minimal SaaS interfaces, documentation.
+        </div>
+      </div>
+      <div class="card-right">
+        <div class="style-5-text">
+          CoAuditz
+        </div>
+        <div class="subhead-tagline">SPREADSHEET RECONCILIATION</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('theme-light');
+    }
+  </script>
+</body>
+</html>
