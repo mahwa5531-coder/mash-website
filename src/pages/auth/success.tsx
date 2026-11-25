@@ -2,32 +2,15 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { SITE_CONFIG } from "@/content/site-config";
-import { assetPath } from "@/lib/utils";
+import { assetPath, triggerDesktopHandoff } from "@/lib/utils";
 
 export default function AuthSuccessPage() {
   const router = useRouter();
   const [authCode, setAuthCode] = React.useState<string>("mcode_pending");
 
-  const executeHandoff = React.useCallback(async (code: string) => {
+  const executeHandoff = React.useCallback((code: string) => {
     const protocolUrl = `mash://auth/callback?code=${encodeURIComponent(code)}`;
-
-    // 1. Localhost loopback bridge: if Mash desktop is already running on port 8000
-    try {
-      fetch("http://localhost:8000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
-      }).catch(() => {});
-    } catch {
-      // Loopback inactive
-    }
-
-    // 2. Trigger Chromium's built-in native ExternalProtocolDialog via OS scheme
-    try {
-      window.location.href = protocolUrl;
-    } catch {
-      // Handled by browser
-    }
+    triggerDesktopHandoff(protocolUrl, "/api/auth/login", { code });
   }, []);
 
   React.useEffect(() => {

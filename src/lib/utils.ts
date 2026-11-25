@@ -13,3 +13,26 @@ export function assetPath(path: string): string {
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
   return `${basePath}${cleanPath}`;
 }
+
+/** Fires the local desktop bridge ping first, then triggers the OS protocol dialog. */
+export function triggerDesktopHandoff(
+  protocolUrl: string,
+  bridgePath: string,
+  payload: Record<string, unknown>
+): void {
+  try {
+    fetch(`http://localhost:8000${bridgePath}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch(() => {});
+  } catch {
+    // Loopback inactive when desktop app is closed
+  }
+
+  try {
+    window.location.href = protocolUrl;
+  } catch {
+    // Handled by browser
+  }
+}

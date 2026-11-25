@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Check } from "lucide-react";
 import { SITE_CONFIG } from "@/content/site-config";
+import { triggerDesktopHandoff } from "@/lib/utils";
 
 export default function CheckoutSuccessPage() {
   const router = useRouter();
@@ -16,24 +17,12 @@ export default function CheckoutSuccessPage() {
 
   const protocolHref = `mash://payment/success?plan=pro&payment_id=${encodeURIComponent(paymentId)}`;
 
-  const executeHandoff = React.useCallback(async () => {
-    // 1. Silent local loopback ping (if Mash Desktop is already running on port 8000)
-    try {
-      fetch("http://localhost:8000/api/license/refresh", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: userEmail, payment_id: paymentId, plan: "pro" }),
-      }).catch(() => {});
-    } catch {
-      // Loopback inactive
-    }
-
-    // 2. Trigger Chromium's built-in native ExternalProtocolDialog
-    try {
-      window.location.href = protocolHref;
-    } catch {
-      // Handled by browser
-    }
+  const executeHandoff = React.useCallback(() => {
+    triggerDesktopHandoff(protocolHref, "/api/license/refresh", {
+      email: userEmail,
+      payment_id: paymentId,
+      plan: "pro",
+    });
   }, [userEmail, paymentId, protocolHref]);
 
   // Settle document and auto-trigger native protocol prompt
