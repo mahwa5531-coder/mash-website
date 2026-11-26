@@ -130,8 +130,8 @@ In no event shall Mash or its directors be liable for indirect, consequential, o
             <div className="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500 font-sans">
               <div>
                 Questions regarding these Terms? Contact{" "}
-                <a href="mailto:legal@mash.ai" className="font-semibold text-slate-900 underline">
-                  legal@mash.ai
+                <a href={`mailto:${SITE_CONFIG.contact.legalEmail}`} className="font-semibold text-slate-900 underline">
+                  {SITE_CONFIG.contact.legalEmail}
                 </a>
               </div>
               <div>

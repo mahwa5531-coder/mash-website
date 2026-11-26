@@ -19,6 +19,11 @@ export interface SiteConfig {
     pricing: string;
     download: string;
   };
+  contact: {
+    supportEmail: string;
+    privacyEmail: string;
+    legalEmail: string;
+  };
 }
 
 export const SITE_CONFIG: SiteConfig = {
@@ -41,5 +46,11 @@ export const SITE_CONFIG: SiteConfig = {
     howItWorks: "#how-it-works",
     pricing: "#pricing",
     download: "/download"
+  },
+  // ponytail: single source of truth before domain purchase — replace these 3 lines when your domain is live
+  contact: {
+    supportEmail: "support@mash.ai",
+    privacyEmail: "privacy@mash.ai",
+    legalEmail: "legal@mash.ai",
   }
 };

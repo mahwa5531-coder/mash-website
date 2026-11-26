@@ -96,7 +96,7 @@ Your numbers, client names, transaction vouchers, and accounting memos belong ex
 
 (b) Spreadsheets and Financial Content: Because raw spreadsheets and audit files are never uploaded to Mash cloud servers, deleting the file on your local computer immediately purges all copies.
 
-(c) Account Erasure: You may request the permanent deletion of your account and identity record at any time by emailing privacy@mash.ai. We will process your deletion request within thirty (30) days, subject to mandatory statutory tax retention requirements.`,
+(c) Account Erasure: You may request the permanent deletion of your account and identity record at any time by emailing ${SITE_CONFIG.contact.privacyEmail}. We will process your deletion request within thirty (30) days, subject to mandatory statutory tax retention requirements.`,
     },
     {
       id: "security",
@@ -116,7 +116,7 @@ Your numbers, client names, transaction vouchers, and accounting memos belong ex
 - Right of Grievance Redressal: Access a designated mechanism to resolve privacy grievances.
 - Right to Nominate: Designate an individual to exercise your privacy rights in the event of death or incapacity.
 
-To exercise any of these statutory rights, please contact our Grievance Officer at privacy@mash.ai.`,
+To exercise any of these statutory rights, please contact our Grievance Officer at ${SITE_CONFIG.contact.privacyEmail}.`,
     },
     {
       id: "children",
@@ -130,7 +130,7 @@ To exercise any of these statutory rights, please contact our Grievance Officer 
 
 Grievance Officer: Legal & Compliance Directorate
 Entity: Mash AI Technologies
-Email: privacy@mash.ai
+Email: ${SITE_CONFIG.contact.privacyEmail}
 Subject Line: "Statutory Privacy Grievance"
 Location: India
 
@@ -265,8 +265,8 @@ We will acknowledge receipt of any privacy grievance within 24 hours and resolve
             <div className="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500 font-sans">
               <div>
                 Have privacy inquiries or statutory requests? Contact{" "}
-                <a href="mailto:privacy@mash.ai" className="font-semibold text-slate-900 underline">
-                  privacy@mash.ai
+                <a href={`mailto:${SITE_CONFIG.contact.privacyEmail}`} className="font-semibold text-slate-900 underline">
+                  {SITE_CONFIG.contact.privacyEmail}
                 </a>
               </div>
               <div>

@@ -16,6 +16,29 @@ import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/comp
 import { SITE_CONFIG } from "@/content/site-config";
 
 export default function PricingPage() {
+  const faqs = [
+    {
+      q: "Why does Mash have a strict No-Refund policy?",
+      a: "Because Mash Pro unlocks immediate commercial license entitlements and allocates cloud reasoning capacity the moment payment is confirmed, all sales (₹1,999) are final. We encourage you to test the full 64-bit Windows app on the Free Forever tier before upgrading.",
+    },
+    {
+      q: "Does Mash auto-renew or charge my UPI/card next month?",
+      a: "No. Pro is a non-recurring 30-day pass with zero auto-debit mandates or cancellation traps. When 30 days end, your account naturally returns to the Free tier. You only pay again manually when you need another 30-day pass—and early renewals stack onto your remaining days.",
+    },
+    {
+      q: "Do my client Excel or Tally files leave my computer?",
+      a: "No. Workbook parsing, scripts, and reconciliation tools run locally on your Windows PC. Ephemeral prompt context is transmitted encrypted and is contractually never used to train AI models.",
+    },
+    {
+      q: "Can I use my Pro license on more than one Windows PC?",
+      a: "Yes, for your own practice. Your Pro pass is tied to your Google account (no hardware-locked license keys), so signing in with the same Google account on your office and home PC shares your active pass.",
+    },
+    {
+      q: "What if money is debited during a network drop or charged twice?",
+      a: "Uncaptured bank debits are auto-reversed by Razorpay within 24–48 hours. If an order is captured asynchronously via webhook, your desktop app unlocks automatically on next launch; duplicate captures reported within 48 hours are fully reversed.",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -197,6 +220,46 @@ export default function PricingPage() {
               </CardFooter>
             </Card>
           </div>
+
+          {/* Pricing & Billing FAQ */}
+          <section className="mt-20 max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <Badge variant="secondary" className="mb-3 text-[11px] font-mono uppercase tracking-wider font-semibold">
+                COMMON QUESTIONS
+              </Badge>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 font-sans">
+                Billing, licensing &amp; confidentiality
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((item) => (
+                <div
+                  key={item.q}
+                  className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs"
+                >
+                  <h3 className="text-sm font-bold text-slate-900 font-sans mb-2">
+                    {item.q}
+                  </h3>
+                  <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                    {item.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center text-xs text-slate-500 font-sans">
+              Full details in our{" "}
+              <Link href="/policies" className="font-medium text-slate-900 underline hover:text-slate-700">
+                Cancellation &amp; Refund Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="/terms" className="font-medium text-slate-900 underline hover:text-slate-700">
+                Terms of Use
+              </Link>
+              .
+            </div>
+          </section>
         </div>
       </main>
     </>

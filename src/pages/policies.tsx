@@ -43,12 +43,12 @@ Purchases are made for software access and computational capability, not for gua
       content: `In the event that a payment gateway technical error causes you to be charged multiple times for a single order, or if an amount is debited from your bank account during a connection drop without a license pass being generated:
 
 • Gateway Auto-Reversals: Payment aggregators (Razorpay) typically reverse uncaptured or dropped transactions back to the original payment source within 24–48 hours.
-• Duplicate Charges: If two separate transactions were captured for a single 30-day period, notify us at support@mash.ai within 48 hours with your transaction identifiers, and the duplicate charge will be fully reversed.`,
+• Duplicate Charges: If two separate transactions were captured for a single 30-day period, notify us at ${SITE_CONFIG.contact.supportEmail} within 48 hours with your transaction identifiers, and the duplicate charge will be fully reversed.`,
     },
     {
       id: "contact",
       title: "6. Billing Support & Inquiries",
-      content: `For any questions regarding billing receipts, transaction confirmations, or account activation, please contact our support team at support@mash.ai. Support requests are typically answered within 24 business hours.`,
+      content: `For any questions regarding billing receipts, transaction confirmations, or account activation, please contact our support team at ${SITE_CONFIG.contact.supportEmail}. Support requests are typically answered within 24 business hours.`,
     },
   ];
 
@@ -128,11 +128,11 @@ Purchases are made for software access and computational capability, not for gua
               <div className="text-[11px] text-slate-500 mt-0.5">Reach out to our billing desk anytime.</div>
             </div>
             <a
-              href="mailto:support@mash.ai"
+              href={`mailto:${SITE_CONFIG.contact.supportEmail}`}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 text-white font-medium text-xs hover:bg-slate-800 transition-colors"
             >
               <Mail className="h-3.5 w-3.5" />
-              <span>support@mash.ai</span>
+              <span>{SITE_CONFIG.contact.supportEmail}</span>
             </a>
           </div>
 

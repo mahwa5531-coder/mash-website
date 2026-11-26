@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { BrandLockup } from "@/components/ui/BrandLockup";
+import { SITE_CONFIG } from "@/content/site-config";
 
 export function Footer() {
   const platformLinks = [
@@ -64,6 +65,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={`mailto:${SITE_CONFIG.contact.supportEmail}`}
+                  className="text-xs font-medium text-slate-900 hover:text-slate-600 transition-colors"
+                >
+                  Billing Support
+                </a>
+              </li>
             </ul>
           </div>
         </div>
