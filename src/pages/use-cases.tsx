@@ -111,10 +111,10 @@ export default function UseCasesPage() {
           name="description"
           content="Explore real-world use cases for Mash: Statutory forensic audits, corporate FP&A variance analysis, tax reconciliation, and executive board reporting."
         />
-        <link rel="canonical" href="https://mash.ai/use-cases/" />
+        <link rel="canonical" href={`${SITE_CONFIG.url}/use-cases/`} />
         <meta property="og:title" content="Mash Use Cases — Auditing, FP&A, and Tax Reconciliation" />
         <meta property="og:description" content="Explore real-world use cases for Mash on Windows. 100% on-device confidentiality." />
-        <meta property="og:url" content="https://mash.ai/use-cases/" />
+        <meta property="og:url" content={`${SITE_CONFIG.url}/use-cases/`} />
       </Head>
 
       <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FAF9F6]">

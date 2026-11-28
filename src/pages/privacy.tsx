@@ -23,7 +23,7 @@ export default function PrivacyPage() {
       role: "Localized Reasoning & Token Factory Processing",
       dataResidency: "In-Flight Ephemeral Processing Only",
       training: "Zero Model Training Guaranteed",
-      link: "https://mash.ai/privacy",
+      link: `${SITE_CONFIG.url}/privacy`,
     },
     {
       name: "Razorpay Software Pvt. Ltd.",

@@ -1,5 +1,7 @@
 export interface SiteConfig {
   name: string;
+  url: string;
+  apiUrl: string;
   tagline: string;
   subhead: string;
   version: string;
@@ -28,6 +30,9 @@ export interface SiteConfig {
 
 export const SITE_CONFIG: SiteConfig = {
   name: "Mash",
+  // ponytail: single source of truth — override via NEXT_PUBLIC_SITE_URL / NEXT_PUBLIC_API_URL or update here when domain is purchased
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://mash.ai").replace(/\/+$/, ""),
+  apiUrl: (process.env.NEXT_PUBLIC_API_URL || "https://api.mash.ai").replace(/\/+$/, ""),
   tagline: "The desktop AI workbench for spreadsheets & financial data.",
   subhead: "Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your confidential company data never leaves your computer.",
   version: "0.1.0",

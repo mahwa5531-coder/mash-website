@@ -15,10 +15,10 @@ export default function Home() {
           name="description"
           content={SITE_CONFIG.subhead}
         />
-        <link rel="canonical" href="https://mash.ai/" />
+        <link rel="canonical" href={`${SITE_CONFIG.url}/`} />
         <meta property="og:title" content={`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`} />
         <meta property="og:description" content={SITE_CONFIG.subhead} />
-        <meta property="og:url" content="https://mash.ai/" />
+        <meta property="og:url" content={`${SITE_CONFIG.url}/`} />
       </Head>
 
       <main>

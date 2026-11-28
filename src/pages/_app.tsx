@@ -37,8 +37,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`} />
         <meta property="og:description" content={SITE_CONFIG.subhead} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mash.ai/" />
-        <meta property="og:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
+        <meta property="og:url" content={`${SITE_CONFIG.url}/`} />
+        <meta property="og:image" content={`${SITE_CONFIG.url}/screenshots/mash_real_llm_hero_dual_pane_top_light.png`} />
         <meta property="og:image:width" content="1440" />
         <meta property="og:image:height" content="900" />
         <meta property="og:image:alt" content="Mash Autonomous AI Workbench Dual-Pane View" />
@@ -47,7 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${SITE_CONFIG.name} — ${SITE_CONFIG.tagline}`} />
         <meta name="twitter:description" content={SITE_CONFIG.subhead} />
-        <meta name="twitter:image" content="https://mash.ai/screenshots/mash_real_llm_hero_dual_pane_top_light.png" />
+        <meta name="twitter:image" content={`${SITE_CONFIG.url}/screenshots/mash_real_llm_hero_dual_pane_top_light.png`} />
       </Head>
 
       {isMinimalLayout ? (

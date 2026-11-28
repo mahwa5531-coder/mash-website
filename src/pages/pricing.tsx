@@ -1,6 +1,7 @@
 import * as React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { 
   Check, 
   Download, 
@@ -14,8 +15,19 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { SITE_CONFIG } from "@/content/site-config";
+import { getWebSession, startGoogleSignIn } from "@/lib/utils";
 
 export default function PricingPage() {
+  const router = useRouter();
+
+  const handleUpgradePro = () => {
+    if (getWebSession()) {
+      router.push("/checkout");
+    } else {
+      startGoogleSignIn("/checkout");
+    }
+  };
+
   const faqs = [
     {
       q: "Why does Mash have a strict No-Refund policy?",
@@ -47,10 +59,10 @@ export default function PricingPage() {
           name="description"
           content="Simple, transparent pricing for Mash. Free plan for individual practitioners. Pro plan at ₹1,999/month for practicing CA firms and CPAs."
         />
-        <link rel="canonical" href="https://mash.ai/pricing/" />
+        <link rel="canonical" href={`${SITE_CONFIG.url}/pricing/`} />
         <meta property="og:title" content="Mash Pricing — Free vs Pro Commercial License for Audit Firms" />
         <meta property="og:description" content="Simple, transparent pricing for Mash. Free plan and Pro at ₹1,999/month flat fee." />
-        <meta property="og:url" content="https://mash.ai/pricing/" />
+        <meta property="og:url" content={`${SITE_CONFIG.url}/pricing/`} />
       </Head>
 
       <main className="pt-28 pb-20 md:pt-36 md:pb-28 bg-[#FAF9F6]">
@@ -210,13 +222,15 @@ export default function PricingPage() {
               </div>
 
               <CardFooter className="p-0 mt-8 pt-6 border-t border-slate-100 flex flex-col gap-2">
-                <Link href="/checkout" className="w-full">
-                  <Button className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md">
-                    <Zap className="h-4 w-4 text-amber-400" />
-                    <span>Upgrade to Pro</span>
-                    <ArrowRight className="h-4 w-4 text-slate-400" />
-                  </Button>
-                </Link>
+                <Button
+                  type="button"
+                  onClick={handleUpgradePro}
+                  className="w-full gap-2 text-xs font-semibold h-12 bg-slate-900 hover:bg-slate-800 text-white shadow-md cursor-pointer"
+                >
+                  <Zap className="h-4 w-4 text-amber-400" />
+                  <span>Upgrade to Pro</span>
+                  <ArrowRight className="h-4 w-4 text-slate-400" />
+                </Button>
               </CardFooter>
             </Card>
           </div>

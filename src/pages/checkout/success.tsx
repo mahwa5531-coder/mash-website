@@ -4,15 +4,20 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Check } from "lucide-react";
 import { SITE_CONFIG } from "@/content/site-config";
-import { triggerDesktopHandoff } from "@/lib/utils";
+import { getWebSession, triggerDesktopHandoff } from "@/lib/utils";
 
 export default function CheckoutSuccessPage() {
   const router = useRouter();
+  const [sessionEmail, setSessionEmail] = React.useState("");
+
+  React.useEffect(() => {
+    setSessionEmail(getWebSession()?.email || "");
+  }, []);
 
   // Extract query parameters with clean fallbacks
   const query = router.query;
-  const userEmail = (query.email as string) || "ca.firm@audit.in";
-  const paymentId = (query.pay_id as string) || "pay_01JK89AZ45";
+  const userEmail = (query.email as string) || sessionEmail || "your registered email";
+  const paymentId = (query.pay_id as string) || "Confirmed";
   const amountPaid = (query.amount as string) || "₹1,999.00";
 
   const protocolHref = `mash://payment/success?plan=pro&payment_id=${encodeURIComponent(paymentId)}`;

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
+const isGithubActions =
+  process.env.GITHUB_ACTIONS === 'true' && process.env.NEXT_PUBLIC_CUSTOM_DOMAIN !== 'true';
 const basePath = isGithubActions ? '/mash-website' : '';
 
 const nextConfig = {

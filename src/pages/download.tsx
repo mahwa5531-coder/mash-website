@@ -15,10 +15,10 @@ export default function DownloadPage() {
           name="description"
           content="Download Mash for Windows. Official desktop application for financial ledgers and spreadsheets."
         />
-        <link rel="canonical" href="https://mash.ai/download/" />
+        <link rel="canonical" href={`${SITE_CONFIG.url}/download/`} />
         <meta property="og:title" content="Download Mash for Windows" />
         <meta property="og:description" content="Official Windows installer for Mash. 100% on-device data confidentiality." />
-        <meta property="og:url" content="https://mash.ai/download/" />
+        <meta property="og:url" content={`${SITE_CONFIG.url}/download/`} />
       </Head>
 
       <main className="pt-28 pb-16 md:pt-36 md:pb-24 bg-[#FAF9F6]">
