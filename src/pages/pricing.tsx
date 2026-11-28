@@ -39,7 +39,7 @@ export default function PricingPage() {
     },
     {
       q: "Do my client Excel or Tally files leave my computer?",
-      a: "No. Workbook parsing, scripts, and reconciliation tools run locally on your Windows PC. Ephemeral prompt context is transmitted encrypted and is contractually never used to train AI models.",
+      a: "Raw workbooks stay locally on your Windows PC and are never uploaded to cloud storage. Only your prompt query and minimal cell context needed to compute an answer transit encrypted (TLS) over commercial non-training AI APIs without cloud file retention.",
     },
     {
       q: "Can I use my Pro license on more than one Windows PC?",
@@ -47,7 +47,7 @@ export default function PricingPage() {
     },
     {
       q: "What if money is debited during a network drop or charged twice?",
-      a: "Uncaptured bank debits are auto-reversed by Razorpay within 24–48 hours. If an order is captured asynchronously via webhook, your desktop app unlocks automatically on next launch; duplicate captures reported within 48 hours are fully reversed.",
+      a: "Uncaptured bank debits are auto-reversed by your bank/Razorpay within 5–7 business days (typically 24–48 hours for UPI). If an order is captured asynchronously via webhook, your desktop app unlocks automatically on next sync; verified duplicate captures reported within 48 hours are refunded within 5–7 business days.",
     },
   ];
 
@@ -77,7 +77,7 @@ export default function PricingPage() {
               for your practice.
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
-              All core spreadsheet auditing tools are included on Windows with 100% local confidentiality. Choose the plan matching your practice workload.
+              All core spreadsheet auditing tools are included on Windows with local-first file isolation. Choose the plan matching your practice workload.
             </p>
           </div>
 
@@ -129,7 +129,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="font-semibold text-slate-900">100% on-device client confidentiality guarantee</span>
+                    <span className="font-semibold text-slate-900">Local-first file isolation · Raw workbooks stay on your PC</span>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="font-semibold text-slate-900">High-volume daily practice workload with zero throttling</span>
+                    <span className="font-semibold text-slate-900">High-volume daily practice capacity (2M 5-hr / 10M weekly token windows)</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -216,7 +216,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>Dedicated firm onboarding &amp; priority audit support</span>
+                    <span>Priority billing &amp; technical email support</span>
                   </div>
                 </div>
               </div>

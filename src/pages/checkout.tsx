@@ -399,7 +399,7 @@ export default function CheckoutPage() {
               <div className="flex items-start gap-2.5">
                 <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                 <span className="font-semibold text-slate-900">
-                  High-volume daily practice workload with zero throttling
+                  High-volume daily practice capacity (2M 5-hr / 10M weekly token windows)
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -412,7 +412,7 @@ export default function CheckoutPage() {
               </div>
               <div className="flex items-start gap-2.5">
                 <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span>100% on-device client data confidentiality guarantee</span>
+                <span>Local-first workbook isolation (no cloud file storage)</span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Check className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -500,7 +500,7 @@ export default function CheckoutPage() {
             <div>
               <div className="font-semibold text-slate-800 mb-0.5">Safe Payment Guarantee</div>
               <p className="text-[11px] text-slate-500 leading-relaxed">
-                UPI and card transactions are encrypted and processed securely by Razorpay. If funds are debited during a connection drop, automated webhooks activate your account within 5 minutes or Razorpay auto-refunds within 24–48 hours.
+                UPI and card transactions are encrypted and processed securely by Razorpay. If funds are debited during a connection drop, automated webhooks activate your account within minutes or uncaptured debits auto-reverse within 5–7 business days (typically 24–48 hours for UPI).
               </p>
             </div>
           </div>

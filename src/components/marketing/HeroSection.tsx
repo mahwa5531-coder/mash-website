@@ -77,7 +77,7 @@ export function HeroSection() {
 
           {/* Subhead */}
           <p className="max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed mb-8 font-sans">
-            Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your confidential numbers never leave your computer.
+            Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your raw workbooks stay on your computer without cloud file storage.
           </p>
 
           {/* Action CTAs Stack */}

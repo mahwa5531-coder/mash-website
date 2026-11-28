@@ -34,7 +34,7 @@ export const SITE_CONFIG: SiteConfig = {
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://mash.ai").replace(/\/+$/, ""),
   apiUrl: (process.env.NEXT_PUBLIC_API_URL || "https://api.mash.ai").replace(/\/+$/, ""),
   tagline: "The desktop AI workbench for spreadsheets & financial data.",
-  subhead: "Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Your confidential company data never leaves your computer.",
+  subhead: "Cross-reference ledgers, detect calculation discrepancies, and inspect complex Excel workbooks side-by-side. Raw workbooks stay on your computer without cloud file storage.",
   version: "0.1.0",
   releaseDate: "November 20, 2026",
   installer: {

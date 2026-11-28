@@ -42,8 +42,8 @@ Purchases are made for software access and computational capability, not for gua
       title: "5. Duplicate Charges & Payment Gateway Errors",
       content: `In the event that a payment gateway technical error causes you to be charged multiple times for a single order, or if an amount is debited from your bank account during a connection drop without a license pass being generated:
 
-• Gateway Auto-Reversals: Payment aggregators (Razorpay) typically reverse uncaptured or dropped transactions back to the original payment source within 24–48 hours.
-• Duplicate Charges: If two separate transactions were captured for a single 30-day period, notify us at ${SITE_CONFIG.contact.supportEmail} within 48 hours with your transaction identifiers, and the duplicate charge will be fully reversed.`,
+• Gateway Auto-Reversals: Payment aggregators (Razorpay) and issuing banks automatically reverse uncaptured or dropped transactions back to the original payment source within 5–7 business days (typically 24–48 hours for UPI).
+• Duplicate Charges: If two separate transactions were captured for a single 30-day period, notify us at ${SITE_CONFIG.contact.supportEmail} within 48 hours with your transaction identifiers, and the verified duplicate charge will be refunded within 5–7 business days.`,
     },
     {
       id: "contact",

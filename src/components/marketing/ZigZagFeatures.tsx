@@ -140,8 +140,8 @@ const ZIGZAG_ITEMS: ZigZagItem[] = [
       },
       {
         icon: <ShieldCheck className="h-4 w-4 text-emerald-600" />,
-        label: "100% On-Device Client Privacy",
-        detail: "Client financial statements, tax IDs, and bank transactions never leave your local PC.",
+        label: "Local-First File Privacy",
+        detail: "Raw Excel workbooks and DuckDB tables stay on your local PC with zero cloud file storage.",
       },
     ],
     screenshot: "/screenshots/mash_single_pane_chat_light.png",

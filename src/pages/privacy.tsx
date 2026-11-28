@@ -10,20 +10,20 @@ export default function PrivacyPage() {
 
   const subProcessors = [
     {
-      name: "Commercial AI Inference Gateways (e.g., OpenRouter, Frontier Model Gateways)",
+      name: "Commercial AI Inference Gateways (OpenRouter / Frontier Model APIs)",
       location: "Global / Cloud (TLS 1.3 Encrypted)",
-      role: "Ephemeral In-Flight Prompt Evaluation & Computational Deduction",
-      dataResidency: "Zero Data Retention (ZDR); Discarded Immediately Post-Stream",
-      training: "Zero Model Training Guaranteed",
+      role: "Ephemeral In-Flight Prompt Evaluation & Token Metering",
+      dataResidency: "Zero Cloud File Storage by Mash; Ephemeral API Transit",
+      training: "Commercial No-Training API Tiers",
       link: "https://openrouter.ai/privacy",
     },
     {
-      name: "Specialized Reasoning & Token Engines (e.g., Indic Token Factories)",
-      location: "India / Global",
-      role: "Localized Reasoning & Token Factory Processing",
-      dataResidency: "In-Flight Ephemeral Processing Only",
-      training: "Zero Model Training Guaranteed",
-      link: `${SITE_CONFIG.url}/privacy`,
+      name: "Regional AI Token Providers (e.g., Sarvam AI)",
+      location: "India / Cloud (TLS 1.3 Encrypted)",
+      role: "Low-Latency AI Reasoning APIs (When Enabled)",
+      dataResidency: "Zero Data Retention / Opt-Out Configured on Model APIs",
+      training: "Model-Training Opt-Out Enforced Prior to Production Use",
+      link: "https://www.sarvam.ai/privacy-policy",
     },
     {
       name: "Razorpay Software Pvt. Ltd.",
@@ -50,8 +50,8 @@ export default function PrivacyPage() {
       content: `At Mash, we adhere strictly to the principle of data minimization under the Digital Personal Data Protection Act, 2023 (DPDPA). We collect only the minimum personal information required to authenticate your software license and deliver computational agent services:
 
 (a) Account Information: When you register or sign in via Google OAuth, we receive your name, email address, profile identifier, and active subscription tier (Free or Pro).
-(b) Transaction & Billing Data: Subscription status, GST billing address, payment identifier, and transaction timestamps processed through our authorized payment gateways. We never store credit card or debit card numbers on our servers.
-(c) In-Flight Inference Data: Ephemeral user prompt queries and minimal cell context snippets extracted by local tools during active agent sessions, transmitted exclusively in-flight to compute reasoning.
+(b) Transaction & Billing Data: Subscription tier, payment order reference, Razorpay payment identifier, and transaction timestamps processed through our authorized payment gateway. We never collect or store credit card, debit card, or UPI credentials on our servers.
+(c) Usage Metadata & In-Flight Inference: We log aggregate token counts, model identifiers, and latency for rate-limiting and quota enforcement — never prompt text, completions, or spreadsheets. During active AI prompts, minimal cell context snippets extracted locally transit encrypted in-flight for reasoning.
 
 WHAT WE DO NOT COLLECT OR STORE:
 Mash does NOT collect, upload, or store your raw client spreadsheets (.xlsx, .csv), complete general ledgers, banking login credentials, client tax documents, or company accounting databases on any cloud server.`,
@@ -63,7 +63,7 @@ Mash does NOT collect, upload, or store your raw client spreadsheets (.xlsx, .cs
 (a) To authenticate your identity and verify your active Pro or Free license entitlement;
 (b) To process, route, and stream real-time computational reasoning responses from authorized inference gateways to your desktop application;
 (c) To track rolling daily token quota windows and prevent service abuse;
-(d) To process subscription renewals, issue statutory GST invoices, and handle customer support inquiries;
+(d) To process pass purchases, issue digital payment receipts, and handle customer support inquiries;
 (e) To comply with applicable statutory, tax, and regulatory obligations under Indian law.`,
     },
     {
@@ -73,16 +73,16 @@ Mash does NOT collect, upload, or store your raw client spreadsheets (.xlsx, .cs
 
 1. Local File Confinement: 100% of your financial workbooks, formulas, DuckDB SQL tables, and file modifications remain stored exclusively on your local computer's physical drive and in system RAM.
 2. In-Flight Token Minimization: When you ask a question, the local engine extracts only the specific cell values or summary rows necessary to answer your prompt. Only these minimal extracted snippets—never the raw 50MB workbook—are transmitted in-flight over TLS 1.3 to compute the analytical answer.
-3. Ephemeral Discard: Once the reasoning tokens are streamed back to your desktop app, the in-flight inference context is immediately discarded from gateway memory.
-4. ICAI Code of Ethics Alignment: This architecture ensures that practicing Chartered Accountants retain unbroken confidential client privilege under Clause (1) of Part I of the Second Schedule to the Chartered Accountants Act, 1949 and Section 126 of the Indian Evidence Act.`,
+3. Ephemeral Cloud Transit: Mash cloud servers act as a pass-through tunnel for metering and do not store prompts, completions, or workbooks in any database.
+4. ICAI & Fiduciary Responsibility: Keeping raw client files local helps practicing Chartered Accountants uphold client confidentiality under Clause (1) of Part I of the Second Schedule to the Chartered Accountants Act, 1949. Under the DPDP Act, 2023, your firm remains the Data Fiduciary and is responsible for client authorization and redacting sensitive identifiers where required before querying cloud AI models.`,
     },
     {
       id: "zero-training-guarantee",
-      title: "4. Zero AI Model Training Guarantee",
-      content: `MASH EXPRESSLY AND LEGALLY WARRANTS:
-We do NOT train, retrain, fine-tune, calibrate, or improve any public or proprietary artificial intelligence, machine learning, or deep learning foundation models using your financial spreadsheets, prompt inputs, extracted cell data, or generated audit outputs.
+      title: "4. AI Model Training & Data Retention Posture",
+      content: `MASH DOES NOT TRAIN MODELS ON YOUR DATA:
+Mash does not collect, retain, or use your spreadsheets, prompts, cell snippets, or generated outputs to train, fine-tune, or improve any AI model.
 
-Your numbers, client names, transaction vouchers, and accounting memos belong exclusively to you and will never become part of any training corpus.`,
+Our cloud gateway stores only operational quota/token usage counters and routes inference strictly through commercial API endpoints configured with no-training and zero-data-retention policies where supported by the upstream provider.`,
     },
     {
       id: "sub-processors",
@@ -92,7 +92,7 @@ Your numbers, client names, transaction vouchers, and accounting memos belong ex
     {
       id: "data-retention-and-deletion",
       title: "6. Data Retention & Deletion",
-      content: `(a) Account Data: We retain your account identifier and subscription records for as long as your account remains active or as required to comply with statutory accounting and tax regulations under Indian law (e.g. 8 years under the Companies Act for tax invoices).
+      content: `(a) Account & Usage Metadata: We retain your Google account identifier, subscription history, and aggregate token-usage records (not prompt content) for as long as your account remains active or as required for accounting and statutory compliance under Indian law.
 
 (b) Spreadsheets and Financial Content: Because raw spreadsheets and audit files are never uploaded to Mash cloud servers, deleting the file on your local computer immediately purges all copies.
 
@@ -191,9 +191,9 @@ We will acknowledge receipt of any privacy grievance within 24 hours and resolve
               <div className="p-2 rounded-xl bg-slate-50 border border-slate-100 w-fit">
                 <ShieldCheck className="h-4 w-4 text-emerald-600" />
               </div>
-              <h3 className="text-xs font-bold text-slate-900 font-sans">Zero Model Training</h3>
+              <h3 className="text-xs font-bold text-slate-900 font-sans">No-Training API Routing</h3>
               <p className="text-[11px] text-slate-500 leading-relaxed font-sans">
-                Your prompt queries, numbers, and tool results are never used to train public foundation models.
+                Prompts are never saved by Mash servers and are routed via non-training commercial API tiers.
               </p>
             </div>
 

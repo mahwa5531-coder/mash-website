@@ -36,7 +36,7 @@ export default function UseCasesPage() {
       metrics: [
         "Instant discrepancy highlighting",
         "Automated VAT/Tax variance detection",
-        "Zero data transmission to cloud pools",
+        "Zero cloud storage of raw workbooks",
       ],
       promptExample:
         '"Audit the FY26 statutory vouchers in the workspace, verify zero material variance against bank feeds, and reconcile ledger accounts into mash_full_feature_audit.xlsx."',
@@ -69,12 +69,12 @@ export default function UseCasesPage() {
       problem:
         "Checking supplier invoice listings against accounts payable ledgers is tedious and carries severe compliance penalties if confidential taxpayer identification numbers leak into public clouds.",
       solution:
-        "Mash executes 100% locally on your Windows PC. It reconciles invoice numbers, purchase order records, and tax withholdings with complete air-gapped security.",
+        "Mash parses workbooks locally on your Windows PC. It reconciles invoice numbers, purchase order records, and tax withholdings without uploading your spreadsheets to cloud storage.",
       screenshot: "/screenshots/mash_single_pane_chat_thought_expanded_light.png",
       alt: "Audit verification trail with calculation checks",
       activeFile: "Tax_Compliance / ap_reconciliation.log",
       metrics: [
-        "100% on-device air-gapped security",
+        "Local-first workbook isolation",
         "Exact reasoning deduction checkpoints",
         "Full audit trail for regulatory reviews",
       ],
@@ -113,7 +113,7 @@ export default function UseCasesPage() {
         />
         <link rel="canonical" href={`${SITE_CONFIG.url}/use-cases/`} />
         <meta property="og:title" content="Mash Use Cases — Auditing, FP&A, and Tax Reconciliation" />
-        <meta property="og:description" content="Explore real-world use cases for Mash on Windows. 100% on-device confidentiality." />
+        <meta property="og:description" content="Explore real-world use cases for Mash on Windows with local-first workbook isolation." />
         <meta property="og:url" content={`${SITE_CONFIG.url}/use-cases/`} />
       </Head>
 
@@ -226,7 +226,7 @@ export default function UseCasesPage() {
               Bring automated audit intelligence to your spreadsheets.
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mb-6 leading-relaxed font-sans">
-              Install the desktop AI workbench on Windows with 100% on-device client confidentiality.
+              Install the desktop AI workbench on Windows with local-first workbook isolation.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={SITE_CONFIG.installer.downloadPath} download>

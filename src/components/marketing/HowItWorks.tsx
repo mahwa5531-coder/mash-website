@@ -23,7 +23,7 @@ export function HowItWorks() {
       icon: <CheckCircle2 className="h-5 w-5 text-slate-800" />,
       title: "Verify Side-by-Side",
       description:
-        "Inspect highlighted discrepancy rows and live formulas in the built-in spreadsheet canvas. Export verified reports with 100% on-device confidentiality.",
+        "Inspect highlighted discrepancy rows and live formulas in the built-in spreadsheet canvas. Export verified reports directly on your local PC without uploading workbooks to cloud storage.",
     },
   ];
 

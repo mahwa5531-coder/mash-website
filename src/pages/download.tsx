@@ -17,7 +17,7 @@ export default function DownloadPage() {
         />
         <link rel="canonical" href={`${SITE_CONFIG.url}/download/`} />
         <meta property="og:title" content="Download Mash for Windows" />
-        <meta property="og:description" content="Official Windows installer for Mash. 100% on-device data confidentiality." />
+        <meta property="og:description" content="Official Windows installer for Mash. Local-first workbook isolation with zero cloud file storage." />
         <meta property="og:url" content={`${SITE_CONFIG.url}/download/`} />
       </Head>
 
@@ -40,7 +40,7 @@ export default function DownloadPage() {
               </h2>
 
               <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed font-sans">
-                Install the standalone desktop application to audit financial ledgers with 100% on-device confidentiality.
+                Install the standalone desktop application to audit financial ledgers locally without uploading workbooks to cloud storage.
               </p>
 
               <div className="pt-2">
@@ -54,7 +54,7 @@ export default function DownloadPage() {
 
               <div className="flex items-center justify-center gap-2 text-xs text-slate-500 pt-2 font-sans">
                 <ShieldCheck className="h-4 w-4 text-emerald-600" />
-                <span>100% on-device execution · Your spreadsheets never leave your computer</span>
+                <span>Local-first execution · Raw spreadsheets are never uploaded to cloud storage</span>
               </div>
             </div>
           </Card>

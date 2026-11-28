@@ -44,7 +44,7 @@ export function DownloadCard() {
 
             <div className="flex items-center justify-center gap-1.5 text-xs text-slate-500 pt-2 font-sans">
               <ShieldCheck className="h-4 w-4 text-emerald-600" />
-              <span>100% on-device execution · Your spreadsheets never leave your computer</span>
+              <span>Local-first execution · Raw spreadsheets are never uploaded to cloud storage</span>
             </div>
           </div>
         </Card>
